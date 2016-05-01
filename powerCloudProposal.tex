@@ -113,7 +113,7 @@ For this project, there are three main development aspects, first programming th
 
 \includegraphics[width=\textwidth]{pcDevMeth.jpg}
 
-On the first level, that is programming the particle, we would need to read data specific to power consumption and log this data to the server. This data includes data such as voltage and current. This information could be garnered using CT sensors on the electronic device. Once this data is logged to the server then it can be stored in a database so that at a later stage when a client makes a request using HTTPS the data can be retrieved and the necessary calculations can be performed and the server is able to respond appropriately. \\
+On the first level, that is programming the particle, we would need to read data specific to power consumption and log this data to the server. This data includes data such as voltage and current. This information could be gathered using CT sensors connected to the electronic device. Once this data is logged to the server then it can be stored in a database so that at a later stage when a client makes a request using HTTPS the data can be retrieved and the necessary calculations can be performed and the server is able to respond appropriately. \\
 
 Based on the above, we have decided to adopt an Agile Development Methodology and more specifically, Extreme Programming. Using this methodology we are able to incrementally build the software system using sprints where specific functionality is completed. We would like to continuously deliver high quality software. This would mean work very closely with the client, Buhler, and more specifically the project owner, Mr. Hanrich Potgieter. As we work together we will be able to identify numerous use cases that will become the focus of the sprints, the development team will complete. \\
 
@@ -159,6 +159,19 @@ our progress and have access to the project material.
 We are also open to any means of communication that the client may prefer or suggest.
 
 \subsection{Technical Challenges}
+\subsubsection{Collecting the readings}
+The sensors or hardware that will be used to collect the physical readings have not been outlined and thus the challenge is how these values will be captured from the operating machinery.\\ \\
+The solution:\\ 
+Since the boards (photon and electron) have GPIOs, these can be used to interface with the various sensors that will capture the readings such as voltage and current. To measure current, a Current transformer, for example can be used to capture the operating current of a machine.\\
+\\
+To measure voltage, a step down transformer can be used to step down the voltage of the line connected in parallel to the operating machine. once the voltage has been stepped down to a level that the boards can tolerate i.e the max voltage would be 3.3V logic since the boards can operate at 3.3V VCC, then the signal can be fed to the analog pins of either the photon or the electron board.
+\\ \\
+These values, voltage and current are essential for the computation of other values such as power, e.g P=VI. 
+
+\subsubsection{Connecting the photon to a local router}
+The electron has a direct connection to the internet through the SARA-U260 module. The photon board, however needs a mobile device to get internet connection and thus thus the challenge will be to eliminate the need for a cellphone for the internet connection.\\ \\
+The solution:\\
+The approach to follow is to use a device that can connect more than one device to the internet e.g a wifi router. The router can provide all the photon boards with a connection to the internet. 
 \subsection{Technologies}
 This section will list the technologies that will be used to implement the system.\\
 To implement the back-end of the system, the following technologies will be used:
