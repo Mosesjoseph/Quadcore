@@ -1,111 +1,62 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 22:44
 entering extended mode
 **./PowerCloudProposal.tex
 (PowerCloudProposal.tex
 LaTeX2e <2016/02/01>
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\s
-crartcl.cls"
-Document Class: scrartcl 2015/10/03 v3.19a KOMA-Script document class (article)
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.
+cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 
-
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\s
-crkbase.sty"
-Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
-basics and keyval usage)
-
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\s
-crbase.sty"
-Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
- basics and keyval usage)
-
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyv
-al.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.c
+lo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\s
-crlfile.sty"
-Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
-
-Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
-                  Copyright (C) Markus Kohm
-
-)))
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\t
-ocbasic.sty"
-Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
-)
-Package tocbasic Info: omitting babel extension for `toc'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 123.
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 124.
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 125.
-Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 203
-3.
-
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\s
-crsize11pt.clo"
-File: scrsize11pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (11p
-t)
-)
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\t
-ypearea.sty"
-Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
-
-Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
-                  Copyright (C) Frank Neukam, 1992-1994
-                  Copyright (C) Markus Kohm, 1994-
-
-\ta@bcor=\skip41
-\ta@div=\count79
-\ta@hblk=\skip42
-\ta@vblk=\skip43
-\ta@temp=\skip44
-\footheight=\skip45
-Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
-(typearea)             BCOR = 0.0pt
-(typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 418.25555pt
-(typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 17.3562pt
-(typearea)              \oddsidemargin  = 17.3562pt
-(typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 595.80026pt
-(typearea)              \topmargin      = -25.16531pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1509.
-)
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-LaTeX Info: Redefining \textsubscript on input line 3906.
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
-\c@pti@nb@sid@b@x=\box26
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\blindtext\bli
+ndtext.sty"
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.
+sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count87
+\c@Blindtext=\count88
+\c@blind@countparstart=\count89
+\blind@countxx=\count90
+\blindtext@numBlindtext=\count91
+\blind@countyy=\count92
+\c@blindlist=\count93
+\c@blindlistlevel=\count94
+\c@blindlist@level=\count95
+\blind@listitem=\count96
+\c@blind@listcount=\count97
+\c@blind@levelcount=\count98
+\blind@mathformula=\count99
+\blind@Mathformula=\count100
+\c@blind@randomcount=\count101
+\c@blind@randommax=\count102
+\c@blind@pangramcount=\count103
+\c@blind@pangrammax=\count104
 )
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc
 .sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def
 "
@@ -420,6 +371,11 @@ Now handling font encoding U ...
 hicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyv
+al.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\grap
 hics.sty"
 Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
@@ -446,122 +402,126 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 xcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count88
+\Gread@gobject=\count105
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 ) (PowerCloudProposal.aux)
 \openout1 = `PowerCloudProposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
 
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
+\scratchcounter=\count106
 \scratchdimen=\dimen105
-\scratchbox=\box27
-\nofMPsegments=\count90
-\nofMParguments=\count91
+\scratchbox=\box26
+\nofMPsegments=\count107
+\nofMParguments=\count108
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count92
+\MPscratchCnt=\count109
 \MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks18
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 13.
+(Font)              <12> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <8> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 23.
  <2012-quad-core-phones.jpg, id=1, 602.25pt x 454.69875pt>
 File: 2012-quad-core-phones.jpg Graphic file (type jpg)
 
 <use 2012-quad-core-phones.jpg>
-Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 13.
-(pdftex.def)             Requested size: 418.25555pt x 315.79616pt.
+Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 35.
+(pdftex.def)             Requested size: 390.0pt x 294.4614pt.
+ [1
 
-Overfull \hbox (10.95003pt too wide) in paragraph at lines 13--14
-[][] 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+{C:/Users/Hlengekile/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012
+-quad-core-phones.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.f
 d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
- [1
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
 
-
-{C:/Users/Hlengekile/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012
--quad-core-phones.jpg>]
-Overfull \hbox (25.1439pt too wide) in paragraph at lines 30--31
-[]\OT1/cmr/m/n/10.95 Web de-vel-op-ment with HTML,JAVASCRIPT,JQUERY,CSS,PHP,AJA
-X,ANGULARJS 
+Overfull \hbox (85.68964pt too wide) in paragraph at lines 62--63
+[]\OT1/cmr/m/n/12 Web de-vel-op-ment with HTML,JAVASCRIPT,JQUERY,CSS,PHP,AJAX,A
+NGULARJS 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-<pcDevMeth.jpg, id=13, 579.66562pt x 310.91156pt>
+[2] <pcDevMeth.jpg, id=17, 579.66562pt x 310.91156pt>
 File: pcDevMeth.jpg Graphic file (type jpg)
  <use pcDevMeth.jpg>
-Package pdftex.def Info: pcDevMeth.jpg used on input line 62.
-(pdftex.def)             Requested size: 418.25555pt x 224.34004pt.
+Package pdftex.def Info: pcDevMeth.jpg used on input line 114.
+(pdftex.def)             Requested size: 390.0pt x 209.18257pt.
 
-Overfull \hbox (10.95003pt too wide) in paragraph at lines 62--63
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 114--115
 [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-[3 <./pcDevMeth.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Overfull \hbox (10.1579pt too wide) in paragraph at lines 118--119
+\OT1/cmr/m/n/12 Method-ol-ogy and more specif-i-cally, Ex-treme Pro-gram-ming. 
+Us-ing this method-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[4] [5] [6] (PowerCloudProposal.aux) ) 
+[4 <./pcDevMeth.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+[5] [6] (PowerCloudProposal.aux) ) 
 Here is how much of TeX's memory you used:
- 2895 strings out of 493622
- 44854 string characters out of 3133099
- 165561 words of memory out of 3000000
- 6303 multiletter control sequences out of 15000+200000
- 6591 words of font info for 24 fonts, out of 3000000 for 9000
+ 1635 strings out of 493622
+ 21681 string characters out of 3133099
+ 78781 words of memory out of 3000000
+ 5044 multiletter control sequences out of 15000+200000
+ 9445 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,6n,46p,617b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Hlengekile/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Hlengekile/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
-rs/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmssbx10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb>
-Output written on PowerCloudProposal.pdf (6 pages, 205472 bytes).
+ 27i,5n,19p,617b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/User
+s/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on PowerCloudProposal.pdf (7 pages, 215802 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
