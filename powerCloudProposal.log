@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 23:14
 entering extended mode
 **./powerCloudProposal.tex
 (powerCloudProposal.tex
@@ -472,11 +472,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[2] <pcDevMeth.jpg, id=17, 579.66562pt x 310.91156pt>
+[2] <pcDevMeth.jpg, id=17, 599.99156pt x 408.77719pt>
 File: pcDevMeth.jpg Graphic file (type jpg)
  <use pcDevMeth.jpg>
 Package pdftex.def Info: pcDevMeth.jpg used on input line 114.
-(pdftex.def)             Requested size: 390.0pt x 209.18257pt.
+(pdftex.def)             Requested size: 390.0pt x 265.7145pt.
 
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 114--115
 [][] 
@@ -539,7 +539,7 @@ engekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
 .pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on powerCloudProposal.pdf (8 pages, 217985 bytes).
+Output written on powerCloudProposal.pdf (8 pages, 231468 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
