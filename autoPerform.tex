@@ -66,7 +66,7 @@ Mbhele \textsc{Themba}\\
 \end{itemize}
 \subsubsection{Non-Technical Strengths}
 \begin{itemize}
-\item Exellent Communication skills
+\item Excellent Communication skills
 \item Patient
 \item Creative approach to problem solving
 \item Pay attention to detail
@@ -138,5 +138,22 @@ Access to our git repository will be provided to the client,so the client can be
 our progress and have access to the project material.
 We are also open to any means of communication that the client may prefer or suggest.
 \subsection{Technical Challenges}
-\subsection{Technologies}
+\subsubsection{Dealing with a wide range of information sources}
+As described in the project proposal, the automated performance management system is required to assess the performance of staff based on information sourced across different software systems. The measuring of performance should be done across a configurable range of performance areas.\\
+
+This presents the technical challenge of dealing with a wide range of information sources. This is a challenge because information from various sources will come in various formats and our system would need to be able to process this information. Especially if the range is configurable, the system needs to be able to deal with new sources of information that may not have been considered during initial development.\\
+
+The solution for this would be to have the system deal with all sources of information in the same way. This can be done through making use of the software design pattern, dependency injection. This will help us apply inversion of control for resolving the dependency of the system on an information source. By passing the system the information source in a standard format through interface based injection, instead of having the system have to understand a wide range of information sources so that it can work with each one, we are able to focus on the information processing rather than each possible information source.
+
+\subsubsection{Determining Performance Criteria}
+Performance will be measured and then aggregated through this system. Aggregation can either be by weighted average or best-n based. Considering that information will come from a wide range of sources, the question arises of how the criteria will be specified. \\
+There are two possibilities:
+\begin{itemize}
+\item The client can specify a standard that will be applied across the board, i.e. information from certain kind's of sources will always carry more weight than others. The system will always calculate performance the same way despite the specific context of use.
+\item Or the client or any user of the system will be able to specify which sources they want to track performance from and specify the criteria to be applied and the system is able to adapt accordingly and perform assessments appropriately. 
+\end{itemize}
+The latter option, is the preferred solution because it will be then possible to apply the system across a wide range of contexts. The system could be applied in an endless range of environments.
+\section{Technologies}
+
+
 \end{document}
