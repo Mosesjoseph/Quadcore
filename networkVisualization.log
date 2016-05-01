@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  1 MAY 2016 23:47
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 23:42
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 entering extended mode
 **./networkVisualization.tex
 (networkVisualization.tex
@@ -388,10 +392,17 @@ NGULARJS
 File: images/graph1.png Graphic file (type png)
 
 <use images/graph1.png>
+<<<<<<< HEAD
 Package pdftex.def Info: images/graph1.png used on input line 132.
 (pdftex.def)             Requested size: 390.0pt x 185.21959pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 131--133
+=======
+Package pdftex.def Info: images/graph1.png used on input line 140.
+(pdftex.def)             Requested size: 390.0pt x 185.21959pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 
  []
 
@@ -401,6 +412,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  1566 strings out of 493634
  21205 string characters out of 3135239
  79206 words of memory out of 3000000
@@ -415,6 +427,23 @@ fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/MOSCO/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/MOSCO/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on networkVisualization.pdf (8 pages, 195616 bytes).
+=======
+ 1637 strings out of 493622
+ 21749 string characters out of 3133099
+ 78791 words of memory out of 3000000
+ 5045 multiletter control sequences out of 15000+200000
+ 9445 words of font info for 33 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,4n,19p,463b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmcsc10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on networkVisualization.pdf (7 pages, 194631 bytes).
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  1 MAY 2016 23:47
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 23:43
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 entering extended mode
 **./autoPerform.tex
 (autoPerform.tex
@@ -387,6 +391,7 @@ NGULARJS
 
 [2] [3] [4] [5] (autoPerform.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  1559 strings out of 493634
  20965 string characters out of 3135239
  80196 words of memory out of 3000000
@@ -402,6 +407,23 @@ sers/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y10.pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmti12.pfb>
 Output written on autoPerform.pdf (6 pages, 154255 bytes).
+=======
+ 1630 strings out of 493622
+ 21527 string characters out of 3133099
+ 79781 words of memory out of 3000000
+ 5040 multiletter control sequences out of 15000+200000
+ 9445 words of font info for 33 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,4n,19p,225b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Use
+rs/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on autoPerform.pdf (5 pages, 153224 bytes).
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

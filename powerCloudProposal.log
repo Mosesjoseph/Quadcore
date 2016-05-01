@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  1 MAY 2016 23:46
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  1 MAY 2016 23:42
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 entering extended mode
 **./powerCloudProposal.tex
 (powerCloudProposal.tex
@@ -385,6 +389,7 @@ Overfull \hbox (85.68964pt too wide) in paragraph at lines 63--64
 NGULARJS 
  []
 
+<<<<<<< HEAD
 [2]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
@@ -402,16 +407,40 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 121--122
 
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
+=======
+[1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+<pcDevMeth.jpg, id=17, 599.99156pt x 408.77719pt>
+File: pcDevMeth.jpg Graphic file (type jpg)
+ <use pcDevMeth.jpg>
+Package pdftex.def Info: pcDevMeth.jpg used on input line 129.
+(pdftex.def)             Requested size: 390.0pt x 265.7145pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 129--130
+[][] 
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (10.1579pt too wide) in paragraph at lines 125--126
+=======
+Overfull \hbox (10.1579pt too wide) in paragraph at lines 133--134
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 \OT1/cmr/m/n/12 Method-ol-ogy and more specif-i-cally, Ex-treme Pro-gram-ming. 
 Us-ing this method-
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
@@ -423,26 +452,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
 [6]
 Underfull \hbox (badness 10000) in paragraph at lines 170--177
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[4 <./pcDevMeth.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 178--185
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 170--177
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 178--185
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 170--177
 
  []
 
 [7]
 Underfull \hbox (badness 10000) in paragraph at lines 179--182
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 178--185
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 
  []
 
 [8] (powerCloudProposal.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  1564 strings out of 493634
  21133 string characters out of 3135239
  81196 words of memory out of 3000000
@@ -458,6 +514,23 @@ MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmti12.pfb>
 Output written on powerCloudProposal.pdf (9 pages, 232942 bytes).
+=======
+ 1636 strings out of 493622
+ 21689 string characters out of 3133099
+ 78781 words of memory out of 3000000
+ 5045 multiletter control sequences out of 15000+200000
+ 9445 words of font info for 33 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,5n,19p,629b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Hl
+engekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on powerCloudProposal.pdf (8 pages, 232348 bytes).
+>>>>>>> 9a67b3ca49442ffaff6604ddb78868a32aad1158
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
