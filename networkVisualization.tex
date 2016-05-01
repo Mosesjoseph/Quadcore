@@ -8,6 +8,8 @@
 \begin{document}
 \maketitle
 \includegraphics[width=\textwidth]{2012-quad-core-phones}
+\newpage
+\tableofcontents
 \section{The Team}
 \subsection{Moses Mayimela}
 \subsection{Hlengekile Jita}
@@ -51,7 +53,27 @@ this project because it is an opportunity to learn and see how software and hard
 \end{flushleft}
 \subsection{Themba Mbhele}
 \section{Project Execution}
-\subsection{Development Methodology}
+\subsection{Project Development Methodology}
+\label{Project Design Methodology}
+\subsubsection{Data Collection}
+The first step is to retrieve the network data. The information may be retrieved from a file or web source.
+\subsubsection{Data Classification}
+The data will now be validated for correctness. If the data is valid, the different members of the network (parent node, sub-parent node and leaf nodes)
+will be identified and classified accordingly. To arrange the data, data structures such as trees will be used.\\
+The members of the network that have been identified are:
+\begin{itemize}
+	\item \textbf{Parent node:} This is the member from which all the other members will be referenced (This is the Main parent or root node).
+	\item \textbf{Sub-Parent node:} This is a member that is referenced from another member and has other members that are referenced through it (It is a child with children).
+	\item \textbf{Leaf node:} This member is at the lowest level of the tree data structure, it is referenced through a parent and has no members that are referenced through it ( It has no children).
+\end{itemize}
+\newpage
+\subsubsection{Data visualization}
+After all the data has been retrieved successfully and the members classified to the respective types, the data will then be loaded to the screen for visual representation (visualize). At this stage, the data can be viewed while allowing interactions for the user. The interactions will include zooming in and out of the visualizer,panning around the graph, click events for more information on a specific member of the network.\\ \\
+\includegraphics[width=\textwidth]{images/graph1.png}
+\begin{center}
+Data organization as data structure and basic representation
+\end{center}
+The image above is a basic representation of how data structures will be used to organize the data and also a starting point as to how the data will be visualized.
 \subsection{Communication With Client}
 To keep the clients informed we are going to use the following means of communication
 \subsubsection{email}
