@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 02:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 03:21
 entering extended mode
 **./autoPerform.tex
 (autoPerform.tex
@@ -384,23 +384,23 @@ Overfull \hbox (85.68964pt too wide) in paragraph at lines 61--62
 NGULARJS 
  []
 
-[2] [3] <images/agileDev.png, id=20, 642.4pt x 367.3725pt>
+[2] [3] [4] [5] <images/agileDev.png, id=26, 642.4pt x 367.3725pt>
 File: images/agileDev.png Graphic file (type png)
 
 <use images/agileDev.png>
-Package pdftex.def Info: images/agileDev.png used on input line 124.
+Package pdftex.def Info: images/agileDev.png used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 223.03741pt.
- [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-[6 <./images/agileDev.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[7 <./images/agileDev.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
-[7] [8] (autoPerform.aux) ) 
+[8] [9] (autoPerform.aux) ) 
 Here is how much of TeX's memory you used:
  1565 strings out of 493634
  21079 string characters out of 3135239
@@ -416,9 +416,9 @@ ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/MOS
 CO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on autoPerform.pdf (9 pages, 288571 bytes).
+Output written on autoPerform.pdf (10 pages, 291880 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
