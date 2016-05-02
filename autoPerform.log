@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 03:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 03:46
 entering extended mode
 **./autoPerform.tex
 (autoPerform.tex
@@ -371,67 +371,86 @@ Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 34.
 \tf@toc=\write3
 \openout3 = `autoPerform.toc'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+
+[2] <images/Mpho.jpg, id=16, 1076.02pt x 807.015pt>
+File: images/Mpho.jpg Graphic file (type jpg)
+ <use images/Mpho.jpg>
+Package pdftex.def Info: images/Mpho.jpg used on input line 49.
+(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 ("C:\Users\MOSCO\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
 
-Overfull \hbox (85.68964pt too wide) in paragraph at lines 61--62
+Overfull \hbox (85.68964pt too wide) in paragraph at lines 62--63
 []\OT1/cmr/m/n/12 Web de-vel-op-ment with HTML,JAVASCRIPT,JQUERY,CSS,PHP,AJAX,A
 NGULARJS 
  []
 
-[2] [3] [4] <images/moses.jpg, id=23, 1076.02pt x 807.015pt>
-File: images/moses.jpg Graphic file (type jpg)
+[3 <./images/Mpho.jpg>] [4] <images/Hlengi.jpg, id=24, 1076.02pt x 807.015pt>
+File: images/Hlengi.jpg Graphic file (type jpg)
 
-<use images/moses.jpg>
-Package pdftex.def Info: images/moses.jpg used on input line 108.
+<use images/Hlengi.jpg>
+Package pdftex.def Info: images/Hlengi.jpg used on input line 87.
 (pdftex.def)             Requested size: 390.0pt x 292.49542pt.
- [5 <./images/moses.jpg>] [6] [7]
-<images/Themba.jpg, id=34, 1076.02pt x 807.015pt>
+ [5 <./images/Hlengi.jpg>] [6]
+<images/moses.jpg, id=32, 1076.02pt x 807.015pt>
+File: images/moses.jpg Graphic file (type jpg)
+ <use images/moses.jpg>
+Package pdftex.def Info: images/moses.jpg used on input line 110.
+(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
+
+[7 <./images/moses.jpg>]
+Overfull \hbox (7.39334pt too wide) in paragraph at lines 128--130
+\OT1/cmr/m/n/12 HTML,CSS, Javascript, NodeJS (Javascript frame-work),PHP and AJ
+AX 
+ []
+
+[8] <images/Themba.jpg, id=39, 1076.02pt x 807.015pt>
 File: images/Themba.jpg Graphic file (type jpg)
  <use images/Themba.jpg>
-Package pdftex.def Info: images/Themba.jpg used on input line 160.
+Package pdftex.def Info: images/Themba.jpg used on input line 154.
 (pdftex.def)             Requested size: 390.0pt x 292.49542pt.
 
-<images/agileDev.png, id=35, 642.4pt x 367.3725pt>
+[9 <./images/Themba.jpg>] [10]
+<images/agileDev.png, id=46, 642.4pt x 367.3725pt>
 File: images/agileDev.png Graphic file (type png)
  <use images/agileDev.png>
-Package pdftex.def Info: images/agileDev.png used on input line 170.
+Package pdftex.def Info: images/agileDev.png used on input line 181.
 (pdftex.def)             Requested size: 390.0pt x 223.03741pt.
 
-[8 <./images/Themba.jpg>] [9 <./images/agileDev.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+[11 <./images/agileDev.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-[10] [11] (autoPerform.aux) ) 
+[12] [13] [14] (autoPerform.aux) ) 
 Here is how much of TeX's memory you used:
- 1575 strings out of 493634
- 21268 string characters out of 3135239
+ 1585 strings out of 493634
+ 21452 string characters out of 3135239
  81196 words of memory out of 3000000
- 4966 multiletter control sequences out of 15000+200000
+ 4974 multiletter control sequences out of 15000+200000
  9445 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,5n,19p,645b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/MOSCO/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/MOSCO/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/M
-OSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti12.pfb>
-Output written on autoPerform.pdf (12 pages, 682861 bytes).
+<C:/Users/MOSCO/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/MOSCO/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/MOSCO/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
+ers/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti12.pfb>
+Output written on autoPerform.pdf (15 pages, 1042066 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
