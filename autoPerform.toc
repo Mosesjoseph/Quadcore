@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {1.4}Themba Mbhele}{9}
 \contentsline {subsubsection}{\numberline {1.4.1}Interests}{9}
 \contentsline {subsubsection}{\numberline {1.4.2}Technical Skills}{9}
-\contentsline {subsubsection}{\numberline {1.4.3}Non-Technical Strengths}{9}
+\contentsline {subsubsection}{\numberline {1.4.3}Non-Technical Strengths}{10}
 \contentsline {subsubsection}{\numberline {1.4.4}Reasons for wanting to do the project}{10}
 \contentsline {section}{\numberline {2}Project Execution}{11}
 \contentsline {subsection}{\numberline {2.1}Development Methodology}{11}
