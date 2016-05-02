@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 02:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  2 MAY 2016 04:01
 entering extended mode
 **./PowerCloudProposal.tex
 (PowerCloudProposal.tex
@@ -370,8 +370,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-)
-No file PowerCloudProposal.aux.
+) (PowerCloudProposal.aux)
 \openout1 = `PowerCloudProposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -406,52 +405,77 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 13.
- <2012-quad-core-phones.jpg, id=1, 602.25pt x 454.69875pt>
-File: 2012-quad-core-phones.jpg Graphic file (type jpg)
+ <images/GroupPhoto.jpg, id=1, 1076.02pt x 807.015pt>
+File: images/GroupPhoto.jpg Graphic file (type jpg)
 
-<use 2012-quad-core-phones.jpg>
-Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 13.
-(pdftex.def)             Requested size: 418.25555pt x 315.79616pt.
+<use images/GroupPhoto.jpg>
+Package pdftex.def Info: images/GroupPhoto.jpg used on input line 13.
+(pdftex.def)             Requested size: 418.25555pt x 313.68788pt.
 
 Overfull \hbox (10.95003pt too wide) in paragraph at lines 13--14
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+<images/Mpho.jpg, id=2, 1076.02pt x 807.015pt>
+File: images/Mpho.jpg Graphic file (type jpg)
+ <use images/Mpho.jpg>
+Package pdftex.def Info: images/Mpho.jpg used on input line 16.
+(pdftex.def)             Requested size: 418.25555pt x 313.68788pt.
+ [1
+
+
+{C:/Users/MOSCO/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/Gr
+oupPhoto.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+
 ("C:\Users\MOSCO\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
 
-[1
-
-
-{C:/Users/MOSCO/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012-quad
--core-phones.jpg>]
-Overfull \hbox (25.1439pt too wide) in paragraph at lines 30--31
+Overfull \hbox (25.1439pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/n/10.95 Web de-vel-op-ment with HTML,JAVASCRIPT,JQUERY,CSS,PHP,AJA
 X,ANGULARJS 
  []
 
-[2] [3] [4] (PowerCloudProposal.aux) ) 
+[2 <./images/Mpho.jpg>] [3] <images/Hlengi.jpg, id=17, 1076.02pt x 807.015pt>
+File: images/Hlengi.jpg Graphic file (type jpg)
+
+<use images/Hlengi.jpg>
+Package pdftex.def Info: images/Hlengi.jpg used on input line 54.
+(pdftex.def)             Requested size: 418.25555pt x 313.68788pt.
+ [4 <./images/Hlengi.jpg>] [5]
+<images/Moses.jpg, id=24, 1076.02pt x 807.015pt>
+File: images/Moses.jpg Graphic file (type jpg)
+ <use images/Moses.jpg>
+Package pdftex.def Info: images/Moses.jpg used on input line 77.
+(pdftex.def)             Requested size: 418.25555pt x 313.68788pt.
+
+[6 <./images/Moses.jpg>] [7] <images/Themba.jpg, id=32, 1076.02pt x 807.015pt>
+File: images/Themba.jpg Graphic file (type jpg)
+
+<use images/Themba.jpg>
+Package pdftex.def Info: images/Themba.jpg used on input line 121.
+(pdftex.def)             Requested size: 418.25555pt x 313.68788pt.
+ [8 <./images/Themba.jpg>] [9] [10] [11]
+(PowerCloudProposal.aux) ) 
 Here is how much of TeX's memory you used:
- 2814 strings out of 493634
- 44105 string characters out of 3135239
+ 2837 strings out of 493634
+ 44502 string characters out of 3135239
  163933 words of memory out of 3000000
- 6213 multiletter control sequences out of 15000+200000
+ 6229 multiletter control sequences out of 15000+200000
  6591 words of font info for 24 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,6n,46p,347b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/MOSCO/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/MOSCO/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/MOSCO/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C
-:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb>
-Output written on PowerCloudProposal.pdf (4 pages, 142637 bytes).
+ 41i,6n,46p,407b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/MOSCO/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/MOSCO/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/MOSC
+O/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on PowerCloudProposal.pdf (11 pages, 1019445 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
