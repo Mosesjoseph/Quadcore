@@ -61,6 +61,33 @@ In our system,we want to take an image analysis approach to solve the same probl
 \subsection{Architectural Scope}
 
 \subsection{Quality Requirements}
+\subsubsection{Usability}
+Usability is the key component of the system because user satisfaction is a high priority for this system because it aims to alleviate a problem that individuals experience daily. The aim is to create that is easy to understand and thus, easy to learn how to us. \\
+\textbf{How to achieve usability}
+\begin{itemize}
+\item The interface of the mobile application will be designed in an intuitive manner meaning that it will be easy to navigate and easy to understand.It will include buttons and other methods of interaction for which their functionality is self explanatory.
+\item The interface will only have what is required and nothing more to ensure that it is not cluttered and does not cause confusion.
+\item Usability tests will be conducted to ensure the successful implementation of a user friendly application.
+\end{itemize}
+\subsubsection{Scalability}
+Scalability refers to a systems ability to handle a heavy workload. We have identified this as an important aspect of the system because a report will have to be provided at a very fast speed because traffic changes rapidly and we need to keep up with the traffic updates. Also, multiple users will be making use of the system at the same time and they all need to be catered to at the same levels of performance. \\
+\textbf{How to achieve usability}
+\begin{itemize}
+\item To improve the performance of the system, reports will only be generated when it is necessary to do so. To elaborate on this, the website from which we will be getting the images from updates its images at one minute intervals so between that period, we will not attempt to grab new images but will make use of the images that were grabbed at the previous interval. In this way, no unnecessary processing takes place.
+\item We will not generate a new report if it is not necessary to do so. If we generate a report for one user and another user requests a report for the exact same route when it is not time to update the images, we will use the same report that was generated for the first user. We will do this by implementing a cache server to store route reports.  
+\end{itemize}
+\subsubsection{Maintainability}
+The components of the system need to implemented in a manner that makes it easy for them to be updated or replaced.\\
+\textbf{How to achieve maintainability}
+\begin{itemize}
+\item Maintainability will be achieved by writing loosely coupled code.
+\end{itemize}
+\subsubsection{Reliability}
+Reliability is of utmost importance because a lot of people will be using the application, especially at traffic peak hours thus the system has to get the job done and it should do it effectively so that users get the best service possible. \\
+\textbf{How to achieve reliability} \\
+\begin{itemize}
+\item The main focus will be placed on the prevention of faults. This will be done by testing the system extensively and working towards fixing any fault that is encountered.
+\end{itemize}
 \subsection{Integration and Access Channel Requirements}
 \subsection{Architectural Constraints}
 \section{Initial Software Architecture Design}
