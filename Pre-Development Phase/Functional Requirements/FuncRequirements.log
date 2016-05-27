@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  2 MAY 2016 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  27 MAY 2016 18:04
 entering extended mode
-**./networkVisualization.tex
-(networkVisualization.tex
+**./FuncRequirements.tex
+(FuncRequirements.tex
 LaTeX2e <2016/02/01>
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 
@@ -406,131 +406,110 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (networkVisualization.aux)
-\openout1 = `networkVisualization.aux'.
+)
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enum
+item.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip43
+\enit@outerparindent=\dimen105
+\enit@toks=\toks17
+\enit@inbox=\box26
+\enitdp@description=\count106
+) (FuncRequirements.aux)
+\openout1 = `FuncRequirements.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen106
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count107
+\scratchdimen=\dimen106
+\scratchbox=\box27
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen107
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks19
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 22.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 22.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 22.
- <images/GroupPhoto.jpg, id=1, 1076.02pt x 807.015pt>
-File: images/GroupPhoto.jpg Graphic file (type jpg)
+(Font)              <6> on input line 24.
+ <2012-quad-core-phones.jpg, id=1, 602.25pt x 454.69875pt>
+File: 2012-quad-core-phones.jpg Graphic file (type jpg)
 
-<use images/GroupPhoto.jpg>
-Package pdftex.def Info: images/GroupPhoto.jpg used on input line 34.
-(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
+<use 2012-quad-core-phones.jpg>
+Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 36.
+(pdftex.def)             Requested size: 390.0pt x 294.4614pt.
  [1
 
-{C:/Users/Hlengekile/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./imag
-es/GroupPhoto.jpg>] (networkVisualization.toc)
-\tf@toc=\write3
-\openout3 = `networkVisualization.toc'.
+{C:/Users/Hlengekile/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012
+-quad-core-phones.jpg>] [2]
+(FuncRequirements.toc
+! Misplaced alignment tab character &.
+<argument> ...rline {4.1}Use Case Identification &
+                                                   Prioritization
+l.5 ...se Case Identification & Prioritization}{2}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-
-[1] <images/Mpho.jpg, id=13, 1076.02pt x 807.015pt>
-File: images/Mpho.jpg Graphic file (type jpg)
- <use images/Mpho.jpg>
-Package pdftex.def Info: images/Mpho.jpg used on input line 49.
-(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
-
-("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.f
-d"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+\tf@toc=\write3
+\openout3 = `FuncRequirements.toc'.
 
-Overfull \hbox (85.68964pt too wide) in paragraph at lines 62--63
-[]\OT1/cmr/m/n/12 Web de-vel-op-ment with HTML,JAVASCRIPT,JQUERY,CSS,PHP,AJAX,A
-NGULARJS 
- []
+ [1]
+! Misplaced alignment tab character &.
+<argument> Use Case Identification &
+                                     Prioritization
+l.54 ...{Use Case Identification & Prioritization}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[2 <./images/Mpho.jpg>] [3] <images/Hlengi.jpg, id=21, 1076.02pt x 807.015pt>
-File: images/Hlengi.jpg Graphic file (type jpg)
-
-<use images/Hlengi.jpg>
-Package pdftex.def Info: images/Hlengi.jpg used on input line 87.
-(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
- [4 <./images/Hlengi.jpg>] [5]
-<images/Moses.jpg, id=28, 1076.02pt x 807.015pt>
-File: images/Moses.jpg Graphic file (type jpg)
- <use images/Moses.jpg>
-Package pdftex.def Info: images/Moses.jpg used on input line 119.
-(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
-
-[6 <./images/Moses.jpg>]
-Overfull \hbox (7.39334pt too wide) in paragraph at lines 137--139
-\OT1/cmr/m/n/12 HTML,CSS, Javascript, NodeJS (Javascript frame-work),PHP and AJ
-AX 
- []
-
-[7] <images/Themba.jpg, id=36, 1076.02pt x 807.015pt>
-File: images/Themba.jpg Graphic file (type jpg)
- <use images/Themba.jpg>
-Package pdftex.def Info: images/Themba.jpg used on input line 163.
-(pdftex.def)             Requested size: 390.0pt x 292.49542pt.
-
-[8 <./images/Themba.jpg>] [9]
-<images/graph1.png, id=43, 980.66376pt x 465.74pt>
-File: images/graph1.png Graphic file (type png)
- <use images/graph1.png>
-Package pdftex.def Info: images/graph1.png used on input line 204.
-(pdftex.def)             Requested size: 390.0pt x 185.21959pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
-
- []
-
-[10 <./images/graph1.png>] [11] (networkVisualization.aux) ) 
+[2] (FuncRequirements.aux) ) 
 Here is how much of TeX's memory you used:
- 1660 strings out of 493622
- 22147 string characters out of 3133099
- 81791 words of memory out of 3000000
- 5061 multiletter control sequences out of 15000+200000
+ 1893 strings out of 493622
+ 26035 string characters out of 3133099
+ 83188 words of memory out of 3000000
+ 5300 multiletter control sequences out of 15000+200000
  9445 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,4n,19p,463b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Hlengekil
-e/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmcsc10.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on networkVisualization.pdf (12 pages, 1070013 bytes).
+ 27i,4n,19p,251b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Hlen
+gekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmti12.pfb>
+Output written on FuncRequirements.pdf (4 pages, 138449 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
