@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  27 MAY 2016 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  27 MAY 2016 22:26
 entering extended mode
 **./FuncRequirements.tex
 (FuncRequirements.tex
@@ -461,55 +461,48 @@ Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 36.
  [1
 
 {C:/Users/Hlengekile/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012
--quad-core-phones.jpg>] [2]
-(FuncRequirements.toc
-! Misplaced alignment tab character &.
-<argument> ...rline {4.1}Use Case Identification &
-                                                   Prioritization
-l.5 ...se Case Identification & Prioritization}{2}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-)
+-quad-core-phones.jpg>] (FuncRequirements.toc)
 \tf@toc=\write3
 \openout3 = `FuncRequirements.toc'.
 
  [1]
-! Misplaced alignment tab character &.
-<argument> Use Case Identification &
-                                     Prioritization
-l.54 ...{Use Case Identification & Prioritization}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+Overfull \hbox (84.8909pt too wide) in paragraph at lines 58--59
+\OT1/cmr/m/n/12 cam-eras to get im-ages which can be found on https://www.i-tra
+ffic.co.za/traffic/cameras.aspx.
+ []
 
-[2] (FuncRequirements.aux) ) 
+[2] <Scope.jpg, id=16, 937.5025pt x 598.235pt>
+File: Scope.jpg Graphic file (type jpg)
+ <use Scope.jpg>
+Package pdftex.def Info: Scope.jpg used on input line 60.
+(pdftex.def)             Requested size: 390.0pt x 248.85623pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
+
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.f
+d"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+ [3 <./Scope.jpg>] [4] (FuncRequirements.aux) ) 
 Here is how much of TeX's memory you used:
- 1893 strings out of 493622
- 26035 string characters out of 3133099
- 83188 words of memory out of 3000000
- 5300 multiletter control sequences out of 15000+200000
+ 1914 strings out of 493622
+ 26416 string characters out of 3133099
+ 85188 words of memory out of 3000000
+ 5317 multiletter control sequences out of 15000+200000
  9445 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,4n,19p,251b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Hlen
-gekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti12.pfb>
-Output written on FuncRequirements.pdf (4 pages, 138449 bytes).
+ 27i,4n,19p,684b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Hlengekile/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlen
+gekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10
+.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Hlengekile/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on FuncRequirements.pdf (5 pages, 252227 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 40 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
