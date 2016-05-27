@@ -89,13 +89,24 @@ Reliability is of utmost importance because a lot of people will be using the ap
 \item The main focus will be placed on the prevention of faults. This will be done by testing the system extensively and working towards fixing any fault that is encountered.
 \end{itemize}
 \subsection{Integration and Access Channel Requirements}
+When considering the access channels of our Traffic Camera Image Analysis System, there are numerous cases to consider; the human users of the system, whether the system  needs to access other systems and whether any other systems may need to access the system. In this system at this initial phase of development, only human users need to access the system and our system needs to access other systems. For both of these cases one then needs to consider through which ways they will access the system, what functionality the system requires these access channels to have and how these access channels will provide said functionality. \\
+ 
+The Traffic Camera Image Analysis System required by our client (will from herewith be referred to as the system or the target system) is a system through which users are able to receive up-to-date traffic information for routes which they set up. The users of the system, need a channel through which they can use the system. For this an Android Application will be utilized, thus users will access the system, for which the business processes will lie in the web server, through this Android Application. \\
+
+On the other hand, our system will need to be able to help users set up their routes by obtaining a departure and arrival point from the users, and using a map to get the possible routes, then combined with the traffic information that results from our image analysis and other metrics perform route optimization. Thus our system needs access to geographical maps. For this our system will integrate with Google Maps, using its Android API.\\
+
+Our systems business processes will communicate with the Android Application through Google Cloud Messaging(GCM) which is used to send notification data and information from a web server to a mobile device. GCM makes use of Google APIs and SDKs and can send push notifications, deep-linking commands and application data to a mobile device. \\
+GCM works by having the client send a registration API request to the GCM interface, therafter GCM responds with a unique identifer known as a GCM registration ID which uniquely identifies the mobile device from which the application is running without sending any personal or device information. Therafter to send data, a API POST request is sent to the GCM Authentication Service, which contains the registration ID, once this ID is successfully verified, the Authentication Service returns an authentication token, which is sent together with the registration ID to the GCM Service so that it can be delivered to the device. \\
+
+The benefits of using GCM for communication between the server and the application is that the quality requirement, security, is already met. there is no need to store log in details and user information in a database, thus also reducing the computational load.
+
 \subsection{Architectural Constraints}
 \subsubsection{Technologies}
 \begin{itemize}
 \item Python: Python will be used to implement the web server of the system which will perform the necessary processing of data and after completion, the server will send the data to the mobile application via Google Cloud Messaging.
-\item OpenCv: OpenCv is an image processing library that the server will make use of to process the traffic images from SANRAL.
+\item OpenCV: OpenCV is an image processing library that the server will make use of to process the traffic images from SANRAL.
 \item Android Studio: Android Studio will be used to design a mobile application on which traffic reports will be displayed.
 \end{itemize}
 \section{Initial Software Architecture Design}
-\includegraphics[width=\textwidth]{2012-quad-core-phones.jpg}
+%\includegraphics[width=\textwidth]{}
 \end{document}
