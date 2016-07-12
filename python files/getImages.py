@@ -33,7 +33,7 @@ while i<66:
                         pass
     try:
         link = driver.find_element_by_link_text("Next").click()
-        time.sleep(2)
+        time.sleep(1)
     except:
         pass
 ##for link in soup.findAll('a', href=True, text='Next'):
