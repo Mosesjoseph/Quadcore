@@ -1,21 +1,47 @@
+from selenium import webdriver
 from urllib import urlopen
 from bs4 import BeautifulSoup
 import re
+import time
 
-page=urlopen("https://www.i-traffic.co.za/traffic/cameras.aspx").read()
+##driver = webdriver.Firefox()
+driver = webdriver.PhantomJS()
+driver.get("https://www.i-traffic.co.za/traffic/cameras.aspx")
 
-soup = BeautifulSoup(page, 'html.parser')
+##page=urlopen("https://www.i-traffic.co.za/traffic/cameras.aspx").read()
+i=0
+while i<66:
+    print "**************************Page:%d*****************************" % i
+    i+=1
+    page=driver.page_source
+    soup = BeautifulSoup(page, 'html.parser')
 
-for img in soup.findAll('img'):
-	img_source=img.get('src')
-	print (img_source)
-	camIDregex=re.compile('CCTV\s(.*)')
-	camID=re.findall(camIDregex,img_source)
-	print camID
-	camStr=str(camID)
-	imgFile=open("traffic/"+camStr+".jpg","wb")
-	try:
-		imgFile.write(urlopen(img_source).read())
-		imgFile.close()
-	except:
-		pass
+    for img in soup.findAll('img'):
+	    img_source=img.get('src')
+	    print (img_source)
+	    camIDregex=re.compile('&deviceID=(.*)')
+	    camID=re.findall(camIDregex,img_source)
+            if len(camID) == 1:
+                print camID[0]
+	        camStr=str(camID[0])
+                camStr=camStr.replace("/","-")
+                imgFile=open("traffic/"+camStr+".jpg","wb")
+                try:
+                        imgFile.write(urlopen(img_source).read())
+                        imgFile.close()
+                except:
+                        pass
+    try:
+        link = driver.find_element_by_link_text("Next").click()
+        time.sleep(2)
+    except:
+        pass
+##for link in soup.findAll('a', href=True, text='Next'):
+##    print link['href']
+
+
+##page = urlopen(link).read()
+##soup = BeautifulSoup(page, 'html.parser')
+
+##while link!="":
+##    link=soup.find('a', href=True, text='Next')
