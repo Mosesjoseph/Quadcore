@@ -4,6 +4,30 @@ from bs4 import BeautifulSoup
 import re
 import time
 
+def wait_for(condition_function):
+    start_time = time.time()
+    while time.time() < start_time + 2:
+        if condition_function():
+            return True
+        else:
+            time.sleep(0.1)
+    raise Exception(
+        'Timeout waiting for {}'.format(condition_function.__name__)
+    )
+
+def click_through_to_new_page(link_text):
+    link = driver.find_element_by_link_text(link_text)
+    link.click()
+
+    def link_has_gone_stale():
+        try:
+            # poll the link with an arbitrary call
+            link.find_elements_by_id('doesnt-matter') 
+            return False
+        except StaleElementReferenceException:
+            return True
+
+    wait_for(link_has_gone_stale)
 ##driver = webdriver.Firefox()
 driver = webdriver.PhantomJS()
 driver.get("https://www.i-traffic.co.za/traffic/cameras.aspx")
@@ -32,16 +56,7 @@ while i<66:
                 except:
                         pass
     try:
-        link = driver.find_element_by_link_text("Next").click()
-        time.sleep(1)
+        click_through_to_new_page('Next')
     except:
         pass
-##for link in soup.findAll('a', href=True, text='Next'):
-##    print link['href']
 
-
-##page = urlopen(link).read()
-##soup = BeautifulSoup(page, 'html.parser')
-
-##while link!="":
-##    link=soup.find('a', href=True, text='Next')
