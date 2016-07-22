@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Themba Mbhele\AndroidStudioProjects\cameraanalysis2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="96163e4531775ce6e62adb623a3da1e222a878e7">
+        <dex dex="C:\Users\Themba Mbhele\AndroidStudioProjects\cameraanalysis2\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e6a297e44a9193c169ae0139f4fd7564f310c18b.jar" />
+    </item>
+
+</items>
