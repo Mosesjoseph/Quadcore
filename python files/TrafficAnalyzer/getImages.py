@@ -54,7 +54,7 @@ while i<66:
                 print camID[0]
 	        camStr=str(camID[0])
                 camStr=camStr.replace("/","-")
-                imgFile=open("trafficp/"+camStr+".jpg","wb")
+                imgFile=open("traffic_images/"+camStr+".jpg","wb")
                 try:
                         imgFile.write(urlopen(img_source).read())
                         imgFile.close()
