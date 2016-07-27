@@ -1,0 +1,11 @@
+PhantomJS is launching GhostDriver...
+[INFO  - 2016-07-21T16:37:06.276Z] GhostDriver - Main - running on port 52696
+[INFO  - 2016-07-21T16:37:07.227Z] Session [5d024270-4f61-11e6-b2d0-55594e619454] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-07-21T16:37:07.227Z] Session [5d024270-4f61-11e6-b2d0-55594e619454] - page.customHeaders:  - {}
+[INFO  - 2016-07-21T16:37:07.227Z] Session [5d024270-4f61-11e6-b2d0-55594e619454] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-07-21T16:37:07.227Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5d024270-4f61-11e6-b2d0-55594e619454
+[ERROR - 2016-07-21T16:37:21.849Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469119041829
+[ERROR - 2016-07-21T16:37:25.134Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469119045119
+[ERROR - 2016-07-21T16:37:31.406Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469119051368
+[ERROR - 2016-07-21T16:37:35.930Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469119055895
+[ERROR - 2016-07-21T16:37:42.743Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469119062681
