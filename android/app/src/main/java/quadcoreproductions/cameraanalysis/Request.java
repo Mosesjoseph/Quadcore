@@ -1,4 +1,4 @@
-package quadcoreproductions.request;
+package quadcoreproductions.cameraanalysis;
 
 /**
  * Created by Themba Mbhele on 2016/07/24.
