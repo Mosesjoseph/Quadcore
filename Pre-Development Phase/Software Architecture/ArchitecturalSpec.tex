@@ -58,6 +58,9 @@ As a commuter, traffic is something that is a part of everyday life, and it is n
 In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images which can be found on https://www.i-traffic.co.za/traffic/cameras.aspx. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
 
 \section{Architectural Requirements}
+\subsection{Architectural Scope}
+The primary responsibility of the system is the gathering of traffic images provided by the various cameras that are situated at a number of locations by the courtesy of SANRAL through their web interface, in order to perform the necessary analysis on each image. The analysis phase of the system is concerned with determining how much traffic one would encounter if using a route where traffic images are available so that a report may be generated and returned to a client.
+Another responsibility of the system, which aims to generate reports in a timely manner, is the persistance of the results that are obtained through the analysis process. By persisting the results, the analysis phase does not need to be done when it is not necessary to do so. This will greatly increase the performance and efficiency of the system.
 \subsection{Quality Requirements}
 \subsubsection{Usability}
 Usability is the key component of the system because user satisfaction is a high priority for this system because it aims to alleviate a problem that individuals experience daily. The aim is to create that is easy to understand and thus, easy to learn how to us. \\
