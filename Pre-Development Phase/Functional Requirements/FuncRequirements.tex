@@ -3,6 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{siunitx}
 
 \begin{document}
 \begin{titlepage}
@@ -37,7 +40,7 @@ Mbhele \textsc{Themba}\\
 
 {\large University of Pretoria, Department of Computer Science}\\
 
-{\large 27 May 2016}\\[3cm]
+{\large 29 July 2016}\\[3cm]
 
 \vfil
 
@@ -46,6 +49,36 @@ Mbhele \textsc{Themba}\\
 \newpage
 \tableofcontents
 \newpage
+
+\newpage
+\section{Versions}
+\begin{table}[]
+\begin{center}
+    \caption{Document History}
+    \pgfplotstabletypeset[
+      multicolumn names, % allows to have multicolumn names
+      col sep=comma, % the seperator in our .csv file
+      display columns/0/.style={
+		column name=$Value 1$, % name of first column
+		column type={S},string type}, 
+      display columns/1/.style={
+		column name=$Value 2$,
+		column type={S},string type},
+	  display columns/2/.style={
+		column name=$Value 3$,
+		column type={S},string type},
+	  display columns/3/.style={
+		column name=$Value 2$,
+		column type={S},string type},
+	  every head row/.style={
+		before row={\toprule},
+		after row={\midrule}},
+	  every last row/.style={after row=\bottomrule},
+    ]{versionTable.csv} % filename/path to file
+  \end{center}
+\end{table}
+\newpage
+
 \section{Introduction}
 This document describes the functional requirements and application design of the Traffic Camera Image Analysis System. The target system will run on a web server  and be accessed by users on an Android Application which will provide the users with the necessary functionality to access real-time traffic information that assists them with things such as avoiding traffic and choosing the best alternative routes. 
 
@@ -57,21 +90,42 @@ As a commuter, traffic is something that is a part of everyday life, and it is n
 
 In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images which can be found on https://www.i-traffic.co.za/traffic/cameras.aspx. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
 \section{System Scope}
-\includegraphics[width=\textwidth]{Scope.jpg}
+\includegraphics[width=\textwidth]{images/System_Scope.jpg}
 \section{Functional Requirements}
 \subsection{Use Cases}
+The use cases for our system are described below. These use cases are the services that provide the user of the application some value. The following uses are listed in order of prioritization:
 \begin{itemize}
-\item Route Set-up
-\item Routes Management
-\item Notification Scheduling
-\item View Route Information
-\item Route Optimization
-\item Route Selection
-\item View Traffic Information
+\item Add Route 			(Critical)
+\item Get Route Traffic		(Critical)
+\item Modify Route			(Critical)
+\item Delete Route			(Critical)
+\item Schedule Notification (Important)
+\item Route Optimization 	(Nice To Have)
 \end{itemize}
 \subsection{Service Contracts}
+For each of the above services described above, there are are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in case the service fails.
+
+\subsubsection{Add Route}
+\subsubsection{Modify Route} 
+\subsubsection{Get Route Traffic}
+
 \subsection{Required Functionality}
+The use cases make use of other lower level functions in order to achieve their purpose. In the below diagrams for each high level use case, the lower level use cases that are required are described.
+ 
+\subsubsection{Add Route}
+\subsubsection{Modify Route} 
+\subsubsection{Delete Route}
+\subsubsection{Get Route Traffic}
+
 \subsection{Process Specification}
+
+\subsubsection{Add Route}
+\subsubsection{Modify Route} 
+\subsubsection{Get Route Traffic}
+
 \section{Domain Model}
+
+
 \section{Open Issues}
+
 \end{document}
