@@ -87,9 +87,13 @@ For this project we aim to achieve a system that makes use of images obtained fr
 \section{Background}
 As a commuter, traffic is something that is a part of everyday life, and it is not one of the more pleasurable aspects of life. Already there is software in place that assists us in dealing with this problem, such as Google Maps. This software uses the crowd-sourcing of GPS data in order to provide their up-to-date traffic information.
 
-In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images which can be found on https://www.i-traffic.co.za/traffic/cameras.aspx. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
+In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
 \section{System Scope}
 \includegraphics[width=\textwidth]{images/System_Scope.jpg}
+
+The purpose of this system as stated earlier, is to provide the user with traffic information based on image analysis from images accessed from highway cameras. Thus the user will need to be able to access services that allow the achievement of this goal.
+
+The scope of the system thus includes the tasks the user can access such as add route, modify route, delete route and get route traffic.
 \section{Functional Requirements}
 \subsection{Use Cases}
 The use cases for our system are described below. These use cases are the services that provide the user of the application some value. The following uses are listed in order of prioritization:
@@ -106,18 +110,50 @@ For each of the above services described above, there are are pre-conditions tha
 
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
+
+
+\emph{Pre-Condition: }
+Valid route boundaries.
+Route does not already exist.
+\emph{Post-Condition: }
+New route is created and stored.
+
+This use case creates a new route and stores it so that it can be used in requests for traffic information. It first checks that the route to be created is valid and does not already exist in storage, then it creates and stores the route. In the case that the route exists an exception is raised.
 \subsubsection{Modify Route} 
 \includegraphics[width=\textwidth]{images/scModify_Route.jpg}
+\emph{Pre-Condition: }
+Route exists.
+\emph{Post-Condition: }
+Route is modified and the modified route is stored. 
+
+This use case makes changes to existing routes and stores the changes. In order to do this, this use case first checks if the route exists, if so it then makes the necessary changes to the route and then stores the route. If the route does not exist an exception is raised. 
 \subsubsection{Delete Route}
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
+\emph{Pre-Condition: }
+Route exists
+\emph{Post-Condition: }
+Route is removed
+This use case removes an existing route. Before it does this it checks if the route exists in storage then removes it. In the case that the route does not exist an exception is raised.
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/scDetermine_Traffic.jpg}
-\subsubsection{Send Notification}
-\includegraphics[width=\textwidth]{images/scSend_Notification.jpg}
+\emph{Pre-Condition: }
+Route consists of camera locations.
+Camera locations on route has valid images.
+\emph{Post-Condition: }
+Traffic information for route is generated.
 
+This use case generates traffic information based on a route provided with the request. To do this it first checks if the route covers any of the camera locations, if not no traffic information is generated and an exception is raised. Otherwise it continues and retrieves the images for the camera's within the route, thereafter it checks if these images are valid, if all are invalid, no traffic information is generated, it then performs image analysis on the valid images and determine the traffic levels and generates traffic information for the route.
+
+\subsubsection{Schedule Notification}
+\includegraphics[width=\textwidth]{images/scSchedule_Notification.jpg}
+\emph{Pre-Condition: }
+Valid times
+\emph{Post-Condition: }
+Notification is scheduled
+
+This use case allows the user to schedule notifications of traffic information at specific times. This is done by allowing the user to specify a time to be notified about a route when adding or modifying it. This time is then used to schedule automated traffic information requests.
 \subsection{Required Functionality}
 The use cases make use of other lower level functions in order to achieve their purpose. In the below diagrams for each high level use case, the lower level use cases that are required are described.
- 
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/Add_Route.jpg}
 \subsubsection{Modify Route} 
@@ -128,7 +164,7 @@ The use cases make use of other lower level functions in order to achieve their 
 \includegraphics[width=\textwidth]{images/Get_Route_Traffic.jpg}
 
 \subsection{Process Specification}
-This section
+This section describes the process for completing the Add Route, Modify Route and Get Route Traffic Sections.
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
 \subsubsection{Modify Route}
@@ -138,6 +174,7 @@ This section
 
 \section{Domain Model}
 \includegraphics[width=\textwidth]{images/Domain_Model.jpg}
+
 \section{Open Issues}
 
 \end{document}
