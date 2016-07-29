@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumitem}
+%\usepackage{pgfplotstable}
+%\usepackage{booktabs}
 
 \begin{document}
 \begin{titlepage}
@@ -37,7 +39,7 @@ Mbhele \textsc{Themba}\\
 
 {\large University of Pretoria, Department of Computer Science}\\
 
-{\large 27 May 2016}\\[3cm]
+{\large 29 July 2016}\\[3cm]
 
 \vfil
 
@@ -45,6 +47,35 @@ Mbhele \textsc{Themba}\\
 
 \newpage
 \tableofcontents
+\newpage
+
+\newpage
+\section{Version History}
+%\begin{table}[]
+%\begin{center}
+%    \caption{Document History}
+%    \pgfplotstabletypeset[
+%      multicolumn names, % allows to have multicolumn names
+%      col sep=comma, % the seperator in our .csv file
+%      display columns/0/.style={
+%		column name=$Value 1$, % name of first column
+%		column type={S},string type}, 
+%      display columns/1/.style={
+%		column name=$Value 2$,
+%		column type={S},string type},
+%	  display columns/2/.style={
+%		column name=$Value 3$,
+%		column type={S},string type},
+%	  display columns/3/.style={
+%		column name=$Value 2$,
+%		column type={S},string type},
+%	  every head row/.style={
+%		before row={\toprule},
+%		after row={\midrule}},
+%	  every last row/.style={after row=\bottomrule},
+%    ]{versionTable.csv} % filename/path to file
+%  \end{center}
+%\end{table}
 \newpage
 \section{Introduction}
 This document describes the architectural requirements of the Traffic Camera Image Analysis System. The target system will run on a web server  and be accessed by users on an Android Application which will provide the users with the necessary functionality to access real-time traffic information that assists them with things such as avoiding traffic and choosing the best alternative routes.
