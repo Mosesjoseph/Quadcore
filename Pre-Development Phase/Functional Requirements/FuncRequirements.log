@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  29 JUL 2016 02:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.21)  29 JUL 2016 03:14
 entering extended mode
 **./FuncRequirements.tex
 (FuncRequirements.tex
@@ -415,6 +415,34 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks17
 \enit@inbox=\box26
 \enitdp@description=\count106
+)
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\book
+tabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen106
+\lightrulewidth=\dimen107
+\cmidrulewidth=\dimen108
+\belowrulesep=\dimen109
+\belowbottomsep=\dimen110
+\aboverulesep=\dimen111
+\abovetopsep=\dimen112
+\cmidrulesep=\dimen113
+\cmidrulekern=\dimen114
+\defaultaddspace=\dimen115
+\@cmidla=\count107
+\@cmidlb=\count108
+\@aboverulesep=\dimen116
+\@belowrulesep=\dimen117
+\@thisruleclass=\count109
+\@lastruleclass=\count110
+\@thisrulewidth=\dimen118
+)
+("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbati
+m.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read1
 ) (FuncRequirements.aux)
 \openout1 = `FuncRequirements.aux'.
 
@@ -434,17 +462,17 @@ LaTeX Font Info:    ... okay on input line 9.
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen106
+\scratchcounter=\count111
+\scratchdimen=\dimen119
 \scratchbox=\box27
-\nofMPsegments=\count108
-\nofMParguments=\count109
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen107
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks19
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen120
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks21
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 26.
@@ -465,88 +493,87 @@ Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 38.
 \tf@toc=\write3
 \openout3 = `FuncRequirements.toc'.
 
- [1] [2] <images/System_Scope.jpg, id=15, 965.6075pt x 594.22pt>
+ [1] <images/System_Scope.jpg, id=12, 965.6075pt x 594.22pt>
 File: images/System_Scope.jpg Graphic file (type jpg)
 
 <use images/System_Scope.jpg>
-Package pdftex.def Info: images/System_Scope.jpg used on input line 92.
+Package pdftex.def Info: images/System_Scope.jpg used on input line 81.
 (pdftex.def)             Requested size: 390.0pt x 239.99588pt.
- [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
-
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
 
 ("C:\Users\Hlengekile\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.f
 d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
- [4 <./images/System_Scope.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 115--120
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+ [3 <./images/System_Scope.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 113--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--144
+Underfull \hbox (badness 10000) in paragraph at lines 128--133
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
 
  []
 
-<images/Add_Route.jpg, id=26, 893.3375pt x 615.29875pt>
+<images/Add_Route.jpg, id=23, 893.3375pt x 615.29875pt>
 File: images/Add_Route.jpg Graphic file (type jpg)
 
 <use images/Add_Route.jpg>
-Package pdftex.def Info: images/Add_Route.jpg used on input line 158.
+Package pdftex.def Info: images/Add_Route.jpg used on input line 147.
 (pdftex.def)             Requested size: 390.0pt x 268.61983pt.
- [6]
-<images/Modify_Route.jpg, id=31, 903.375pt x 601.24625pt>
+ [5]
+<images/Modify_Route.jpg, id=27, 903.375pt x 601.24625pt>
 File: images/Modify_Route.jpg Graphic file (type jpg)
 
 <use images/Modify_Route.jpg>
-Package pdftex.def Info: images/Modify_Route.jpg used on input line 167.
+Package pdftex.def Info: images/Modify_Route.jpg used on input line 156.
 (pdftex.def)             Requested size: 390.0pt x 259.56754pt.
- [7 <./images/Add_Route.jpg>]
-<images/Delete_Route.jpg, id=35, 741.77126pt x 433.62pt>
+ [6 <./images/Add_Route.jpg>]
+<images/Delete_Route.jpg, id=32, 741.77126pt x 433.62pt>
 File: images/Delete_Route.jpg Graphic file (type jpg)
 
 <use images/Delete_Route.jpg>
-Package pdftex.def Info: images/Delete_Route.jpg used on input line 175.
+Package pdftex.def Info: images/Delete_Route.jpg used on input line 164.
 (pdftex.def)             Requested size: 390.0pt x 227.98473pt.
- [8 <./images/Modify_Route.jpg>]
-<images/Get_Route_Traffic.jpg, id=39, 1031.855pt x 566.115pt>
+ [7 <./images/Modify_Route.jpg>]
+<images/Get_Route_Traffic.jpg, id=36, 1031.855pt x 566.115pt>
 File: images/Get_Route_Traffic.jpg Graphic file (type jpg)
 
 <use images/Get_Route_Traffic.jpg>
-Package pdftex.def Info: images/Get_Route_Traffic.jpg used on input line 181.
+Package pdftex.def Info: images/Get_Route_Traffic.jpg used on input line 170.
 (pdftex.def)             Requested size: 390.0pt x 213.96841pt.
- [9 <./images/Delete_Route.jpg> <./images/Get_Route_Traffic.jpg>] [10] (FuncReq
-uirements.aux) ) 
+ [8 <./images/Delete_Route.jpg> <./images/Get_Route_Traffic.jpg>] [9] (FuncRequ
+irements.aux) ) 
 Here is how much of TeX's memory you used:
- 1933 strings out of 493622
- 26981 string characters out of 3133099
- 85188 words of memory out of 3000000
- 5332 multiletter control sequences out of 15000+200000
+ 2018 strings out of 493622
+ 28350 string characters out of 3133099
+ 86518 words of memory out of 3000000
+ 5411 multiletter control sequences out of 15000+200000
  9098 words of font info for 32 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,5n,19p,684b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Hlengekile/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
-/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb>
-Output written on FuncRequirements.pdf (11 pages, 773053 bytes).
+<C:/Users/Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hlengekile/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Hlengekile/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+Hlengekile/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb>
+Output written on FuncRequirements.pdf (10 pages, 772423 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
