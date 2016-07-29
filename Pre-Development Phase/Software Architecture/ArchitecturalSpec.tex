@@ -127,6 +127,8 @@ The communication between Google maps servers and the Android device makes us of
 \subsubsection{Communication between the Android device and the Django server}
 This communication is also initiated by the the Android device. In this case the Android device will be requesting information about the cameras in which a point falls in the range of lat-long pairs of each camera. The Android device will run a GET request to the server with the relevant lat-long information then the server will respond to that request with a JSON array which has all the cameras that matched that point.
 
+\subsubsection{Communication between Django server and itraffic website}
+This communication is initiated by the server machine. The server creates http requests to the itraffic website then pull the images from the 65 pages of camera coverage. After pulling the images they are processed and their traffic level is persisted directly to the database. The Django server will request camera information from the itraffic website with a GET request then the itraffic website responds in XML-formatted text or JSON-formatted text depending on what was specified when the request to the server was made.
 
 \subsection{Architectural Constraints}
 \subsubsection{Technologies}
