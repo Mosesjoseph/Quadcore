@@ -3,12 +3,12 @@
 \contentsline {section}{\numberline {3}Background}{2}
 \contentsline {section}{\numberline {4}Architectural Requirements}{3}
 \contentsline {subsection}{\numberline {4.1}Architectural Scope}{3}
-\contentsline {subsection}{\numberline {4.2}Quality Requirements}{3}
-\contentsline {subsubsection}{\numberline {4.2.1}Usability}{3}
+\contentsline {subsection}{\numberline {4.2}Quality Requirements}{4}
+\contentsline {subsubsection}{\numberline {4.2.1}Usability}{4}
 \contentsline {subsubsection}{\numberline {4.2.2}Scalability}{4}
-\contentsline {subsubsection}{\numberline {4.2.3}Maintainability}{4}
-\contentsline {subsubsection}{\numberline {4.2.4}Reliability}{4}
+\contentsline {subsubsection}{\numberline {4.2.3}Maintainability}{5}
+\contentsline {subsubsection}{\numberline {4.2.4}Reliability}{5}
 \contentsline {subsection}{\numberline {4.3}Integration and Access Channel Requirements}{5}
-\contentsline {subsection}{\numberline {4.4}Architectural Constraints}{5}
-\contentsline {subsubsection}{\numberline {4.4.1}Technologies}{5}
-\contentsline {section}{\numberline {5}Initial Software Architecture Design}{6}
+\contentsline {subsection}{\numberline {4.4}Architectural Constraints}{6}
+\contentsline {subsubsection}{\numberline {4.4.1}Technologies}{6}
+\contentsline {section}{\numberline {5}Initial Software Architecture Design}{7}
