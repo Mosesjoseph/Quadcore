@@ -16,15 +16,17 @@
 \section{Introduction}
 This document contains the testing methods that we have used to test the Traffic Camera Image Analysis system that we are currently developing for our final project for COS301 project. We will document the tests that are currently in place and have been run, and future tests that we still plan to design as we continue to develop the system.
 
-\section{Plan for Testing}
+\section{Plan for Testing (Android)}
 \subsection{Testing tools}
 As the functions that are being used by the system were developed, tests were designed to test their functionality to verify that the functions do what they are intended to do so that as we continue with the development, we use functions that have been thoroughly tested and have been verified as correct.
 On the android side of the system, JUnit was used to conduct all unit tests. We
 made use of a testing framework because it allows us to automate the testing process because we do not have to manually run tests for each function that we intend to test, instead JUnit will run all of the tests for us provided that we
 have properly annotated our functions and made use of assertions.
-\subsection{Running the unit test}
-To run the unit test for Android, an internet connection has to be established and an IDE such as eclipse, android studio or IntelliJ must be used. Once that infrastructure is in place, and the test have all been written, executing the tests simply involves right clicking on the folder in which the unit tests are located and choosing the "run tests" options. this will execute all the tests in that folder and generate a report displaying the results of the tests.
-\section{Testing python on the server}
+\subsection{Running the unit tests}
+To run the unit test for Android, an internet connection has to be established and an IDE such as eclipse, android studio or IntelliJ must be used. Once that infrastructure is in place, and the tests have all been written, executing the tests simply involves right clicking on the folder in which the unit tests are located and choosing the "run tests" options. this will execute all the tests in that folder and generate a report displaying the results of the tests.
+\subsection{Plans for the future}
+Once the application has been completed, we plan to conduct usability tests where we gather a number of people to test the application. The aim of these tests will be to determine whether the user interface of the application is user friendly and the test will also reveal any flaws in the system
+\section{Plan for Testing (Server)}
 \subsection{getImages.py}
 To test the script, the following must be met
 \begin{itemize}
