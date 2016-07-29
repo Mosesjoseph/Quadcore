@@ -10,7 +10,7 @@
 \begin{titlepage}
 \center
 
-\textsc{\LARGE Architectural Requirements}\\[1.5cm]
+\textsc{\LARGE Application Design and Functional Requirements}\\[1.5cm]
 \textsc{\Large Project: Traffic Camera Image Analysis}\\[1.5cm]
 \textsc{\large Client: DPSS, CSIR}\\[0.5cm]
 \textsc{\large Team: Quadcore Productions}\\[0.5cm]
@@ -170,6 +170,7 @@ The Delete Route use case makes use of the following lower level functions to as
 \includegraphics[width=\textwidth]{images/Get_Route_Traffic.jpg}
 The Get Route Traffic use case makes use of the following lower level functions, both within and outside the Routes module to determine the traffic of a route and send it back to the user:
 \begin{itemize}
+\item \textbf{checkForCameras -} This function checks if the route passes b y any of the available cameras.
 \item \textbf{fetchImage -} This function fetches an image from the camera at the specified location.
 \item \textbf{analyseImage -} This function performs image analysis in order to determine the traffic level in that location
 \item \textbf{composeTrafficInfo -} This function composes all the traffic levels that make up the route and constructs a preliminary "traffic info report".
