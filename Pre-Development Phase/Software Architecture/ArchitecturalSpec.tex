@@ -128,9 +128,14 @@ The communication between Google maps servers and the Android device makes us of
 This communication is also initiated by the the Android device. In this case the Android device will be requesting information about the cameras in which a point falls in the range of lat-long pairs of each camera. The Android device will run a GET request to the server with the relevant lat-long information then the server will respond to that request with a JSON array which has all the cameras that matched that point.
 
 \subsubsection{Communication between Django server and itraffic website}
+SANRAL provides the images and also an API which has information about each camera on the road such as the camera's latitude and longitude coordinates. This information will be very useful when users request information from the server. The itraffic website currently has 644 camera feeds which are updated every minute. The script executed from the server will pull these images from the itraffic website, perform analysis and persist the results of the usable images.On the server side, the images will be analyzed and linked to their physical location on the map to help determine which cameras correspond to a request made by the user.\\ \\	\\ \\
 This communication is initiated by the server machine. The server creates http requests to the itraffic website then pull the images from the 65 pages of camera coverage. After pulling the images they are processed and their traffic level is persisted directly to the database. The Django server will request camera information from the itraffic website with a GET request then the itraffic website responds in XML-formatted text or JSON-formatted text depending on what was specified when the request to the server was made.
 
 \subsection{Architectural Constraints}
+\subsubsection{Network connectivity}
+One of the major constraints is network speed, if the android device does not have a healthy connection to the network this will make the mobile application to be slow due to waiting for responses from the external systems that it has to communicate with.
+\subsubsection{itraffic website}
+The API does enforce a limit of one request per minute, this is more evidence for the data to be persisted on a database. At the time of writing, it takes four minutes to fetch all 644 images from the SANRAL website. Thus, the one minute limitation will not impact the operation of the server or mobile application.
 \subsubsection{Technologies}
 \begin{itemize}
 \item Python: Python will be used to implement the web server of the system which will perform the necessary processing of data and after completion, the server will send the data to the mobile application via Google Cloud Messaging.

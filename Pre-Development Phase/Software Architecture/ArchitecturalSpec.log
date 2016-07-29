@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  29 JUL 2016 08:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  29 JUL 2016 08:40
 entering extended mode
 **./ArchitecturalSpec.tex
 (ArchitecturalSpec.tex
@@ -404,12 +404,17 @@ Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 38.
  [1
 
 {C:/Users/MOSCO/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./2012-quad
--core-phones.jpg>] (ArchitecturalSpec.toc)
+-core-phones.jpg>] (ArchitecturalSpec.toc
+Overfull \hbox (3.45566pt too wide) in paragraph at lines 14--14
+ [][] []\OT1/cmr/m/n/12 Communication be-tween Django server and itraf-fic web-
+ 
+ []
+
+)
 \tf@toc=\write3
 \openout3 = `ArchitecturalSpec.toc'.
 
-
-[1]
+ [1]
 Overfull \hbox (84.8909pt too wide) in paragraph at lines 78--79
 \OT1/cmr/m/n/12 cam-eras to get im-ages which can be found on https://www.i-tra
 ffic.co.za/traffic/cameras.aspx.
@@ -444,12 +449,28 @@ Overfull \hbox (0.36107pt too wide) in paragraph at lines 127--127
 []\OT1/cmr/bx/n/12 Communication be-tween the An-droid de-vice and the Django
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
 [6] <Layers.jpg, id=31, 840.13875pt x 816.04875pt>
 File: Layers.jpg Graphic file (type jpg)
  <use Layers.jpg>
-Package pdftex.def Info: Layers.jpg used on input line 141.
+Package pdftex.def Info: Layers.jpg used on input line 146.
 (pdftex.def)             Requested size: 390.0pt x 378.81125pt.
- [7 <./Layers.jpg>] (ArchitecturalSpec.aux) ) 
+ [7]
+[8 <./Layers.jpg>] (ArchitecturalSpec.aux) ) 
 Here is how much of TeX's memory you used:
  1929 strings out of 493634
  27228 string characters out of 3135239
@@ -458,16 +479,16 @@ Here is how much of TeX's memory you used:
  9445 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,4n,19p,685b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/MOSCO/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/MOSCO/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Use
-rs/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti12.pfb>
-Output written on ArchitecturalSpec.pdf (8 pages, 383721 bytes).
+<C:/Users/MOSCO/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/MOSCO/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/User
+s/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/MOSCO/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmti12.pfb>
+Output written on ArchitecturalSpec.pdf (9 pages, 385512 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

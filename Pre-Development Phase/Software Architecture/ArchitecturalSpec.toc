@@ -12,6 +12,8 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Communication between Android device and Google maps}{6}
 \contentsline {subsubsection}{\numberline {4.3.2}Communication between the Android device and the Django server}{6}
 \contentsline {subsubsection}{\numberline {4.3.3}Communication between Django server and itraffic website}{6}
-\contentsline {subsection}{\numberline {4.4}Architectural Constraints}{6}
-\contentsline {subsubsection}{\numberline {4.4.1}Technologies}{6}
-\contentsline {section}{\numberline {5}Initial Software Architecture Design}{7}
+\contentsline {subsection}{\numberline {4.4}Architectural Constraints}{7}
+\contentsline {subsubsection}{\numberline {4.4.1}Network connectivity}{7}
+\contentsline {subsubsection}{\numberline {4.4.2}itraffic website}{7}
+\contentsline {subsubsection}{\numberline {4.4.3}Technologies}{7}
+\contentsline {section}{\numberline {5}Initial Software Architecture Design}{8}
