@@ -24,17 +24,31 @@ made use of a testing framework because it allows us to automate the testing pro
 have properly annotated our functions and made use of assertions.
 \subsection{Running the unit test}
 To run the unit test for Android, an internet connection has to be established and an IDE such as eclipse, android studio or IntelliJ must be used. Once that infrastructure is in place, and the test have all been written, executing the tests simply involves right clicking on the folder in which the unit tests are located and choosing the "run tests" options. this will execute all the tests in that folder and generate a report displaying the results of the tests.
-\section{Testing Script to pull images from itraffic website}
+\section{Testing python on the server}
 \subsection{getImages.py}
 To test the script, the following must be met
 \begin{itemize}
 \item Python version 2.7
 \item There must be a folder with the name "traffic\_images"
 \item The computer where the script will be tested should have an internet connection
+\item Mysql server
 \item If Possible, you may verify if the itraffic website is operational.
 \item This script was written and tested on a UNIX environment and this is the environment where it should be tested.
 \item The "TrafficAnalyzer" Django project should be in the same folder as the "getImages.py". This is becauset the script makes use of the files in the Django project.
 \end{itemize}
 
 After the above requirements have been met,the script can be manually executed on the terminal or it may be executed.
+
+\subsection{Django project}
+The Django project will handle all the requests from the android device regarding camera information. The following is a list of the requirements for the Django application to work.
+\begin{itemize}
+\item Mysql server 5.6 or above
+\item Django 1.7.6
+\item python-mysql connector
+\item The project was developed in a UNIX environment.
+\item The server should have an internet connection.
+\item The port where the server is listening should be enabled. E.g 8000.
+\item The website also works with information form the itraffic website and thus it should be verified that the itraffic website is active to avoid avoid incorrect results from the server.
+\end{itemize}
+To Test the server, an Android device or a web browser may be used to send requests to the django application. Then the application should be able to respond with relevant information. Giving it known latitude-longitude combination and verify if the cameras returned are correct.
 \end{document}
