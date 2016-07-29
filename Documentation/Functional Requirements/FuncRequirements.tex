@@ -98,7 +98,7 @@ The use cases for our system are described below. These use cases are the servic
 For each of the above services described above, there are are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in case the service fails.
 
 \subsubsection{Add Route}
-%\includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
+\includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
 
 
 \textbf{Pre-Condition: }
@@ -109,7 +109,7 @@ New route is created and stored.\\
 
 This use case creates a new route and stores it so that it can be used in requests for traffic information. It first checks that the route to be created is valid and does not already exist in storage, then it creates and stores the route. In the case that the route exists an exception is raised.
 \subsubsection{Modify Route} 
-%\includegraphics[width=\textwidth]{images/scModify_Route.jpg}
+\includegraphics[width=\textwidth]{images/scModify_Route.jpg}
 \textbf{Pre-Condition: }
 Route exists.\\
 \textbf{Post-Condition: }
@@ -117,14 +117,14 @@ Route is modified and the modified route is stored.\\
 
 This use case makes changes to existing routes and stores the changes. In order to do this, this use case first checks if the route exists, if so it then makes the necessary changes to the route and then stores the route. If the route does not exist an exception is raised. 
 \subsubsection{Delete Route}
-%\includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
+\includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \textbf{Pre-Condition: }
 Route exists.\\
 \textbf{Post-Condition: }
 Route is removed\\
 This use case removes an existing route. Before it does this it checks if the route exists in storage then removes it. In the case that the route does not exist an exception is raised.
 \subsubsection{Get Route Traffic}
-%\includegraphics[width=\textwidth]{images/scDetermine_Traffic.jpg}
+\includegraphics[width=\textwidth]{images/scDetermine_Traffic.jpg}
 \textbf{Pre-Condition: }
 Route consists of camera locations.\\
 Camera locations on route has valid images.\\
@@ -134,7 +134,7 @@ Traffic information for route is generated.\\
 This use case generates traffic information based on a route provided with the request. To do this it first checks if the route covers any of the camera locations, if not no traffic information is generated and an exception is raised. Otherwise it continues and retrieves the images for the camera's within the route, thereafter it checks if these images are valid, if all are invalid, no traffic information is generated, it then performs image analysis on the valid images and determine the traffic levels and generates traffic information for the route.
 
 \subsubsection{Schedule Notification}
-%\includegraphics[width=\textwidth]{images/scSchedule_Notification.jpg}
+\includegraphics[width=\textwidth]{images/scSchedule_Notification.jpg}
 \textbf{Pre-Condition: }
 Valid times\\
 \textbf{Post-Condition: }
@@ -181,11 +181,11 @@ The Get Route Traffic use case makes use of the following lower level functions,
 \subsection{Process Specification}
 This section describes the process for completing the Add Route, Modify Route and Get Route Traffic Sections.
 \subsubsection{Add Route}
-%\includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
+\includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
 \subsubsection{Modify Route}
-%\includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
+\includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
 \subsubsection{Get Route Traffic}
-%\includegraphics[width=\textwidth]{images/psGet_Route_Traffic.jpg}
+\includegraphics[width=\textwidth]{images/psGet_Route_Traffic.jpg}
 
 \section{Domain Model}
 %\includegraphics[width=\textwidth]{images/Domain_Model.jpg}
