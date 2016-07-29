@@ -121,9 +121,11 @@ The system is implemented in a manner such that a different service provider can
 
 The system is available to clients in the form of a mobile application. The mobile application allows clients to set up routes for which they would like to receive traffic updates on. Once these routes have been set up, the client is able to switch between the routes and a traffic report will be generated on the selected route. The report that is generated is then conveyed to the client in both a graphical and a textual manner.
 
-\subsection{Communication between Android and Google maps}
+\subsubsection{Communication between Android device and Google maps}
 The communication between Google maps servers and the Android device makes us of an HTTP request from the device, requesting directions from the server. The server then responds with JSON-formatted response to the Android device. The response from Google maps has directions that must be taken by the user from the starting point to the ending point. These directions are in a form of lat-long pairs to guide the user. These lat-long pairs are sent to the server for response with camera information regarding whether or not a point is covered by the SANRAL cameras.
 
+\subsubsection{Communication between the Android device and the Django server}
+This communication is also initiated by the the Android device. In this case the Android device will be requesting information about the cameras in which a point falls in the range of lat-long pairs of each camera. The Android device will run a GET request to the server with the relevant lat-long information then the server will respond to that request with a JSON array which has all the cameras that matched that point.
 
 
 \subsection{Architectural Constraints}
