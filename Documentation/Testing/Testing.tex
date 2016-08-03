@@ -1,17 +1,69 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
+\usepackage{blindtext}
 \usepackage[utf8]{inputenc}
-
-\title{Testing}
-\author{Themba Mbhele (14007950)\\
-        Moses Mayimela (14019702)\\
-        Hlengekile Jita (14077893)\\
-        Mpho Baloyi (14133670)\\
-        }
-\date{29 July 2016}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{verbatim}
+\usepackage{makecell}
 
 \begin{document}
+\begin{titlepage}
+\center
 
-\maketitle
+\textsc{\LARGE Testing Documentation}\\[1.5cm]
+\textsc{\Large Project: Traffic Camera Image Analysis}\\[1.5cm]
+\textsc{\large Client: DPSS, CSIR}\\[0.5cm]
+\textsc{\large Team: Quadcore Productions}\\[0.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\textbf{Author(s):}\\
+Mpho \textsc{Baloyi}\\
+Hlengekile \textsc{Jita}\\
+Mayimela \textsc{Moses}\\
+Mbhele \textsc{Themba}\\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\textbf{Student number(s):} \\
+14133670\\ % Student number
+14077893\\
+14019702\\
+14007950\\
+\end{flushright}
+\end{minipage}\\
+
+\includegraphics[width=\textwidth]{2012-quad-core-phones.jpg}
+
+{\large University of Pretoria, Department of Computer Science}\\
+
+{\large 29 July 2016}\\[3cm]
+
+\vfil
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\newpage
+%\begin{comment}
+\begin{table}[ht]
+ \centering
+ \caption{Version History}
+ \label{tab:table1}
+ \begin{tabular}{cccc}
+   \toprule Version No. & Date & Changes & By\\
+   \midrule 1 & 29 July 2016 & & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele}\\
+   \bottomrule
+  \end{tabular}
+\end{table}
+%\end{comment}
+\newpage
 
 \section{Introduction}
 This document contains the testing methods that we have used to test the Traffic Camera Image Analysis system that we are currently developing for our final project for COS301 project. We will document the tests that are currently in place and have been run, and future tests that we still plan to design as we continue to develop the system.

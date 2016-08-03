@@ -5,6 +5,7 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{verbatim}
+\usepackage{makecell}
 
 \begin{document}
 \begin{titlepage}
@@ -50,21 +51,19 @@ Mbhele \textsc{Themba}\\
 \newpage
 
 \newpage
-\begin{comment}
-\begin{table}[]
+%\begin{comment}
+\begin{table}[ht]
  \centering
  \caption{Version History}
  \label{tab:table1}
- \begin{tabular}{ccc}
-   \toprule
-    Version No. & Date & Changes & By\\
-    \midrule
-    1 & 27 May 2016 & Introduction, Background, Vision, Scope, Use cases & Mpho Baloyi, Hlengekile Jita, Moses Mayimela, Themba Mbhele\\
-    2 & 29 July 2016 & Updated Scope, Updated Use Cases, Added Service Contracts, Added Required Functionality, Added Process Specification & Mpho Baloyi, Hlengekile Jita, Moses Mayimela, Themba Mbhele \\
-    \bottomrule
+ \begin{tabular}{cccc}
+   \toprule Version No. & Date & Changes & By\\
+   \midrule 1 & 27 May 2016 & \makecell {Introduction,\\ Background,\\ Vision,\\ Scope,\\ Use cases} & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele}\\
+   2 & 29 July 2016 & \makecell {Updated Scope,\\ Updated Use Cases,\\ Added Service Contracts,\\ Added Required Functionality,\\ Added Process Specification} & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele} \\
+   \bottomrule
   \end{tabular}
 \end{table}
-\end{comment}
+%\end{comment}
 \newpage
 
 \section{Introduction}
@@ -185,7 +184,7 @@ This section describes the process for completing the Add Route, Modify Route an
 \subsubsection{Modify Route}
 \includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
 \subsubsection{Get Route Traffic}
-\includegraphics[width=\textwidth]{images/psGet_Route_Traffic.jpg}
+\includegraphics[width=\textwidth]{images/ps_GetRouteTraffic.jpg}
 
 \section{Domain Model}
 %\includegraphics[width=\textwidth]{images/Domain_Model.jpg}
