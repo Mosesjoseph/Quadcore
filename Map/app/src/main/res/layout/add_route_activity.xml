@@ -10,30 +10,35 @@
         layout="@layout/tool_bar">
     </include>
 
-
-
-    <EditText
-        android:layout_width="match_parent"
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/startLocation"
-        android:hint="enter start location"
+        android:hint="Enter start location"
+        android:id="@+id/autocomplete"
         android:layout_below="@+id/tool_bar"
-        android:drawableLeft="@mipmap/ic_create_black_18dp"
-        />
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/endLocation"
-        android:hint="enter end location"
-        android:layout_below="@+id/startLocation"
-        android:drawableLeft="@mipmap/ic_create_black_18dp"
-        />
+        android:hint="Enter start location"
+        android:id="@+id/autocompleteEnd"
+        android:layout_below="@+id/autocomplete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/search_icon"
         android:id="@+id/search_button"
-        android:layout_below="@+id/endLocation"
+        android:layout_below="@+id/autocompleteEnd"
         android:onClick="sendRequestParameters"
         />
 </RelativeLayout>
