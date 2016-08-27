@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -30,7 +31,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 /**
- * Created by Themba Mbhele on 2016/08/03.
+ * Created by Quadcore Productions on 2016/08/03.
  */
 public class AddRouteActivity extends AppCompatActivity
 {
@@ -125,6 +126,28 @@ public class AddRouteActivity extends AppCompatActivity
         }
 
         @Override
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            View view;
+            LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            if(position != (resultList.size()-1))
+                view = inflater.inflate(R.layout.autocomplete_list_item, null);
+            else
+                view = inflater.inflate(R.layout.place_autocomplete_item_powered_by_google, null);
+
+            if(position != (resultList.size()-1))
+            {
+                TextView autocompleteTextView = (TextView)view.findViewById(R.id.autocompleteText);
+                autocompleteTextView.setText(resultList.get(position));
+            }
+            else
+            {
+
+            }
+            return view;
+        }
+
+        @Override
         public int getCount()
         {
             return resultList.size();
@@ -149,6 +172,7 @@ public class AddRouteActivity extends AppCompatActivity
                     if(charSequence != null)
                     {
                         resultList = autocomplete(charSequence.toString());
+                        resultList.add("footer");
                         filterResults.values = resultList;
                         filterResults.count = resultList.size();
                     }
