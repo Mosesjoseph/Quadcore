@@ -1,0 +1,252 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJM1DGvpxhlR4RTHuEerBiYvY",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJF0fFgDcYlR4RPXU_DSsZPkM",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : -25.738853,
+               "lng" : 28.2815371
+            },
+            "southwest" : {
+               "lat" : -26.2369742,
+               "lng" : 28.2198703
+            }
+         },
+         "copyrights" : "Map data ©2016 AfriGIS (Pty) Ltd, Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "66.6 km",
+                  "value" : 66649
+               },
+               "duration" : {
+                  "text" : "50 mins",
+                  "value" : 3001
+               },
+               "end_address" : "Boksburg, South Africa",
+               "end_location" : {
+                  "lat" : -26.234512,
+                  "lng" : 28.2399945
+               },
+               "start_address" : "Pretoria, South Africa",
+               "start_location" : {
+                  "lat" : -25.7480554,
+                  "lng" : 28.2292868
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 321
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 41
+                     },
+                     "end_location" : {
+                        "lat" : -25.747829,
+                        "lng" : 28.232484
+                     },
+                     "html_instructions" : "Head \u003cb\u003eeast\u003c/b\u003e on \u003cb\u003eArcadia St\u003c/b\u003e toward \u003cb\u003eFestival St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "j|c|CaphkDQeGYeIAq@"
+                     },
+                     "start_location" : {
+                        "lat" : -25.7480554,
+                        "lng" : 28.2292868
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 165
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 55
+                     },
+                     "end_location" : {
+                        "lat" : -25.746353,
+                        "lng" : 28.2323561
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at the 1st cross street onto \u003cb\u003eFestival St\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "|zc|C_dikDwDLoBH"
+                     },
+                     "start_location" : {
+                        "lat" : -25.747829,
+                        "lng" : 28.232484
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "2.5 km",
+                        "value" : 2545
+                     },
+                     "duration" : {
+                        "text" : "4 mins",
+                        "value" : 223
+                     },
+                     "end_location" : {
+                        "lat" : -25.7414089,
+                        "lng" : 28.256561
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at the 1st cross street onto \u003cb\u003eFrancis Baard St\u003c/b\u003e/\u003cb\u003eM2\u003c/b\u003e/\u003cb\u003eN4\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Francis Baard St/N4\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePartial toll road\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "tqc|CgcikD_@gN[uJGsBUiIIyCKsEIuBC[EkAE{@O}DCS?AEUWiAm@qCOu@Om@[uAI[YmAGYWiAqAyFa@cBa@gAg@}@e@i@IIw@s@SQ_@]eAeAg@cA]y@WcAQaBIaCO}CKoCCc@QuDYcHKaB"
+                     },
+                     "start_location" : {
+                        "lat" : -25.746353,
+                        "lng" : 28.2323561
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "11.6 km",
+                        "value" : 11643
+                     },
+                     "duration" : {
+                        "text" : "7 mins",
+                        "value" : 442
+                     },
+                     "end_location" : {
+                        "lat" : -25.8248288,
+                        "lng" : 28.2481302
+                     },
+                     "html_instructions" : "Merge onto \u003cb\u003eBen Schoeman Fwy\u003c/b\u003e/\u003cb\u003eN1\u003c/b\u003e via the ramp to \u003cb\u003eJohannesburg\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eToll road\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "xrb|CozmkDMc@I]EUMaBkCaO[kBK{@KgBOoFWwHCq@?EAa@Co@Aa@CwAS{@Qa@EGSOIEKCMCIAG?K?MDSFIDSTS`@CLA`@@LDLFRDLLLLHZLX@r@FH?j@ILA\\Eb@E^Gz@Kx@OtBi@hAYbBq@`D_BnB}AzCeCnCuC~@{@bAeANSf@e@JI|@_@TUrCsCtAyAlDsDb@_@?Aj@e@xDyCTQlDiBbCgAdBm@pD{@dDq@~ASlBMfGa@\\CD?DAlDQxAIzGe@xOw@`DOlACbB?lADtANb@DtDn@d@DZFH@XD?@z@Nr@HbNvB~Dn@fFr@vB^dCb@~B^pB\\TDbBXTFtLtBtBXpDr@RDH@NBTDrTjDtLjBrBZB@PB@?d@H`@FbIxATDpARpC`@bIvAF@dCr@D@rGvBxE~BtAt@v@d@x@d@~XpQfEdCdG~CnB|@dDxAnC~@bDlA`Bn@lHvBdBd@`Cl@tO`E?@F@F@~GhBzI|BlDdAxCfAfDpAb@PnCnAtAn@zBjAxA|@tA|@lBnA|AhAdBpArAhAzCjCfFvErClCjDhDlIpI"
+                     },
+                     "start_location" : {
+                        "lat" : -25.7414089,
+                        "lng" : 28.256561
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "36.7 km",
+                        "value" : 36731
+                     },
+                     "duration" : {
+                        "text" : "20 mins",
+                        "value" : 1180
+                     },
+                     "end_location" : {
+                        "lat" : -26.1265562,
+                        "lng" : 28.2333541
+                     },
+                     "html_instructions" : "Take exit \u003cb\u003e134\u003c/b\u003e to merge onto \u003cb\u003eR21\u003c/b\u003e toward \u003cb\u003eKempton Park\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePartial toll road\u003c/div\u003e",
+                     "maneuver" : "ramp-left",
+                     "polyline" : {
+                        "points" : "d|r|CyelkDf@JBBNJZT`@ZtCbCbA`ATJNLVRb@\\r@d@j@Vb@Pj@R^Ht@Ll@HbAHhAFhBLdCPr@Hj@Bx@@X@ZA^CTCd@G`@Kf@OZITEl@EhBy@bDwAHC~CsA|EoBbE}AtF_BDCrCu@~Be@pDs@nJcB|NaCdO{BpCe@jDi@rH_AlRyBtLoA|Ee@n@GvMiAb`@sCLAJ?f@EbLi@lAG`Oo@bNe@b@Ah`@y@xCCxTMtRBxH@N?dIDjOA~N@pO?lBBpGEtHQrDO|Hs@hEc@pDk@rCc@vB_@bFgAjQ_FpJkDjG}BzEeBtF_B`G}ArGoAvE}@`JeAdGi@xCShEQhFS|CGxM@tI^~Ir@dCTnLtA`ZrEjLjB~HnAx^|FzGdApNrBrOdBvD\\`S`BtE`@xJx@b\\hClGl@vOpAn_@rCx@H`DXjPrAtCVd\\hCvEZpCVrBHh@Dj@FtJv@jNhAr`@~CtCXvD?xDOtAUpASlD_AdEcBfCmAlAk@fJoEbZcN~E_Ct@_@DAx@c@nDaBvb@wRj@Sh@Qf@Ovj@uMh@OZKfA_@f@UXMPK\\S\\UdGaExCsBrGcEPMVURO@Af@a@`@]b\\gUfPcLbRuMr]kV~MsJnBiAxAy@jE}AzBg@tB[dBS`BIvC?fBFt@Fd@FlBXlFvAnBr@|SbIbNpFNFdJ`DfLbEfLjEhKdEHBjDnAvBl@xBd@~@PlARdBTvJfA|Fn@fJ`ApEb@pD`@pCZxBZ~B`@lE~@nFhAlCj@dFhAj@NbARvAXbATvAZ|@TbATn@P\\JjAb@b@PxAl@d@TVL^PxBnAzB`Bh@d@v@p@jAjAv@|@`AlAx@bA~DrGtD~GbBxC^p@DDb@v@zCtFrCtFl@rAj@vAbCzF`AtCrAlElD|NlBjI^vAlAfFxArGfAvDf@tApB`FdAvBlA~Bz@zAhClD|@hA`CjCzAvAhAfA~ApAlAx@jDvBPJhAj@hAj@t@ZvChAzC`AnBh@hDp@pBVrNpAr]dDrANfBRxB^xA`@rBz@pAt@rB`BlBzBh@~@t@jA"
+                     },
+                     "start_location" : {
+                        "lat" : -25.8248288,
+                        "lng" : 28.2481302
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "9.1 km",
+                        "value" : 9100
+                     },
+                     "duration" : {
+                        "text" : "10 mins",
+                        "value" : 580
+                     },
+                     "end_location" : {
+                        "lat" : -26.1994556,
+                        "lng" : 28.2448378
+                     },
+                     "html_instructions" : "Keep \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eR21\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePartial toll road\u003c/div\u003e",
+                     "maneuver" : "keep-left",
+                     "polyline" : {
+                        "points" : "~ym~CmiikD|HbNFJ\\p@zAnCzBpDv@hAhArAp@t@f@b@jAdAr@h@rA|@FD|@h@|@f@VPxErClA|@l@f@n@h@pClCdBxAlBvA\\ThBlAf@ZvCtAlBz@lBz@vAh@vIrCfCp@~AZdB\\zARzBRpBJv@@f@@hDCzDSbCYr@KdB]t@Q^Kx@Uv@W|@]|By@rCaAjGcCtAg@xEiB~@]nNoFrW_KxBy@pPkGvK}DlEeBtHsCRIdE{AxGmCrDqA`E{Aj@U\\MZMRIb@QhFmBfG{BlJsDh@S|B}@RGh@O~C}@~@_@b@MPEr@Uj@Sl@UJEPGXOBAhDsAlCiADAj@MTIZOFAbEaBd@Sz@]hBq@hCcAhFsBZMf@SdC}@f@QTKtBw@JEv@Y\\KjAe@VKtBu@rCeAhAc@VGrDwAzEeBdBs@~MiFd@S`E_Bh@UfAa@rBs@d@S"
+                     },
+                     "start_location" : {
+                        "lat" : -26.1265562,
+                        "lng" : 28.2333541
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "5.0 km",
+                        "value" : 5001
+                     },
+                     "duration" : {
+                        "text" : "6 mins",
+                        "value" : 363
+                     },
+                     "end_location" : {
+                        "lat" : -26.2336057,
+                        "lng" : 28.2479578
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eRondebult Rd\u003c/b\u003e/\u003cb\u003eR21\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "ra|~CgqkkD^O\\QPN`CnBn@f@d@Xx@d@`A^xCx@vCv@hJdCzAb@dAZbA^`@Lv@RhAb@`Bp@`@R^TZT^ZRTX\\f@r@\\j@b@`A\\v@\\z@HP`@bAZv@Rb@`@|@n@pAPZPVRXNNPPd@^n@`@ZP^NPHZHn@Pn@Pp@Ll@L\\DhD^dAHbEZnCRxBTdAJ~ANtALhBPh@Dd@Bj@?j@CXE^EPCXGLCPENEh@S`@MNINIXQTO\\WTUTY`@m@NWVg@Tk@t@_D\\oAb@qBx@gDXkAVoAf@oBPq@nFoV~@uDb@}AV_Ar@_CJYZo@r@qAp@gAt@u@DCn@a@x@e@|@[zASv@CF?tAF~@LrATPBnBXRDtANXDbANnP|BhBVfAL"
+                     },
+                     "start_location" : {
+                        "lat" : -26.1994556,
+                        "lng" : 28.2448378
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.1 km",
+                        "value" : 1143
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 117
+                     },
+                     "end_location" : {
+                        "lat" : -26.234512,
+                        "lng" : 28.2399945
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eLancaster Rd\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "`wb_DwdlkDKj@Kp@E^In@?N@F?@@BB@DDHDJBJBNDNBJ@PBxIjANB`@L^Nb@Vj@n@Zj@`@z@JVHVHd@@VAb@Id@]|@k@vAkAtCuDjIuCxF"
+                     },
+                     "start_location" : {
+                        "lat" : -26.2336057,
+                        "lng" : 28.2479578
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "j|c|CaphkDk@kQAq@wDLoBH_@gNc@iNu@mX_@aJkCaMcAmEsB}IiAeC{ByBeBcBeA}Bi@eDY_H{@mSYeCOs@MaBkCaOg@gDw@aUGyBCwAS{@Wi@w@]k@B]Lg@v@En@FZL`@ZVt@N|@FzBWzASnDy@lDkA`D_BnB}AzCeCnCuCbCaCv@y@hAi@lLwLhGaFbE{BhFuBvImBlEa@pHg@|`@yBnFSpDDtIjArYrEdRvC`GdAjPnCdEx@bVvDl]xF|PrCfLnDnHtDpBjAf_@vUtJ|EtHxCdG|BrK|CvSnFnHnBhObE`IxCdK|EzJtGxDzCbKbJ~HvHlIpIf@JRN|@p@xEdEd@Xz@p@~A|@dD|@dHh@~G`@jBGjCm@bAKlGqCjQeHzFcBrG{A`PwCb_@}F|HoA`\\yDzc@gEdb@{CpNq@d^uAla@{@rYQdg@Jjs@BfQWpNcAzJoAjGcAbFgAjQ_F|RiHzEeBtF_B`G}ArGoAvE}@`JeA~K}@rLe@vREtI^~Ir@tPjBfqAlSlWxDjUbCtbAfIdX~Bha@|Chw@nGfObA`}@hHtCXvD?xDOtAU~FsAlIqDxn@_ZdHgDbd@kSpAa@`l@eNbBk@pBcApUoO~@u@to@kd@vp@ae@nQ}LxAy@jE}ApFcAfE]~FFzANlBXlFvAlWvJrNxFlWdJpXpKtDrApFrAlCd@|M|Ah^vDjGv@lI`BnSnEvH~AnEhAnFxBv@^tFpD`BvAbChCzBpCtJrPlDhGnHjNxAjDdEpKrAlElD|NlCbLfDzNnBlGvDxIhCzEfEvF|EbFhDxCtIhF~BfArHjCxGzAdRhBf`@tD`Fr@xA`@rBz@dEvCvCzDrJnPd@|@vE`I`C|CxAxA~BnBzAbAlJvFzBdB`EvDrEpDfCbB~DpBzEvBnL|DfFlA`Ep@lF^~ABdJWvDe@zCo@nEwArRgH|o@wVpg@iRhXgK~LqEza@yOrLsDfLuEdBi@nKeEpVmJxO}FlOyFpVsJ`GyB\\QPNpDvC~A~@zExAbT|FfFdBbCdAz@j@tBbC|B`FzApDtBbEzAzA|BlAlDz@zH|@|YfCpABdAIxAUlBm@nAu@r@m@v@gAf@_AjAkEtCuL`Ia^nDsMlCcFz@y@hBgA|@[zAS~@CtCTdBXrFt@dXrDg@lDB\\^Pv@N|K`BbAf@fAzAl@rAR|@?z@g@bBwBlFkIdQ"
+         },
+         "summary" : "R21",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
