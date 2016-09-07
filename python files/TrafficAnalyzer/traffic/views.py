@@ -6,6 +6,7 @@ from traffic.models import camera_info
 from django.core import serializers
 from django.utils import timezone
 import re
+import geolocation as geo
 # Create your views here.
 def decodepolyline(point_str):            
     # sone coordinate offset is represented by 4 to 5 binary chunks
