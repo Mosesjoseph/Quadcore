@@ -33,3 +33,10 @@ def getCameraInfo(request, camera_id):
     json_data = serializers.serialize("json", cam)
     return HttpResponse(json_data, content_type='application/json')
     #return HttpResponse("You're requesting info for camera: %s" % camera_id)
+
+def processPolyLine(request, polydata):
+    ##cam = camera_info.objects.filter(camera=camera_id)
+    ##json_data = serializers.serialize("json", cam)
+    ##return HttpResponse(json_data, content_type='application/json')
+    var=polydata
+    return HttpResponse(polydata)

@@ -19,7 +19,7 @@ from django.utils import timezone
 #    return HttpResponse("You're voting on question %s." % question_id)
 
 def home(request):
-    entries=camera_info.objects.all()[:10]
+    entries=camera_info.objects.all()
     json_data = serializers.serialize("json", entries)
     return HttpResponse(json_data, content_type='application/json')
 
@@ -33,3 +33,9 @@ def getCameraInfo(request, camera_id):
     json_data = serializers.serialize("json", cam)
     return HttpResponse(json_data, content_type='application/json')
     #return HttpResponse("You're requesting info for camera: %s" % camera_id)
+
+def processPolyLine(request, polydata):
+    ##cam = camera_info.objects.filter(camera=camera_id)
+    ##json_data = serializers.serialize("json", cam)
+    ##return HttpResponse(json_data, content_type='application/json')
+    return HttpResponse("We have a polyline over here."+polydata)
