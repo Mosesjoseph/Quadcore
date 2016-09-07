@@ -46,15 +46,16 @@ public class DisplayMapActivity extends FragmentActivity implements OnMapReadyCa
 
     List<LatLng> startLatLng = new ArrayList<>();
     List<LatLng> endLatLng = new ArrayList<>();
+    List<List<LatLng>> values;
     List<LatLng> linePoly;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        Intent intent = getIntent();
-        message = intent.getStringExtra("origin");
-        message2 = intent.getStringExtra("destination");
+      //  Intent intent = getIntent();
+  //      message = intent.getStringExtra("origin");
+    //    message2 = intent.getStringExtra("destination");
       //  new GetClass(this).execute();
        // TextView text = (TextView)findViewById(R.id.textView);
         //text.setTextSize(40);
@@ -71,27 +72,12 @@ public class DisplayMapActivity extends FragmentActivity implements OnMapReadyCa
         new GetClass(this).execute();
 
 
-
-    //   PolylineOptions polylineOptions = new PolylineOptions().geodesic(true).color(Color.BLACK).width(10).addAll(linePoly);
-      //  mMap.addPolyline(polylineOptions);
-        //LatLngBounds.Builder latLngBounds = new LatLngBounds.Builder();
-        //for(LatLng latLng : linePoly)
-          //  latLngBounds.include(latLng);
-
-        //final LatLngBounds bounds = latLngBounds.build();
-
-
-        //LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-        //Criteria criteria = new Criteria();
-        //String provider = locationManager.getBestProvider(criteria, false);
-        // Location location = locationManager.getLastKnownLocation(provider);
-
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-25.755926, 28.231105);
+    //    LatLng sydney = new LatLng(-25.755926, 28.231105);
        // LatLng sydney = new LatLng(startLatLng.get(0).latitude, startLatLng.get(0).longitude);
          // LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
-        mMap.addMarker(new MarkerOptions().position(sydney).title("CurrentLocation"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15));
+      //  mMap.addMarker(new MarkerOptions().position(sydney).title("CurrentLocation"));
+      //  mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15));
 
         //if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -123,8 +109,8 @@ public class DisplayMapActivity extends FragmentActivity implements OnMapReadyCa
         protected  void onPreExecute()
         {
             progress = new ProgressDialog(this.context);
-            progress.setMessage("Loading");
-           // progress.show();
+            progress.setMessage("Loading...");
+            progress.show();
         }
 
         @Override
@@ -132,14 +118,14 @@ public class DisplayMapActivity extends FragmentActivity implements OnMapReadyCa
         {
             try {
              //   final TextView textView = (TextView) findViewById(R.id.textView);
-                String urlString = "https://maps.googleapis.com/maps/api/directions/json?";
-                String origin = "";
-                String destination = "";
-                String apiKey = "AIzaSyBxzMOzDddAIUKR3RlINgbhtTReEGCvEKI";
-                urlString+="origin=pretoria&destination=johannesburg&key=";
-                urlString+=apiKey;
-             //   GoogleRequest googleRequest = new GoogleRequest("pretoria", "johannesburg");
-                URL url = new URL(urlString);
+            //    String urlString = "https://maps.googleapis.com/maps/api/directions/json?";
+            //    String origin = "";
+            //    String destination = "";
+            //    String apiKey = "AIzaSyBxzMOzDddAIUKR3RlINgbhtTReEGCvEKI";
+            //    urlString+="origin=pretoria&destination=johannesburg&key=";
+            //    urlString+=apiKey;
+                GoogleRequest googleRequest = new GoogleRequest("pretoria", "johannesburg");
+                URL url = new URL(googleRequest.getUrl());
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("GET");
                 httpURLConnection.setRequestProperty("USER-AGENT", "Mozilla/5.0");
@@ -164,106 +150,32 @@ public class DisplayMapActivity extends FragmentActivity implements OnMapReadyCa
                 try
                 {
                     //parseJSONGoogle(responseOutput.toString());
-                   // List<List<LatLng>> values = new GoogleJSONParser(responseOutput.toString()).parseJSON();
-                  //  linePoly = new ArrayList<>(new GoogleJSONParser(responseOutput.toString()).decode());
-                 //   startLatLng = new ArrayList<>(values.get(0));
-                   // endLatLng = new ArrayList<>(values.get(1));
+                    values = new GoogleJSONParser(responseOutput.toString()).parseJSON();
+                    linePoly = new GoogleJSONParser(responseOutput.toString()).decode();
+                    startLatLng = new ArrayList<>(values.get(0));
+                    endLatLng = new ArrayList<>(values.get(1));
                     String json = responseOutput.toString();
                     if(json == "")
                         return null;
 
-                    startLatLng = new ArrayList<>();
-                    endLatLng = new ArrayList<>();
 
-                    JSONObject jsonObject = new JSONObject(json);
-                    JSONArray jsonRoutes = jsonObject.getJSONArray("routes");
-
-                    for(int i = 0; i < jsonRoutes.length(); ++i)
-                    {
-
-                        JSONObject jsonRoute = jsonRoutes.getJSONObject(i);
-
-                        //getpolyline
-                        JSONObject polyLine = jsonRoute.getJSONObject("overview_polyline");
-
-                        //get the legs of the route
-                        JSONArray routeLegs = jsonRoute.getJSONArray("legs");
-
-                        //get the steps of the route
-                        JSONObject routeSteps = routeLegs.getJSONObject(0);
-                        JSONArray steps = routeSteps.getJSONArray("steps");
-
-                        for(int j = 0; j < steps.length(); ++j)
-                        {
-                            //loop through steps to get to get their latlng values
-                            JSONObject step = steps.getJSONObject(j);
-                            JSONObject slatlng = step.getJSONObject("start_location");
-                            JSONObject elatlong = step.getJSONObject("end_location");
-                            startLatLng.add(new LatLng(slatlng.getDouble("lat"), slatlng.getDouble("lng")));
-                            endLatLng.add(new LatLng(elatlong.getDouble("lat"), elatlong.getDouble("lng")));
-                        }
-                        System.out.println("sizeeeeeee: "+startLatLng.size());
-                    }
-
-                    linePoly = new ArrayList<>();
-                    jsonObject = new JSONObject(json);
-                    jsonRoutes = jsonObject.getJSONArray("routes");
-
-                    JSONObject jsonRoute = jsonRoutes.getJSONObject(0);
-
-                    //getpolyline
-                    JSONObject polyLine = jsonRoute.getJSONObject("overview_polyline");
-                    final String lineP = polyLine.getString("points");
-
-                    int length = lineP.length();
-                    int i = 0;
-                    int lat = 0;
-                    int lng = 0;
-
-                    while(i < length)
-                    {
-                        int b;
-                        int shift = 0;
-                        int result = 0;
-                        do
-                        {
-                            b = lineP.charAt(i++) - 63;
-                            result |= (b & 0x1f) << shift;
-                            shift+=5;
-                        }
-                        while(b >= 0x20);
-                        int dist = ((result & 1) != 0 ? ~(result >>1) : (result >> 1));
-                        lat+=dist;
-
-                        shift = 0;
-                        dist = 0;
-                        do
-                        {
-                            b = lineP.charAt(i++) - 63;
-                            result |= (b & 0x1f) << shift;
-                            shift+=5;
-                        }
-                        while(b >= 0x20);
-                        int dlng = ((result&1) != 0 ? ~(result >> 1) : (result >> 1));
-                        lng+=dlng;
-
-                        linePoly.add(new LatLng(lat/100000d, lng/100000d));
-                    }
                 }
                 catch(JSONException error)
                 {
                     error.printStackTrace();
                 }
 
-              //  DisplayMapActivity.this.runOnUiThread(new Runnable() {
-                    //@Override
-                  //  public void run() {
-                //        LatLng test = new LatLng(startLatLng.get(0).latitude, startLatLng.get(0).latitude);
-                  //      mMap.addMarker(new MarkerOptions().position(test).title("CurrentLocation"));
-                    //    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(test, 15));
+                DisplayMapActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                      //  LatLng test = new LatLng(startLatLng.get(0).latitude, startLatLng.get(0).longitude);
+                      //  mMap.addMarker(new MarkerOptions().position(test).title("CurrentLocation"));
+                      //  mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(test, 15));
+                        mMap.addPolyline(new PolylineOptions().addAll(linePoly));
+                     //   mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(linePoly.get(0), 15));
                         progress.dismiss();
-                //    }
-                //});
+                    }
+                });
             }
             catch(IOException error)
             {
