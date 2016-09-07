@@ -90,7 +90,8 @@ def processPolyLine(request, polydata):
     ##json_data = serializers.serialize("json", cam)
     ##return HttpResponse(json_data, content_type='application/json')
     polytuple=decodepolyline(polydata)
-    return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
+    return HttpResponse(len(polydata))
+    ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
 
 

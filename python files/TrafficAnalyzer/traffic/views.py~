@@ -84,10 +84,46 @@ def getCameraInfo(request, camera_id):
     json_data = serializers.serialize("json", cam)
     return HttpResponse(json_data, content_type='application/json')
     #return HttpResponse("You're requesting info for camera: %s" % camera_id)
-
+poly4="xrb|CozmkDMc@I]EUMaBkCaO[kBK{@KgBOoFWwHCq@?EAa@Co@Aa@CwAS{@Qa@EGSOIEKCMCIAG?K?MDSFIDSTS`@CLA`@@LDLFRDLLLLHZLX@r@FH?j@ILA\\Eb@E^Gz@Kx@OtBi@hAYbBq@`D_BnB}AzCeCnCuC~@{@bAeANSf@e@JI|@_@TUrCsCtAyAlDsDb@_@?Aj@e@xDyCTQlDiBbCgAdBm@pD{@dDq@~ASlBMfGa@\\CD?DAlDQxAIzGe@xOw@`DOlACbB?lADtANb@DtDn@d@DZFH@XD?@z@Nr@HbNvB~Dn@fFr@vB^dCb@~B^pB\\TDbBXTFtLtBtBXpDr@RDH@NBTDrTjDtLjBrBZB@PB@?d@H`@FbIxATDpARpC`@bIvAF@dCr@D@rGvBxE~BtAt@v@d@x@d@~XpQfEdCdG~CnB|@dDxAnC~@bDlA`Bn@lHvBdBd@`Cl@tO`E?@F@F@~GhBzI|BlDdAxCfAfDpAb@PnCnAtAn@zBjAxA|@tA|@lBnA|AhAdBpArAhAzCjCfFvErClCjDhDlIpI"
 def processPolyLine(request, polydata):
     ##cam = camera_info.objects.filter(camera=camera_id)
     ##json_data = serializers.serialize("json", cam)
     ##return HttpResponse(json_data, content_type='application/json')
     polytuple=decodepolyline(polydata)
-    return HttpResponse(polytuple[0][0]+","+polytuple[0][1])
+    return HttpResponse(len(polydata))
+    ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
