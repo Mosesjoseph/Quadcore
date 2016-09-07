@@ -5,7 +5,7 @@ import json
 from traffic.models import camera_info
 from django.core import serializers
 from django.utils import timezone
-
+import re
 # Create your views here.
 def decodepolyline(point_str):            
     # sone coordinate offset is represented by 4 to 5 binary chunks
@@ -89,8 +89,9 @@ def processPolyLine(request, polydata):
     ##cam = camera_info.objects.filter(camera=camera_id)
     ##json_data = serializers.serialize("json", cam)
     ##return HttpResponse(json_data, content_type='application/json')
+    polydata= polydata.replace('\\\\', '\\')
     polytuple=decodepolyline(polydata)
-    return HttpResponse(len(polydata))
+    return HttpResponse(polytuple)
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
 
