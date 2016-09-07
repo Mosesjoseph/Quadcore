@@ -10,8 +10,9 @@ urlpatterns = patterns('',
     #url(r'^(?P<question_id>[0-9]+)/$', 'traffic.views.detail', name='detail'),
     # ex: /polls/5/results/
     #url(r'^(?P<question_id>[0-9]+)/results/$', 'traffic.views.results', name='results'),
+    
     # ex: /polls/5/vote/
-    #url(r'^(?P<question_id>[0-9]+)/vote/$', 'traffic.views.vote', name='vote'),
+    url(r'^polyline/(?P<polydata>.+)$', 'traffic.views.processPolyLine', name='polyProcessor'),
     
     #route to set the camera data
     #ex: /setcamera/cam123KZN/25
