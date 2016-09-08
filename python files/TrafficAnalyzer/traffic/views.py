@@ -20,14 +20,24 @@ from django.core.cache import cache
 
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
+cameras=[]
 
+def analyseImage(img):
+    print "Analysis"
+
+def getImage(Id):
+    print "Get image"
 
 def setTrafficForCamera(camera_id,traffic_level):
     print "ok"
-    if cache.has_key("foo")==False
+    if cache.has_key("foo")==False:
+        getImage("ImageId")
+        analyseImage("image")
         cache.set("foo", "value", timeout=60)
+    #Only set the
+    #cache.set("foo", "value", timeout=60)
     
-cameras=[]
+
 def populateCameraList(cam):
     for cm in cameras:
         if cam == cm:
@@ -89,9 +99,9 @@ def processPolyLine(request, polydata):
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    ##json_data = serializers.serialize("json", cameras)
-    ##return HttpResponse(json_data, content_type='application/json')
-    return HttpResponse()
+    json_data = serializers.serialize("xml", cameras)
+    return HttpResponse(json_data, content_type='application/xml')
+    #return HttpResponse(cameras)
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
