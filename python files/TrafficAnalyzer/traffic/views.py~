@@ -9,8 +9,9 @@ import re
 import geolocation as geo
 import numpy as np
 from django.core.cache import cache
-from random import randint
+
 from datetime import datetime
+import imageHandler
 # Create your views here.
 
 #def detail(request, question_id):
@@ -24,21 +25,14 @@ from datetime import datetime
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 
-def analyseImage(img):
-    print "Analysis"
-    return randint(1,5)
-
-def getImage(Id):
-    print "Get image"
-
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
-        getImage(camera.camera)                     #Fetch image
-        trafficLevel=analyseImage("image")      #analyse the image
-        camera.traffic=trafficLevel
-        camera.timestamp = datetime.now()       #update model timestamp
-        camera.save()
-        cache.set(camera.camera, trafficLevel, timeout=60)
+        if imageHandler.getImage(camera.camera)==True:                     #Fetch image
+            trafficLevel=analyseImage("image")      #analyse the image
+            camera.traffic=trafficLevel
+            camera.timestamp = datetime.now()       #update model timestamp
+            camera.save()
+            cache.set(camera.camera, trafficLevel, timeout=60)
     #else it is already in the database and does not need to be fetched
     
 
@@ -105,12 +99,12 @@ def processPolyLine(request, polydata):
     #camera: "GP::GP CCTV N4 101"
 
     #JSON response
-    json_data = serializers.serialize("json", cameras)
-    return HttpResponse(json_data, content_type='application/json')
+    #json_data = serializers.serialize("json", cameras)
+    #return HttpResponse(json_data, content_type='application/json')
     
     #XML response
-    #xml_data = serializers.serialize("xml", cameras)
-    #return HttpResponse(xml_data, content_type='application/xml')
+    xml_data = serializers.serialize("xml", cameras)
+    return HttpResponse(xml_data, content_type='application/xml')
     
     #return HttpResponse(cameras)
     #return HttpResponse(json_data, content_type='application/json')

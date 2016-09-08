@@ -9,8 +9,9 @@ import re
 import geolocation as geo
 import numpy as np
 from django.core.cache import cache
-from random import randint
+
 from datetime import datetime
+import imageHandler
 # Create your views here.
 
 #def detail(request, question_id):
@@ -24,21 +25,14 @@ from datetime import datetime
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 
-def analyseImage(img):
-    print "Analysis"
-    return randint(1,5)
-
-def getImage(Id):
-    print "Get image"
-
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
-        getImage(camera.camera)                     #Fetch image
-        trafficLevel=analyseImage("image")      #analyse the image
-        camera.traffic=trafficLevel
-        camera.timestamp = datetime.now()       #update model timestamp
-        camera.save()
-        cache.set(camera.camera, trafficLevel, timeout=60)
+        if imageHandler.getImage(camera.camera)==True:                     #Fetch image
+            trafficLevel=imageHandler.analyseImage("image")      #analyse the image
+            camera.traffic=trafficLevel
+            camera.timestamp = datetime.now()       #update model timestamp
+            camera.save()
+            cache.set(camera.camera, trafficLevel, timeout=60)
     #else it is already in the database and does not need to be fetched
     
 
