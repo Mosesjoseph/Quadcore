@@ -81,9 +81,9 @@ def processPolyLine(request, polydata):
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    json_data = serializers.serialize("json", cameras)
-    return HttpResponse(json_data, content_type='application/json')
-    #return HttpResponse(len(cameras))
+    #json_data = serializers.serialize("json", cameras)
+    #return HttpResponse(json_data, content_type='application/json')
+    return HttpResponse(len(cameras))
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
