@@ -24,16 +24,18 @@ cameras=[]
 
 def analyseImage(img):
     print "Analysis"
+    return 5
 
 def getImage(Id):
     print "Get image"
 
-def setTrafficForCamera(camera_id,traffic_level):
-    print "ok"
-    if cache.has_key("foo")==False:
-        getImage("ImageId")
-        analyseImage("image")
-        cache.set("foo", "value", timeout=60)
+def setTrafficForCamera(camera):
+    if cache.has_key(camera.camera)==False:
+        getImage(camera.camera)                     #Fetch image
+        trafficLevel=analyseImage("image")      #analyse the image
+        camera.traffic=trafficLevel
+        camera.save()
+        cache.set(camera.camera, trafficLevel, timeout=60)
     #Only set the
     #cache.set("foo", "value", timeout=60)
     
@@ -87,7 +89,8 @@ def processPolyLine(request, polydata):
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
-    #setTrafficForCamera("camId","trafficLevel");
+    for cam in cameras:
+        setTrafficForCamera(cam);
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)
