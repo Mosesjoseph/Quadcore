@@ -20,6 +20,13 @@ from django.core.cache import cache
 
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
+
+
+def setTrafficForCamera(camera_id,traffic_level):
+    print "ok"
+    if cache.has_key("foo")==False
+        cache.set("foo", "value", timeout=60)
+    
 cameras=[]
 def populateCameraList(cam):
     for cm in cameras:
@@ -70,20 +77,21 @@ def processPolyLine(request, polydata):
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
-    cache.set("foo", "value", timeout=25)
+    #setTrafficForCamera("camId","trafficLevel");
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)
     #return HttpResponse(json_data, content_type='application/json')
+    
     #StartLatitude =-25.740908
     #StartLongitude =28.263433
     #EndLatitude =-25.739112
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    json_data = serializers.serialize("json", cameras)
-    return HttpResponse(json_data, content_type='application/json')
-    #return HttpResponse(len(cameras))
+    ##json_data = serializers.serialize("json", cameras)
+    ##return HttpResponse(json_data, content_type='application/json')
+    return HttpResponse()
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
