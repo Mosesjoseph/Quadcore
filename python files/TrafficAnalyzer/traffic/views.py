@@ -7,6 +7,7 @@ from django.core import serializers
 from django.utils import timezone
 import re
 import geolocation as geo
+import numpy as np
 # Create your views here.
 
 #def detail(request, question_id):
@@ -43,22 +44,31 @@ def processPolyLine(request, polydata):
     ##return HttpResponse(json_data, content_type='application/json')
     polydata= polydata.replace('\\\\', '\\')
     nodes=geo.decodepolyline(polydata)
-    boundBoxes=[]
+
+    boundBoxes = np.zeros((len(nodes),2,2)) # Make a 10 by 20 by 30 array
     i=0
     for node in nodes:
         loc = geo.GeoLocation.from_degrees(node[0], node[1])
         distance = 0.1  # 100m
         SW_loc,NE_loc = loc.bounding_locations(distance)
-        boundBoxes.insert(i,(SW_loc.deg_lat,SW_loc.deg_lon,NE_loc.deg_lat,NE_loc.deg_lon))
+        #boundBoxes.insert(i,(SW_loc.deg_lat,SW_loc.deg_lon,",",NE_loc.deg_lat,NE_loc.deg_lon))
+        boundBoxes[i][0][0]=SW_loc.deg_lat
+        boundBoxes[i][0][1]=SW_loc.deg_lon
+        boundBoxes[i][1][0]=NE_loc.deg_lat
+        boundBoxes[i][1][1]=NE_loc.deg_lon
         i +=1
-    i=0
     cameras=[]
+    i=0
     for box in boundBoxes:
-        cam = camera_info.objects.raw("select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)")
-        cameras.insert(i,cam)
+        query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (box[0][0],box[0][1],box[1][0],box[1][1])
+        #cam = camera_info.objects.raw('select * from traffic_camera_info where (latitude > -25.740908 and latitude<-25.739112) and (longitude >28.263433 and longitude < 28.265427)')
+        for cam in camera_info.objects.raw(query):
+            cameras.insert(i,cam)
         i +=1
-    #cam = camera_info.objects.raw('select * from traffic_camera_info where (latitude > -25.740908 and latitude<-25.739112) and (longitude >28.263433 and longitude < 28.265427)')
-    json_data = serializers.serialize("json", cam)
+
+    #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
+    #cam = camera_info.objects.raw(query)
+    #json_data = serializers.serialize("json", cam)
     #return HttpResponse(json_data, content_type='application/json')
     #StartLatitude =-25.740908
     #StartLongitude =28.263433
@@ -66,8 +76,9 @@ def processPolyLine(request, polydata):
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    json_data = serializers.serialize("json", cameras[5])
-    return HttpResponse(json_data, content_type='application/json')
+    #json_data = serializers.serialize("json", cameras)
+    #return HttpResponse(json_data, content_type='application/json')
+    return HttpResponse(len(cameras))
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
