@@ -10,6 +10,7 @@ import geolocation as geo
 import numpy as np
 from django.core.cache import cache
 from random import randint
+from datetime import datetime
 # Create your views here.
 
 #def detail(request, question_id):
@@ -35,10 +36,10 @@ def setTrafficForCamera(camera):
         getImage(camera.camera)                     #Fetch image
         trafficLevel=analyseImage("image")      #analyse the image
         camera.traffic=trafficLevel
+        camera.timestamp = datetime.now()
         camera.save()
         cache.set(camera.camera, trafficLevel, timeout=60)
-    #Only set the
-    #cache.set("foo", "value", timeout=60)
+    #else it is already in the database
     
 
 def populateCameraList(cam):
@@ -102,9 +103,15 @@ def processPolyLine(request, polydata):
     #EndLatitude =-25.739112
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
+
+    #JSON response
+    json_data = serializers.serialize("json", cameras)
+    return HttpResponse(json_data, content_type='application/json')
     
-    json_data = serializers.serialize("xml", cameras)
-    return HttpResponse(json_data, content_type='application/xml')
+    #XML response
+    #xml_data = serializers.serialize("xml", cameras)
+    #return HttpResponse(xml_data, content_type='application/xml')
+    
     #return HttpResponse(cameras)
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
