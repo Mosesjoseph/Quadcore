@@ -4,14 +4,17 @@ def getImage(imgId):
     print ("get Image")
     camIDregex=re.compile('::(.*)')
     camID=re.findall(camIDregex,imgId)
+    networkIDregex=re.compile('(.*)::')
+    networkID=re.findall(networkIDregex,imgId)
     print camID[0]
+    print networkID[0]
     imgFile=open("images/"+imgId+".jpg","wb")
     try:
-        imgFile.write(urlopen("https://www.i-traffic.co.za/api/cameraimage?key=c763adacf26b4b7eb5bc81bca8772975&format=xml&cameraID="+camID[0]+"&networkId=GP").read())
+        imgFile.write(urlopen("https://www.i-traffic.co.za/api/cameraimage?key=c763adacf26b4b7eb5bc81bca8772975&format=xml&cameraID="+camID[0]+"&networkId="+networkID[0]).read())
         imgFile.close()
         return True
     except:
         return False
         #pass
 
-getImage("GP::GP CCTV N1 206")
+getImage("GP::GP CCTV N1 205")
