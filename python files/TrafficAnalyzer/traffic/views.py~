@@ -8,6 +8,7 @@ from django.utils import timezone
 import re
 import geolocation as geo
 import numpy as np
+from django.core.cache import cache
 # Create your views here.
 
 #def detail(request, question_id):
@@ -21,7 +22,6 @@ import numpy as np
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 def populateCameraList(cam):
-    print "ok"
     for cm in cameras:
         if cam == cm:
             return HttpResponse("Duplicate")
@@ -54,7 +54,7 @@ def processPolyLine(request, polydata):
     i=0
     for node in nodes:
         loc = geo.GeoLocation.from_degrees(node[0], node[1])
-        distance = 0.025  # 100m
+        distance = 0.1  # 100m
         SW_loc,NE_loc = loc.bounding_locations(distance)
         #boundBoxes.insert(i,(SW_loc.deg_lat,SW_loc.deg_lon,",",NE_loc.deg_lat,NE_loc.deg_lon))
         boundBoxes[i][0][0]=SW_loc.deg_lat
@@ -70,7 +70,7 @@ def processPolyLine(request, polydata):
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
-
+    cache.set("foo", "value", timeout=25)
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)

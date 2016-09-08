@@ -8,6 +8,7 @@ from django.utils import timezone
 import re
 import geolocation as geo
 import numpy as np
+from django.core.cache import cache
 # Create your views here.
 
 #def detail(request, question_id):
@@ -21,7 +22,6 @@ import numpy as np
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 def populateCameraList(cam):
-    print "ok"
     for cm in cameras:
         if cam == cm:
             return HttpResponse("Duplicate")
@@ -70,7 +70,7 @@ def processPolyLine(request, polydata):
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
-
+    cache.set("foo", "value", timeout=25)
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)
@@ -81,9 +81,9 @@ def processPolyLine(request, polydata):
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    json_data = serializers.serialize("json", cameras)
-    return HttpResponse(json_data, content_type='application/json')
-    #return HttpResponse(len(cameras))
+    #json_data = serializers.serialize("json", cameras)
+    #return HttpResponse(json_data, content_type='application/json')
+    return HttpResponse(len(cameras))
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
