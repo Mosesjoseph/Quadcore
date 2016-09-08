@@ -9,6 +9,7 @@ import re
 import geolocation as geo
 import numpy as np
 from django.core.cache import cache
+from random import randint
 # Create your views here.
 
 #def detail(request, question_id):
@@ -24,7 +25,7 @@ cameras=[]
 
 def analyseImage(img):
     print "Analysis"
-    return 5
+    return randint(0,9)
 
 def getImage(Id):
     print "Get image"
@@ -33,7 +34,8 @@ def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
         getImage(camera.camera)                     #Fetch image
         trafficLevel=analyseImage("image")      #analyse the image
-        camera.update(traffic=trafficLevel)
+        camera.traffic=trafficLevel
+        camera.save()
         cache.set(camera.camera, trafficLevel, timeout=60)
     #Only set the
     #cache.set("foo", "value", timeout=60)

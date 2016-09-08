@@ -9,6 +9,7 @@ import re
 import geolocation as geo
 import numpy as np
 from django.core.cache import cache
+from random import randint
 # Create your views here.
 
 #def detail(request, question_id):
@@ -24,7 +25,7 @@ cameras=[]
 
 def analyseImage(img):
     print "Analysis"
-    return 5
+    return randint(1,5)
 
 def getImage(Id):
     print "Get image"
