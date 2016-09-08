@@ -39,7 +39,7 @@ def setTrafficForCamera(camera):
 def populateCameraList(cam):
     for cm in cameras:
         if cam == cm:
-            return HttpResponse("Duplicate")
+            return 0
     cameras.insert(0,cam)
 
 def home(request):
@@ -85,8 +85,10 @@ def processPolyLine(request, polydata):
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
+
     for cam in cameras:
         setTrafficForCamera(cam);
+
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)
