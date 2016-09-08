@@ -105,12 +105,12 @@ def processPolyLine(request, polydata):
     #camera: "GP::GP CCTV N4 101"
 
     #JSON response
-    json_data = serializers.serialize("json", cameras)
-    return HttpResponse(json_data, content_type='application/json')
+    #json_data = serializers.serialize("json", cameras)
+    #return HttpResponse(json_data, content_type='application/json')
     
     #XML response
-    #xml_data = serializers.serialize("xml", cameras)
-    #return HttpResponse(xml_data, content_type='application/xml')
+    xml_data = serializers.serialize("xml", cameras)
+    return HttpResponse(xml_data, content_type='application/xml')
     
     #return HttpResponse(cameras)
     #return HttpResponse(json_data, content_type='application/json')
