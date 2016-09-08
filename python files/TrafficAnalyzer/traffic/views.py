@@ -19,8 +19,13 @@ import numpy as np
 
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
-def populateCameraList(camArray,cam):
+cameras=[]
+def populateCameraList(cam):
     print "ok"
+    for cm in cameras:
+        if cam == cm:
+            return HttpResponse("Duplicate")
+    cameras.insert(0,cam)
 
 def home(request):
     entries=camera_info.objects.all()
@@ -57,13 +62,13 @@ def processPolyLine(request, polydata):
         boundBoxes[i][1][0]=NE_loc.deg_lat
         boundBoxes[i][1][1]=NE_loc.deg_lon
         i +=1
-    cameras=[]
+    
     i=0
     for box in boundBoxes:
         query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (box[0][0],box[0][1],box[1][0],box[1][1])
         #cam = camera_info.objects.raw('select * from traffic_camera_info where (latitude > -25.740908 and latitude<-25.739112) and (longitude >28.263433 and longitude < 28.265427)')
         for cam in camera_info.objects.raw(query):
-            cameras.insert(i,cam)
+            populateCameraList(cam)
         i +=1
 
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
@@ -76,9 +81,9 @@ def processPolyLine(request, polydata):
     #EndLongitude =28.265427
     #camera: "GP::GP CCTV N4 101"
     
-    #json_data = serializers.serialize("json", cameras)
-    #return HttpResponse(json_data, content_type='application/json')
-    return HttpResponse(len(cameras))
+    json_data = serializers.serialize("json", cameras)
+    return HttpResponse(json_data, content_type='application/json')
+    #return HttpResponse(len(cameras))
     #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
