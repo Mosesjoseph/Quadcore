@@ -7,7 +7,6 @@ from django.core import serializers
 from django.utils import timezone
 import re
 import geolocation as geo
-import basex
 # Create your views here.
 
 #def detail(request, question_id):
@@ -19,6 +18,8 @@ import basex
 
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
+def populateCameraList(camArray,cam):
+    print "ok"
 
 def home(request):
     entries=camera_info.objects.all()
@@ -50,13 +51,24 @@ def processPolyLine(request, polydata):
         SW_loc,NE_loc = loc.bounding_locations(distance)
         boundBoxes.insert(i,(SW_loc.deg_lat,SW_loc.deg_lon,NE_loc.deg_lat,NE_loc.deg_lon))
         i +=1
-
+    i=0
+    cameras=[]
+    for box in boundBoxes:
+        cam = camera_info.objects.raw("select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)")
+        cameras.insert(i,cam)
+        i +=1
+    #cam = camera_info.objects.raw('select * from traffic_camera_info where (latitude > -25.740908 and latitude<-25.739112) and (longitude >28.263433 and longitude < 28.265427)')
+    json_data = serializers.serialize("json", cam)
+    #return HttpResponse(json_data, content_type='application/json')
     #StartLatitude =-25.740908
     #StartLongitude =28.263433
     #EndLatitude =-25.739112
     #EndLongitude =28.265427
+    #camera: "GP::GP CCTV N4 101"
     
-    return HttpResponse(boundBoxes)
+    json_data = serializers.serialize("json", cameras[5])
+    return HttpResponse(json_data, content_type='application/json')
+    #return HttpResponse(json_data, content_type='application/json')
     ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
 
