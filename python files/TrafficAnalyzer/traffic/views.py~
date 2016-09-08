@@ -10,7 +10,7 @@ import geolocation as geo
 import numpy as np
 from django.core.cache import cache
 from random import randint
-import datetime
+from datetime import datetime
 # Create your views here.
 
 #def detail(request, question_id):

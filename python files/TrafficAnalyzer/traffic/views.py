@@ -36,10 +36,10 @@ def setTrafficForCamera(camera):
         getImage(camera.camera)                     #Fetch image
         trafficLevel=analyseImage("image")      #analyse the image
         camera.traffic=trafficLevel
-        camera.timestamp = datetime.now()
+        camera.timestamp = datetime.now()       #update model timestamp
         camera.save()
         cache.set(camera.camera, trafficLevel, timeout=60)
-    #else it is already in the database
+    #else it is already in the database and does not need to be fetched
     
 
 def populateCameraList(cam):
