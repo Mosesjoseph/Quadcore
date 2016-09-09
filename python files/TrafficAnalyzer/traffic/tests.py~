@@ -12,7 +12,3 @@ class SimpleTest(TestCase):
     
     def test_from_degrees(self):
         self.assertEqual(type(self.loc),type(geo.GeoLocation.from_degrees(-25.7587942, 28.2190005)))
-    
-    #def test_bounding_locations(self):
-        
-        #self.assertEqual(45, len(res))

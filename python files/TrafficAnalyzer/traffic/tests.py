@@ -10,4 +10,5 @@ class SimpleTest(TestCase):
         res=geo.decodepolyline(self.polyline)
         self.assertEqual(45, len(res))
     
-    
+    def test_from_degrees(self):
+        self.assertEqual(type(self.loc),type(geo.GeoLocation.from_degrees(-25.7587942, 28.2190005)))
