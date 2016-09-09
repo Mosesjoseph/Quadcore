@@ -34,3 +34,7 @@ class SimpleTest(TestCase):
     def test_analyseImage(self):
         traffic=imageHandler.analyseImage("CamId")
         self.assertTrue(traffic >= 1 and traffic <= 5)
+
+    def test_getImage(self):
+        traffic=imageHandler.getImage("GP::GP CCTV N1 202")
+        self.assertTrue(traffic)
