@@ -3,6 +3,7 @@ import geolocation as geo
 from django.core.cache import cache
 import views
 from traffic.models import camera_info
+import imageHandler
 # Create your tests here.
 class SimpleTest(TestCase):
     def setUp(self):
@@ -26,5 +27,10 @@ class SimpleTest(TestCase):
         self.assertEqual(28.219499,  float("%f" % NE_loc.deg_lon))
 
     def test_populateCameraList(self):
-        views.populateCameraList(camera_info.objects.create(camera="test",timestamp="2016-09-09 00:25:18"))
-        self.assertEqual(views.populateCameraList(camera_info.objects.create(camera="test",timestamp="2016-09-09 00:25:18")),None)
+        demo=camera_info.objects.create(camera="test",timestamp="2016-09-09 00:25:18")
+        views.populateCameraList(demo)
+        self.assertEqual(views.populateCameraList(views.populateCameraList(demo)),None)
+
+    def test_analyseImage(self):
+        traffic=imageHandler.analyseImage("CamId")
+        self.assertTrue(traffic >= 1 and traffic <= 5)

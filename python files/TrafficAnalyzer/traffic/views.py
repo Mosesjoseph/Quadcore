@@ -39,6 +39,7 @@ def setTrafficForCamera(camera):
 def populateCameraList(cam):
     for cm in cameras:
         if cam == cm:
+            #return HttpResponse("Duplicate")
             return 0
     cameras.insert(0,cam)
 
