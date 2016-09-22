@@ -11,8 +11,8 @@ def getImage(imgId):
     #print networkID[0]
     imgFile=open("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/images/"+imgId+".jpg","wb")
     try:
-        imgFile.write(urlopen("https://www.i-traffic.co.za/api/cameraimage?key=c763adacf26b4b7eb5bc81bca8772975&format=xml&cameraID="+camID[0]+"&networkId="+networkID[0]).read())
-        imgFile.close()
+        #imgFile.write(urlopen("https://www.i-traffic.co.za/api/cameraimage?key=c763adacf26b4b7eb5bc81bca8772975&format=xml&cameraID="+camID[0]+"&networkId="+networkID[0]).read())
+        #imgFile.close()
         return True
     except:
         return False

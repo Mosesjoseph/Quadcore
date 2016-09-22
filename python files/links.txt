@@ -1,0 +1,7 @@
+links
+http://stackoverflow.com/questions/26932891/detect-touching-overlapping-circles-ellipses-with-opencv-and-python
+http://www.pyimagesearch.com/2014/10/20/finding-shapes-images-using-python-opencv/
+https://pythonspot.com/en/car-tracking-with-cascades/
+http://docs.opencv.org/trunk/d2/dbd/tutorial_distance_transform.html
+http://mark-kay.net/2014/06/24/detecting-vehicles-cctv-image/
+https://www.behance.net/gallery/Vehicle-Detection-Tracking-and-Counting/4057777
