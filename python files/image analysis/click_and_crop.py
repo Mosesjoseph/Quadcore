@@ -3,6 +3,8 @@ import string
 import random
 import argparse
 import cv2
+from os import listdir
+from os.path import isfile, join
 
 # initialize the list of reference points and boolean indicating
 # whether cropping is being performed or not
@@ -61,31 +63,45 @@ def name_generator(size=10, chars=string.ascii_letters + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", required=True, help="Path to the image")
+ap.add_argument("-i", "--images", required=True, help="Path to the images folder")
 args = vars(ap.parse_args())
 
 # load the image, clone it, and setup the mouse callback function
-image = cv2.imread(args["image"])
-clone = image.copy()
+image = None
+clone = None
 cv2.namedWindow("image")
 cv2.setMouseCallback("image", click_and_crop)
 
-# keep looping until the 'q' key is pressed
-while True:
-	# display the image and wait for a keypress
-	cv2.imshow("image", image)
-	key = cv2.waitKey(1) & 0xFF
 
-	# if the 'r' key is pressed, reset the cropping region
-	if key == ord("r"):
-		image = clone.copy()
+mypath=args["images"]
+onlyfiles = [ f for f in listdir(mypath) if isfile(join(mypath,f)) ]
+images = numpy.empty(len(onlyfiles), dtype=object)
+for n in range(0, len(onlyfiles)):
+    try:
+        images[n] = cv2.imread( join(mypath,onlyfiles[n]) )
+        image=images[n]
+        clone=image.copy()
+        ##cv2.imshow("ROI", images[n])
 
-	# if the 'c' key is pressed, break from the loop
-	elif key == ord("c"):
-		crop_and_save()
-        
-        elif key == ord("q"):
-            break
+        # keep looping until the 'q' key is pressed
+        while True:
+            # display the image and wait for a keypress
+            cv2.imshow("image", image)
+            key = cv2.waitKey(1) & 0xFF
+
+            # if the 'r' key is pressed, reset the cropping region
+            if key == ord("r"):
+                    image = clone.copy()
+
+            # if the 'c' key is pressed, break from the loop
+            elif key == ord("c"):
+                    crop_and_save()
+            
+            elif key == ord("q"):
+                break
+        ##cv2.waitKey(0)
+    except:
+        pass
 
 # close all open windows
 cv2.destroyAllWindows()
