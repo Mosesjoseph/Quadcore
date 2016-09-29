@@ -1,0 +1,2 @@
+"c" to crop
+"q" to go to the next image
