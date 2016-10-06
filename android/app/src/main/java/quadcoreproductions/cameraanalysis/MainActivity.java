@@ -47,8 +47,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String[] listItems ={"Themba", "Moses", "Android", "Python", "Wassup", "Selenium", "PhantomJS", "BS4", "Halla!!!!!!!!!!"};
+    String[] listItems ={"", "", "Android", "Python", "Wassup", "Selenium", "PhantomJS", "BS4", "Halla!!!!!!!!!!"};
     HttpURLConnection client;
+ List<LatLng> startLatLng = new ArrayList<>();
+    List<LatLng> endLatLng = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,34 +60,16 @@ public class MainActivity extends AppCompatActivity
         boolean test = false;
         boolean test2 = false;
 
-        try
-        {
-           test = connectToServer();
-           test2 = sendToServer();
-            getServerResponse();
-        }
-        catch (IOException error)
-        {
-            error.printStackTrace();
-        }
-        //}
-
-        if(test == true)
-            listItems[0] = "successful";
-        else
-            listItems[0] = "failed";
-
-        if(test2 == true)
-            listItems[1] = "successful";
-        else
-            listItems[1] = "failed";
-
-
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, R.layout.activity_listview, listItems);
         ListView listView = (ListView)findViewById(R.id.listView);
         if (listView != null) {
             listView.setAdapter(arrayAdapter);
         }
+
+	 public void  sendGetRequest(View view)
+	 {
+		new GetClass(this).execute();
+	 }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -170,150 +154,85 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+     private class GetClass extends AsyncTask<String, Void, Void>
+   {
+       private Context context;
 
-    String requestParameters = "camera=";
-    public boolean connectToServer()
-    {
-        String server ="http://10.0.0.1:8000";
-        URL url;
+       public GetClass(Context c)
+       {
+           this.context = c;
+       }
 
-        //try to create a connection
-        try {
-            try {
-                 url = new URL(server);
-            }
-            catch(MalformedURLException error)
-            {
-                return  false;
-            }
-            client = (HttpURLConnection) url.openConnection();
-            return true;
-        }
-        catch(IOException error)
-        {
-            return false;
-        }
-    }
+       protected  void onPreExecute()
+       {
+           progress = new ProgressDialog(this.context);
+           progress.setMessage("Loading");
+           progress.show();
+       }
 
-    public boolean sendToServer() throws ProtocolException
-    {
-        client.setRequestMethod("GET");
-        client.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        client.setDoInput(true);
-        client.setDoOutput(true);
+       @Override
+       protected Void doInBackground(String... params)
+       {
+           try {
+               final TextView textView = (TextView) findViewById(R.id.textView);
+               GoogleRequest googleRequest = new GoogleRequest("pretoria", "johannesburg");
+               URL url = new URL(googleRequest.getUrl());
+               HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+               httpURLConnection.setRequestMethod("GET");
+               httpURLConnection.setRequestProperty("USER-AGENT", "Mozilla/5.0");
+               httpURLConnection.setRequestProperty("ACCEPT-LANGUAGE", "en-US, en;0.5");
 
-        //Send Request
-        try {
-            DataOutputStream wr = new DataOutputStream(client.getOutputStream());
-         //   BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-           // wr.writeBytes("/getcamera/TEM212");
-            //wr.flush();
-            //wr.close();
+               int responseCode = httpURLConnection.getResponseCode();
 
-            return true;
+               final StringBuilder output = new StringBuilder("Request URL " + url);
+               output.append(System.getProperty("line.separator") + "Response Code " +responseCode);
+               output.append(System.getProperty("line.seperator") + "Type " + "GET");
+               BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+               String line = "";
+               StringBuilder responseOutput = new StringBuilder();
+               System.out.println("output==============" + br);
+               while((line = br.readLine()) != null)
+                   responseOutput.append(line);
+               br.close();
 
-        }
-        catch(IOException error)
-        {
-            return false;
-        }
-    }
+           //    System.out.println(responseOutput.toString());
 
-    public void getServerResponse() throws IOException
-    {
-        InputStream is = client.getInputStream();
-        BufferedReader br = new BufferedReader(new InputStreamReader(is));
-        String line = "";
-        StringBuffer response = new StringBuffer();
-        while((line = br.readLine()) != null)
-        {
-            response.append(line);
-            response.append('\r');
-        }
-        br.close();
-        int itemsLength = listItems.length;
-        listItems[itemsLength-1] = response.toString();
-    }
+               output.append(System.getProperty("line.seperator")+ "Response " + System.getProperty("line.seperator") + System.getProperty("line.seperator") + responseOutput.toString());
+               try
+               {
+                   //parseJSONGoogle(responseOutput.toString());
+                   List<List<LatLng>> values = new GoogleJSONParser(responseOutput.toString()).parseJSON();
+                   startLatLng = new ArrayList<>(values.get(0));
+                   endLatLng = new ArrayList<>(values.get(1));
+               }
+               catch(JSONException error)
+               {
+                   error.printStackTrace();
+               }
 
-    public void disconnectToServer()
-    {
-        client.disconnect();
-    }
+               MainActivity.this.runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                       textView.setText(startLatLng.get(0).toString());
+                       progress.dismiss();
+                   }
+               });
+           }
+           catch(IOException error)
+           {
 
-    public String getURL(String origin, String destination) throws UnsupportedEncodingException
-    {
-        String originParameter;
-        String destinationParameter;
+           }
 
-        originParameter = URLEncoder.encode(origin, "utf-8");
-        destinationParameter = URLEncoder.encode(destination, "utf-8");
+           return null;
+       }
+   
+   
 
-        String url = "https://maps.googleapis.com/maps/api/dir" + "origin=" + originParameter + "&destination=" + destination + "&key=";
-        return url;
+   
+   
 
-    }
-
-    private class downloadData extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... params) {
-            try {
-                URL url = new URL(params[0]);
-                HttpURLConnection googleServer = null;
-                InputStream is;
-                StringBuffer buffer = null;
-                BufferedReader br;
-                try {
-                    googleServer = (HttpURLConnection) url.openConnection();
-                    is = googleServer.getInputStream();
-                    br = new BufferedReader(new InputStreamReader(is));
-                    buffer = new StringBuffer();
-                    String line = "";
-
-                    while ((line = br.readLine()) != null)
-                        buffer.append(line);
-                } catch (IOException error) {
-
-                }
-
-                return buffer.toString();
-            } catch (MalformedURLException error) {
-
-            }
-            return "";
-        }
-    }
-
-    public void parseJSONGoogle(String googleData) throws JSONException
-    {
-        if(googleData == null)
-            return;
-
-        List<LatLng> startLatLong = new ArrayList<>();
-        List<LatLng> endLatLong = new ArrayList<>();
-        JSONObject jsonObject = new JSONObject(googleData);
-        JSONArray jsonArray = jsonObject.getJSONArray("routes");
-
-        //loop through route
-        for(int i = 0; i < jsonArray.length(); ++i)
-        {
-
-            JSONObject jsonRoute = jsonArray.getJSONObject(i);
-            JSONArray jsonLegs = jsonRoute.getJSONArray("legs");
-            JSONObject jsonLeg = jsonLegs.getJSONObject(0);
-            JSONObject jsonStartLocation = jsonLeg.getJSONObject("start_location");
-            JSONObject jsonEndLocation =  jsonLeg.getJSONObject("end_location");
-
-            //get the latitude and longitude
-            LatLng latLngStart = new LatLng(jsonStartLocation.getDouble("lat"), jsonStartLocation.getDouble("lng"));
-            LatLng latLngEnd = new LatLng(jsonEndLocation.getDouble("lat"), jsonEndLocation.getDouble("lng"));
-
-            startLatLong.add(latLngStart);
-            endLatLong.add(latLngEnd);
-
-        }
-
-        //us latlong values to see which cameras are in the path and send those cameras to the server
-    }
+   
+   
 }
 
 
