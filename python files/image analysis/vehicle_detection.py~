@@ -18,7 +18,7 @@ if (type(img) == type(None)):
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 print "got grey image"
 
-cars = car_cascade.detectMultiScale(gray, 1.04, 1)
+cars = car_cascade.detectMultiScale(gray, 1.1, 1)
 print len(cars)
 for (x,y,w,h) in cars:
     cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)      
