@@ -1,81 +1,84 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{blindtext}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{enumitem}
-\usepackage{booktabs}
-\usepackage{verbatim}
-\usepackage{makecell}
+
+\title{Testing}
+\author{Themba Mbhele (14007950)\\
+        Moses Mayimela (14019702)\\
+        Hlengekile Jita (14077893)\\
+        Mpho Baloyi (14133670)\\
+        }
+\date{29 July 2016}
 
 \begin{document}
-\begin{titlepage}
-\center
 
-\textsc{\LARGE Testing Documentation}\\[1.5cm]
-\textsc{\Large Project: Traffic Camera Image Analysis}\\[1.5cm]
-\textsc{\large Client: DPSS, CSIR}\\[0.5cm]
-\textsc{\large Team: Quadcore Productions}\\[0.5cm]
-
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\textbf{Author(s):}\\
-Mpho \textsc{Baloyi}\\
-Hlengekile \textsc{Jita}\\
-Mayimela \textsc{Moses}\\
-Mbhele \textsc{Themba}\\
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\textbf{Student number(s):} \\
-14133670\\ % Student number
-14077893\\
-14019702\\
-14007950\\
-\end{flushright}
-\end{minipage}\\
-
-\includegraphics[width=\textwidth]{2012-quad-core-phones.jpg}
-
-{\large University of Pretoria, Department of Computer Science}\\
-
-{\large 29 July 2016}\\[3cm]
-
-\vfil
-
-\end{titlepage}
-
-\newpage
-\tableofcontents
-\newpage
-
-\newpage
-%\begin{comment}
-\begin{table}[ht]
- \centering
- \caption{Version History}
- \label{tab:table1}
- \begin{tabular}{cccc}
-   \toprule Version No. & Date & Changes & By\\
-   \midrule 1 & 29 July 2016 & & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele}\\
-   \bottomrule
-  \end{tabular}
-\end{table}
-%\end{comment}
-\newpage
+\maketitle
 
 \section{Introduction}
-This document contains the testing methods that we have used to test the Traffic Camera Image Analysis system that we are currently developing for our final project for COS301 project. We will document the tests that are currently in place and have been run, and future tests that we still plan to design as we continue to develop the system.
+This document contains all the details of the tests that were conducted on the system. In addition to tests that have already been conducted, plans for futures tests will also be stated.
+
+\section{Purpose}
+The purpose of this document is to combine the unit tests of the system and the results of the unit tests (report) into a single document.
 
 \section{Plan for Testing (Android)}
-\subsection{Testing tools}
+\subsection{Scope}
+The features of the system that will be tested are the following:
+\begin{itemize}
+    \item Route construction
+    \item Communication with server (making a request)
+    \item Communication with server (receiving a response)
+\end{itemize}
+\subsection{Testing Environment}
 As the functions that are being used by the system were developed, tests were designed to test their functionality to verify that the functions do what they are intended to do so that as we continue with the development, we use functions that have been thoroughly tested and have been verified as correct.
 On the android side of the system, JUnit was used to conduct all unit tests. We
-made use of a testing framework because it allows us to automate the testing process because we do not have to manually run tests for each function that we intend to test, instead JUnit will run all of the tests for us provided that we
+made use of a testing framework because it allows us to automate the testing process as we do not have to manually run tests for each function that we intend to test. Instead, JUnit will run all of the tests for us provided that we
 have properly annotated our functions and made use of assertions.
 \subsection{Running the unit tests}
-To run the unit test for Android, an internet connection has to be established and an IDE such as eclipse, android studio or IntelliJ must be used. Once that infrastructure is in place, and the tests have all been written, executing the tests simply involves right clicking on the folder in which the unit tests are located and choosing the "run tests" options. this will execute all the tests in that folder and generate a report displaying the results of the tests.
+To run the unit tests, an internet connection has to be established, in order to make server responses, and an IDE such as eclipse, android studio or IntelliJ must be used. Once that infrastructure is in place, and the tests have all been written, executing the tests simply involves right clicking on the folder in which the unit tests are located and choosing the "run tests" options. this will execute all the tests in that folder and generate a report displaying the results of the tests. The tests will run across various operating systems.
+\subsection{Test Cases}
+\subsubsection{Test Case 1: Route Construction (valid data)}
+The purpose of this unit test is determine whether the route construction function acts according to its specification when provided with data that it is possible to construct a route from.\\Input: \begin{itemize}
+\item A start and end locations that are user specified
+\end{itemize}
+Outcome: For this test to be successful, the following result is expected
+\begin{itemize}
+\item A JSON object (Received from the Google server response)
+\item The JSON object must not be empty. It should include all the data needed to process and construct a route. Such data includes latitude/longitude values for various points on the route.
+\end{itemize}
+\subsubsection{Test Case 2: Route Construction (invalid data)}
+The purpose of this unit test is to test whether the route construction function will deal with a scenario where valid input is used, but no routes (via vehicle) can be constructed due to nature obstructions such as oceans, inadequate map data, or garbage input from the user.
+\\Input: \begin{itemize}
+\item A start and end locations that are user specified
+\end{itemize}
+Outcome: For this test to be successful, the following result is expected
+\begin{itemize}
+\item A JSON object (Received from the Google server response)
+\item The JSON object must be empty.
+\end{itemize}
+
+\subsubsection{Test Case 3: Server Response}
+The purpose of this test is to determine test that our server will always generate a response that is in the expected format. The expect format is XML.
+\\Input: \begin{itemize}
+\item Encoded poly line that includes all the latitude and longitude values of a route
+\end{itemize}
+Outcome: For this test to be successful, the following response is expected from the server
+\begin{itemize}
+\item An XML string
+\end{itemize}
+
+\subsubsection{Test Case 4: Input validation}
+The purpose of this test is to make sure that the input data received from the user is processed and validated correctly
+\\Input: \begin{itemize}
+\item Empty input data
+\item Valid input data (i.e Non-empty input data)
+\end{itemize}
+Outcome: For this test to be successful, the following results are expected
+\begin{itemize}
+\item If empty input data is provided by user, the function should return false so that the appropriate action may be taken.
+\item If the user provides non-empty data, the function should return true, signalling that valid data was provided. Other than checking for non-empty data, it would be difficult to determine whether the user has provided useful input because we cannot determine wheter a place exists or not. Instead, this will be taken care of in test case 2 when a request is made to the Google server.
+\end{itemize}
+\subsection{Unit Test Report}
+The following results were obtained from running all the tests
+\subsubsection{Test Case 1}
 \subsection{Plans for the future}
 Once the application has been completed, we plan to conduct usability tests where we gather a number of people to test the application. The aim of these tests will be to determine whether the user interface of the application is user friendly and the test will also reveal any flaws in the system
 \section{Plan for Testing (Server)}
@@ -88,7 +91,7 @@ To test the script, the following must be met
 \item Mysql server
 \item If Possible, you may verify if the itraffic website is operational.
 \item This script was written and tested on a UNIX environment and this is the environment where it should be tested.
-\item The "TrafficAnalyzer" Django project should be in the same folder as the "getImages.py". This is becauset the script makes use of the files in the Django project.
+\item The "TrafficAnalyzer" Django project should be in the same folder as the "getImages.py". This is because the script makes use of the files in the Django project.
 \end{itemize}
 
 After the above requirements have been met,the script can be manually executed on the terminal or it may be executed.
