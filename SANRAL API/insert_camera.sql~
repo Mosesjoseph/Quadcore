@@ -1,0 +1,2 @@
+INSERT INTO traffic_camera_info (id, camera, traffic, timestamp,latitude, longitude,roadway_name) VALUES 
+(NULL,'WC::WC CCTV N2 910',0,NOW(),-34.085015,18.834943,'N2');
