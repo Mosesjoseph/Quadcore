@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_route"
+        android:title="Edit Route"
+        ></item>
+    <item
+        android:id="@+id/delete_route"
+        android:title="Delete Route"
+        ></item>
+    <item
+        android:id="@+id/get_report"
+        android:title="Get Traffic Report"
+        android:icon="@mipmap/ic_near_me_black_18dp"
+        ></item>
+</menu>
