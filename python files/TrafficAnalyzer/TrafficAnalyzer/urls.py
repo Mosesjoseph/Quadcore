@@ -6,7 +6,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'traffic.views.home', name='home'),
 
-    # ex: /polyline/5/vote/
+    # ex: /polls/5/vote/
     url(r'^polyline/(?P<polydata>.+)$', 'traffic.views.processPolyLine', name='polyProcessor'),
     
     #route to set the camera data
@@ -17,7 +17,6 @@ urlpatterns = patterns('',
     #ex: /camera/5/
     url(r'^getcamera/(?P<camera_id>.+)$', 'traffic.views.getCameraInfo', name='get'),
     
-
     #route to get camera image  
     #ex: /getimage/cam_id/
     url(r'^viewimage/(?P<image_id>.+)$', 'traffic.views.viewImage', name='get_image'),

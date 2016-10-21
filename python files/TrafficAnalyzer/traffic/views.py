@@ -108,6 +108,12 @@ def processPolyLine(request, polydata):
     #XML response
     xml_data = serializers.serialize("xml", cameras)
     return HttpResponse(xml_data, content_type='application/xml')
+    
+    #return HttpResponse(cameras)
+    #return HttpResponse(json_data, content_type='application/json')
+    ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
+
+
 
 def viewImage(request, image_id):
     imageName="traffic/images/"+image_id+".jpg"
@@ -118,10 +124,6 @@ def viewImage(request, image_id):
         image_data = open("traffic/images/no_image.png", "rb").read()
         return HttpResponse(image_data, content_type="image/png")
     #return HttpResponse("You're looking at question %s." % question_id)
-
-
-
-
 
 
 
