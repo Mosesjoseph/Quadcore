@@ -40,7 +40,7 @@ Mbhele \textsc{Themba}\\
 
 {\large University of Pretoria, Department of Computer Science}\\
 
-{\large 29 July 2016}\\[3cm]
+{\large 22 October 2016}\\[3cm]
 
 \vfil
 
@@ -60,6 +60,7 @@ Mbhele \textsc{Themba}\\
    \toprule Version No. & Date & Changes & By\\
    \midrule 1 & 27 May 2016 & \makecell {Introduction,\\ Background,\\ Vision,\\ Scope,\\ Use cases} & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele}\\
    2 & 29 July 2016 & \makecell {Updated Scope,\\ Updated Use Cases,\\ Added Service Contracts,\\ Added Required Functionality,\\ Added Process Specification} & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele} \\
+   3 & 22 October 2016 & \makecell {Added Domain Model,\\ Added Extra Route Info Use Case,\\ Added Captions and Figure References,\\ Changed Open Issues} & \makecell {Mpho Baloyi,\\ Hlengekile Jita,\\ Moses Mayimela,\\ Themba Mbhele} \\
    \bottomrule
   \end{tabular}
 \end{table}
@@ -77,11 +78,11 @@ As a commuter, traffic is something that is a part of everyday life, and it is n
 
 In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
 \section{System Scope}
+The purpose of this system is to provide the user with traffic information based on image analysis from images accessed from highway cameras. The user will thus need to be able to access services that allow the achievement of this goal.
+
+The scope of the system which is depicted below in {figure ref} includes the tasks the user can access such as add route, modify route, delete route and get route traffic.
 \includegraphics[width=\textwidth]{images/System_Scope.jpg}
 
-The purpose of this system as stated earlier, is to provide the user with traffic information based on image analysis from images accessed from highway cameras. Thus the user will need to be able to access services that allow the achievement of this goal.
-
-The scope of the system thus includes the tasks the user can access such as add route, modify route, delete route and get route traffic.
 \section{Functional Requirements}
 \subsection{Use Cases}
 The use cases for our system are described below. These use cases are the services that provide the user of the application some value. The following uses are listed in order of prioritization:
@@ -91,10 +92,10 @@ The use cases for our system are described below. These use cases are the servic
 \item Modify Route			(Critical)
 \item Delete Route			(Critical)
 \item Schedule Notification (Important)
-\item Route Optimization 	(Nice To Have)
+\item Extra Route Information 	(Nice To Have)
 \end{itemize}
 \subsection{Service Contracts}
-For each of the above services described above, there are are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in case the service fails.
+For each of the above services described above, there are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in case the service fails.
 
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
@@ -140,6 +141,11 @@ Valid times\\
 Notification is scheduled\\
 
 This use case allows the user to schedule notifications of traffic information at specific times. This is done by allowing the user to specify a time to be notified about a route when adding or modifying it. This time is then used to schedule automated traffic information requests.
+
+\subsubsection{Extra Route Information}
+\includegraphics[width=\textwidth]{images/scExtra_Route_Info.jpg}
+
+
 \subsection{Required Functionality}
 The use cases make use of other lower level functions in order to achieve their purpose. In the below diagrams for each high level use case, the lower level use cases that are required are described.
 \subsubsection{Add Route}
@@ -176,6 +182,8 @@ The Get Route Traffic use case makes use of the following lower level functions,
 \item \textbf{sendTrafficInformation -} This function creates a traffic information report and sends it to the user who requested it.
 \item \textbf{storeTrafficLevels -} The traffic levels are stored for any other user to be able to access it if necessary instead of performing analysis again.
 \end{itemize}
+\subsubsection{Extra Route Information}
+\includegraphics[width=\textwidth]{images/Extra_Route_Info.jpg}
 
 \subsection{Process Specification}
 This section describes the process for completing the Add Route, Modify Route and Get Route Traffic Sections.
@@ -183,18 +191,19 @@ This section describes the process for completing the Add Route, Modify Route an
 \includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
 \subsubsection{Modify Route}
 \includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
+\subsubsection{Delete Route}
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/ps_GetRouteTraffic.jpg}
-
+\subsubsection{Extra Route Information}
+\includegraphics[width=\textwidth]{images/ps_ExRouteInfo.jpg}
 \section{Domain Model}
 %\includegraphics[width=\textwidth]{images/Domain_Model.jpg}
 
 \section{Open Issues}
-Some of the issues that still need to be covered, and that still need more clarification are the following:
+Possible future work to be done on the system:
 \begin{itemize}
-\item Domain model for the modules of the system, still need further clarification on format of some data
-\item Further work is to be done on the Get Route Traffic service
-\item Route Optimization, currently debating the value, if any, this service might add to the system.
+\item \textbf{Improve Schedule Notification Use Case} - The current version of the system does not have push notifications. By implementing push notifications the application will be more efficient for the user.
+\item \textbf{Camera's from more sources} - The system only has access to SANRAL highway cameras. This limits the scope of the application. If other sources of camera's are found further work could include improving the analysis by having more images.
 \end{itemize}
-
 \end{document}
+
