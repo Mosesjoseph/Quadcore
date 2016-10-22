@@ -1,15 +1,15 @@
 from urllib import urlopen
 from xml.etree.ElementTree import parse
-from traffic.models import traffic_event
+from traffic.models import traffic_event as te
 from datetime import datetime
 # Download the RSS feed and parse it
 #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
 #doc = parse(u)
-
+doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/file.xml")
 # Extract and output tags of interest
 
 def getEvents(roadName):  
-    doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/file.xml")
+    
     #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
     #doc = parse(u)
     eventsRoot = doc.getroot()
@@ -23,7 +23,7 @@ def getEvents(roadName):
             lanes_ = ev[4].text
             updated_ =ev[5].text
             
-            tmp=traffic_event(roadway_name=roadway_, location=location_, description=description_, direction_of_travel=direction_, lanes_affected=lanes_, timestamp=datetime.now())
+            tmp=te(roadway_name=roadway_, location=location_, description=description_, direction_of_travel=direction_, lanes_affected=lanes_, timestamp=datetime.now())
             events.insert(0,tmp)
     #res=roadway+","+location+", Direction of travel:"+direction+", Description:"+description+", Affected lanes:"+lanes+", Last updated:"+updated
     #res=[roadway,location,direction,description,lanes,updated]    

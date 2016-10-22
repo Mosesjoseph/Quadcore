@@ -10,10 +10,10 @@ import re
 import geolocation as geo
 import numpy as np
 from django.core.cache import cache
-
+from urllib import urlopen
 from datetime import datetime
 import imageHandler
-import xmlHandler
+from xml.etree.ElementTree import parse
 # Create your views here.
 
 #def detail(request, question_id):
@@ -27,6 +27,33 @@ import xmlHandler
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 roadNames=[]
+
+doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/file.xml")
+# Extract and output tags of interest
+
+def getEvents(roadName): 
+    global doc
+    if cache.has_key("xml_data")==False:
+        doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/data_files/events.xml")
+        cache.set("xml_data", "traffic_event", timeout=60)
+ 
+    #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
+    #doc = parse(u)
+    eventsRoot = doc.getroot()
+    events=[]
+    for ev in eventsRoot:
+        if(ev[12].text==roadName):        
+            roadway_ = ev[12].text
+            location_ = ev[8].text
+            direction_ = ev[2].text
+            description_ = ev[1].text
+            lanes_ = ev[4].text
+            updated_ =ev[5].text
+            
+            tmp=traffic_event(roadway_name=roadway_, location=location_, description=description_, direction_of_travel=direction_, lanes_affected=lanes_, timestamp=datetime.now())
+            events.insert(0,tmp)  
+            tmp=0  
+    return events
 
 def createRoadNames(cam):
     for cm in roadNames:
@@ -98,7 +125,6 @@ def processPolyLine(request, polydata):
 
     for cam in cameras:
         setTrafficForCamera(cam)
-
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
     #json_data = serializers.serialize("json", cam)
@@ -115,15 +141,17 @@ def processPolyLine(request, polydata):
     #return HttpResponse(json_data, content_type='application/json')
 
 
-    for cam in cameras:
-        createRoadNames(cam)
+    for ca in cameras:
+        createRoadNames(ca)
 
     for road in roadNames: 
-        events_array=xmlHandler.getEvents("N3")
+        events_array=getEvents(road)
         for event in events_array:
             cameras.insert(0,event)
+    
     #XML response
     xml_data = serializers.serialize("xml", cameras)
+    del cameras[:]
     return HttpResponse(xml_data, content_type='application/xml')
     
     #return HttpResponse(cameras)
