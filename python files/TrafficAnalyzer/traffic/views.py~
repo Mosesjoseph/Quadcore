@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 import json
 from traffic.models import camera_info
+from traffic.models import traffic_event
 from django.core import serializers
 from django.utils import timezone
 import re
@@ -12,6 +13,7 @@ from django.core.cache import cache
 
 from datetime import datetime
 import imageHandler
+import xmlHandler
 # Create your views here.
 
 #def detail(request, question_id):
@@ -104,7 +106,9 @@ def processPolyLine(request, polydata):
     #JSON response
     #json_data = serializers.serialize("json", cameras)
     #return HttpResponse(json_data, content_type='application/json')
-    
+    events_array=xmlHandler.getEvents("N2")
+    for event in events_array:
+        cameras.insert(0,event)
     #XML response
     xml_data = serializers.serialize("xml", cameras)
     return HttpResponse(xml_data, content_type='application/xml')
@@ -115,7 +119,15 @@ def processPolyLine(request, polydata):
 
 
 
-
+def viewImage(request, image_id):
+    imageName="traffic/images/"+image_id+".jpg"
+    try:
+        image_data = open(imageName, "rb").read()
+        return HttpResponse(image_data, content_type="image/jpeg")
+    except IOError:
+        image_data = open("traffic/images/no_image.png", "rb").read()
+        return HttpResponse(image_data, content_type="image/png")
+    #return HttpResponse("You're looking at question %s." % question_id)
 
 
 

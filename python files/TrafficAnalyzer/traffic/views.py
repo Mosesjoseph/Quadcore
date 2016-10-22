@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 import json
 from traffic.models import camera_info
+from traffic.models import traffic_event
 from django.core import serializers
 from django.utils import timezone
 import re
@@ -12,6 +13,7 @@ from django.core.cache import cache
 
 from datetime import datetime
 import imageHandler
+import xmlHandler
 # Create your views here.
 
 #def detail(request, question_id):
@@ -24,7 +26,7 @@ import imageHandler
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
-
+roadNames=[]
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
         if imageHandler.getImage(camera.camera)==True:                     #Fetch image
@@ -104,7 +106,9 @@ def processPolyLine(request, polydata):
     #JSON response
     #json_data = serializers.serialize("json", cameras)
     #return HttpResponse(json_data, content_type='application/json')
-    
+    events_array=xmlHandler.getEvents("N2")
+    for event in events_array:
+        cameras.insert(0,event)
     #XML response
     xml_data = serializers.serialize("xml", cameras)
     return HttpResponse(xml_data, content_type='application/xml')
