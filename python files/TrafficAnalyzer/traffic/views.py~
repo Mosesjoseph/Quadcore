@@ -26,6 +26,13 @@ import xmlHandler
 #def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
+roadNames=[]
+
+def createRoadNames(cam):
+    for cm in roadNames:
+        if cam.roadway_name == cm:
+            return 0
+    roadNames.insert(0,cam.roadway_name)
 
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
@@ -90,7 +97,7 @@ def processPolyLine(request, polydata):
         i +=1
 
     for cam in cameras:
-        setTrafficForCamera(cam);
+        setTrafficForCamera(cam)
 
     #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
     #cam = camera_info.objects.raw(query)
@@ -106,9 +113,15 @@ def processPolyLine(request, polydata):
     #JSON response
     #json_data = serializers.serialize("json", cameras)
     #return HttpResponse(json_data, content_type='application/json')
-    events_array=xmlHandler.getEvents("N2")
-    for event in events_array:
-        cameras.insert(0,event)
+
+
+    for cam in cameras:
+        createRoadNames(cam)
+
+    for road in roadNames: 
+        events_array=xmlHandler.getEvents("N3")
+        for event in events_array:
+            cameras.insert(0,event)
     #XML response
     xml_data = serializers.serialize("xml", cameras)
     return HttpResponse(xml_data, content_type='application/xml')

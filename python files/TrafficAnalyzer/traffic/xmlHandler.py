@@ -5,12 +5,14 @@ from datetime import datetime
 # Download the RSS feed and parse it
 #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
 #doc = parse(u)
-doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/event.xml")
-eventsRoot = doc.getroot()
 
 # Extract and output tags of interest
 
 def getEvents(roadName):  
+    doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/event.xml")
+    #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
+    #doc = parse(u)
+    eventsRoot = doc.getroot()
     events=[]
     for ev in eventsRoot:
         if(ev[12].text==roadName):        
