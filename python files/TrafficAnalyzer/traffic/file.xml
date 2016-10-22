@@ -1,0 +1,106 @@
+<ArrayOfEvent
+	xmlns="http://schemas.datacontract.org/2004/07/IBI.ATIS.Web.ApiServiceModels"
+	xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Event>
+		<CountyName>KwaZulu Natal</CountyName>
+		<Description>Protesting</Description>
+		<DirectionOfTravel>Northbound</DirectionOfTravel>
+		<ID>KZN-ATMS::53174</ID>
+		<LanesAffected>2 left lanes blocked</LanesAffected>
+		<LastUpdated>20/08/2016 14:08:17</LastUpdated>
+		<Latitude>-29.850844</Latitude>
+		<LcsEntries/>
+		<Location>2.7 km after Ramp from M7 Solomon Mahlangu I/C</Location>
+		<Longitude>30.952232</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 14:07:20</Reported>
+		<RoadwayName>N2</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 14:07:20</StartDate>
+	</Event>
+	<Event>
+		<CountyName>KwaZulu Natal</CountyName>
+		<Description>Wet roads</Description>
+		<DirectionOfTravel>Westbound</DirectionOfTravel>
+		<ID>KZN-ATMS::53173</ID>
+		<LanesAffected>All lanes open</LanesAffected>
+		<LastUpdated>20/08/2016 13:35:16</LastUpdated>
+		<Latitude>-29.836563</Latitude>
+		<LcsEntries/>
+		<Location>2.9 km after Ramp from Pavillion I/C (St James Avenue)</Location>
+		<Longitude>30.900615</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 12:05:01</Reported>
+		<RoadwayName>N3</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 12:05:01</StartDate>
+	</Event>
+	<Event>
+		<CountyName>Western Cape</CountyName>
+		<Description>Vehicle on shoulder</Description>
+		<DirectionOfTravel>Outbound</DirectionOfTravel>
+		<ID>WC-ATMS::79940</ID>
+		<LanesAffected>All lanes open</LanesAffected>
+		<LastUpdated>20/08/2016 14:07:34</LastUpdated>
+		<Latitude>-34.085123</Latitude>
+		<LcsEntries/>
+		<Location>0.1 km after Old Main Rd (R102)</Location>
+		<Longitude>18.834999</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 12:22:19</Reported>
+		<RoadwayName>N2</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 12:22:19</StartDate>
+	</Event>
+	<Event>
+		<CountyName>Western Cape</CountyName>
+		<Description>Vehicle on shoulder</Description>
+		<DirectionOfTravel>Westbound</DirectionOfTravel>
+		<ID>WC-ATMS::79946</ID>
+		<LanesAffected>All lanes open</LanesAffected>
+		<LastUpdated>20/08/2016 13:47:22</LastUpdated>
+		<Latitude>-33.951458</Latitude>
+		<LcsEntries/>
+		<Location>1.0 km after Ramp from Jan Smuts M17</Location>
+		<Longitude>18.495087</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 13:40:29</Reported>
+		<RoadwayName>N4</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 13:40:29</StartDate>
+	</Event>
+	<Event>
+		<CountyName>Gauteng</CountyName>
+		<Description>Stationary vehicle</Description>
+		<DirectionOfTravel>Southbound</DirectionOfTravel>
+		<ID>GP-ATMS::78309</ID>
+		<LanesAffected>Left lane blocked</LanesAffected>
+		<LastUpdated>20/08/2016 14:13:29</LastUpdated>
+		<Latitude>-25.957325</Latitude>
+		<LcsEntries/>
+		<Location>0.4 km after Ramp to Olifantsfontein I/C</Location>
+		<Longitude>28.133408</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 14:11:31</Reported>
+		<RoadwayName>N1</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 14:11:31</StartDate>
+	</Event>
+	<Event>
+		<CountyName>KwaZulu Natal</CountyName>
+		<Description>Wet roads</Description>
+		<DirectionOfTravel>Eastbound/Westbound</DirectionOfTravel>
+		<ID>KZN-ATMS::53171</ID>
+		<LanesAffected>All lanes open</LanesAffected>
+		<LastUpdated>20/08/2016 13:04:27</LastUpdated>
+		<Latitude>-29.970653</Latitude>
+		<LcsEntries/>
+		<Location>1.1 km after N2 (M4 Split)/Ramp from M4 SB</Location>
+		<Longitude>30.941</Longitude>
+		<PlannedEndDate/>
+		<Reported>20/08/2016 11:24:33</Reported>
+		<RoadwayName>N2</RoadwayName>
+		<Severity>Minor</Severity>
+		<StartDate>20/08/2016 11:24:33</StartDate>
+	</Event>
+</ArrayOfEvent>

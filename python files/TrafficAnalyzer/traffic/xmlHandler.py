@@ -9,7 +9,7 @@ from datetime import datetime
 # Extract and output tags of interest
 
 def getEvents(roadName):  
-    doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/event.xml")
+    doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/file.xml")
     #u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
     #doc = parse(u)
     eventsRoot = doc.getroot()
