@@ -1,0 +1,1 @@
+<ServiceResponse xmlns="http://schemas.datacontract.org/2004/07/IBI.ATIS.Web.ServiceExceptions" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ErrorCode><Code>200</Code><Msg>Camera image not found.</Msg></ErrorCode><State>fail</State></ServiceResponse>

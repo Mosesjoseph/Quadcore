@@ -14,22 +14,11 @@ from urllib import urlopen
 from datetime import datetime
 import imageHandler
 from xml.etree.ElementTree import parse
-# Create your views here.
 
-#def detail(request, question_id):
-#    return HttpResponse("You're looking at question %s." % question_id)
-
-#def results(request, question_id):
-#    response = "You're looking at the results of question %s."
-#    return HttpResponse(response % question_id)
-
-#def vote(request, question_id):
-#    return HttpResponse("You're voting on question %s." % question_id)
 cameras=[]
 roadNames=[]
 
 doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/data_files/events.xml")
-# Extract and output tags of interest
 
 def getEvents(roadName): 
     global doc
@@ -61,10 +50,10 @@ def createRoadNames(cam):
 
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
-        if imageHandler.getImage(camera.camera)==True:                     #Fetch image
+        if imageHandler.getImage(camera.camera)==True:           #Fetch image
             trafficLevel=imageHandler.analyseImage("image")      #analyse the image
             camera.traffic=trafficLevel
-            camera.timestamp = datetime.now()       #update model timestamp
+            camera.timestamp = datetime.now()                    #update model timestamp
             camera.save()
             cache.set(camera.camera, trafficLevel, timeout=60)
     #else it is already in the database and does not need to be fetched
@@ -94,9 +83,6 @@ def getCameraInfo(request, camera_id):
     #return HttpResponse("You're requesting info for camera: %s" % camera_id)
 
 def processPolyLine(request, polydata):
-    ##cam = camera_info.objects.filter(camera=camera_id)
-    ##json_data = serializers.serialize("json", cam)
-    ##return HttpResponse(json_data, content_type='application/json')
     polydata= polydata.replace('\\\\', '\\')
     nodes=geo.decodepolyline(polydata)
 
@@ -116,28 +102,12 @@ def processPolyLine(request, polydata):
     i=0
     for box in boundBoxes:
         query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (box[0][0],box[0][1],box[1][0],box[1][1])
-        #cam = camera_info.objects.raw('select * from traffic_camera_info where (latitude > -25.740908 and latitude<-25.739112) and (longitude >28.263433 and longitude < 28.265427)')
         for cam in camera_info.objects.raw(query):
             populateCameraList(cam)
         i +=1
 
     for cam in cameras:
         setTrafficForCamera(cam)
-    #query="select * from traffic_camera_info where (latitude > %f and latitude< %f) and (longitude >%f and longitude < %f)" % (boundBoxes[57][0][0],boundBoxes[57][0][1],boundBoxes[57][1][0],boundBoxes[57][1][1])
-    #cam = camera_info.objects.raw(query)
-    #json_data = serializers.serialize("json", cam)
-    #return HttpResponse(json_data, content_type='application/json')
-    
-    #StartLatitude =-25.740908
-    #StartLongitude =28.263433
-    #EndLatitude =-25.739112
-    #EndLongitude =28.265427
-    #camera: "GP::GP CCTV N4 101"
-
-    #JSON response
-    #json_data = serializers.serialize("json", cameras)
-    #return HttpResponse(json_data, content_type='application/json')
-
 
     for ca in cameras:
         createRoadNames(ca)
@@ -151,10 +121,6 @@ def processPolyLine(request, polydata):
     xml_data = serializers.serialize("xml", cameras)
     del cameras[:]
     return HttpResponse(xml_data, content_type='application/xml')
-    
-    #return HttpResponse(cameras)
-    #return HttpResponse(json_data, content_type='application/json')
-    ##return HttpResponse("%f,%f" % (polytuple[0][0],polytuple[0][1]))
 
 
 
@@ -166,7 +132,6 @@ def viewImage(request, image_id):
     except IOError:
         image_data = open("traffic/images/no_image.png", "rb").read()
         return HttpResponse(image_data, content_type="image/png")
-    #return HttpResponse("You're looking at question %s." % question_id)
 
 
 
