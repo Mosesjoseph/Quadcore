@@ -158,7 +158,7 @@ The use cases make use of other lower level functions in order to achieve their 
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/Add_Route.jpg}
 
-The Add Route use case makes use of the following lower level functions to add a route to the system:
+The Add Route use case makes use of the following lower level functions depicted in {figure ref} above to add a route to the system:
 \begin{itemize}
 \item \textbf{getRoute -} This checks if the route exists already or not.
 \item \textbf{createRoute -} This creates a route, or a set of directions, based on the route boundaries (departure and destination points).
@@ -167,7 +167,7 @@ The Add Route use case makes use of the following lower level functions to add a
 
 \subsubsection{Modify Route} 
 \includegraphics[width=\textwidth]{images/Modify_Route.jpg}
-The Modify Route use case makes use of the following lower level functions to make changes to an already existing route.
+The Modify Route use case makes use of the following lower level functions depicted in {figure ref} above to make changes to an already existing route.
 \begin{itemize}
 \item \textbf{getRoute -} This checks if the route exists already.
 \item \textbf{createRoute -} This creates a route, or a set of directions, based on the route boundaries (departure and destination points). Only if the changes are in the route boundaries.
@@ -176,25 +176,33 @@ The Modify Route use case makes use of the following lower level functions to ma
 
 \subsubsection{Delete Route}
 \includegraphics[width=\textwidth]{images/Delete_Route.jpg}
-The Delete Route use case makes use of the following lower level functions to assist in removing the route from storage:
+The Delete Route use case makes use of the following lower level functions depicted in {figure ref} above to assist in removing the route from storage:
 \begin{itemize}
 \item \textbf{getRoute -} This checks if the route exists already .
 \end{itemize}
 
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/Get_Route_Traffic.jpg}
-The Get Route Traffic use case makes use of the following lower level functions, both within and outside the Routes module to determine the traffic of a route and send it back to the user:
+The Get Route Traffic use case makes use of the following lower level functions, depicted in {figure ref} above, both within and outside the Traffic Information module to determine the traffic of a route and send it back to the user:
 \begin{itemize}
 \item \textbf{checkForCameras -} This function checks if the route passes b y any of the available cameras.
 \item \textbf{fetchImage -} This function fetches an image from the camera at the specified location.
 \item \textbf{analyseImage -} This function performs image analysis in order to determine the traffic level in that location
 \item \textbf{composeTrafficInfo -} This function composes all the traffic levels that make up the route and constructs a preliminary "traffic info report".
 \item \textbf{sendTrafficInformation -} This function creates a traffic information report and sends it to the user who requested it.
-\item \textbf{storeTrafficLevels -} The traffic levels are stored for any other user to be able to access it if necessary instead of performing analysis again.
+\item \textbf{storeTrafficLevels -} The traffic levels are stored for any other user to be able to access it if their request requires similar information.
 \end{itemize}
 
 \subsubsection{Extra Route Information}
 \includegraphics[width=\textwidth]{images/Extra_Route_Info.jpg}
+The Extra Route Information use case makes use of the following lower level functions, depicted in {figure ref} above, to get roadworks and incident information for the route:
+
+\begin{itemize}
+\item \textbf{fetchRoadworksInfo -} This function fetches the roadworks information, if any, of the specified route.
+\item \textbf{fetchIncidentInfo -} This function fetches he incident information, if any, of the specified route.
+\item \textbf{sendTrafficInformation -} This function sends the traffic information to the user.
+\item \textbf{storeTrafficInfo -} The traffic information is stored in cache for any other user who makes a similar request.
+\end{itemize}
 
 \subsection{Process Specification}
 This section describes the process for completing the Add Route, Modify Route and Get Route Traffic Sections.
@@ -202,16 +210,12 @@ This section describes the process for completing the Add Route, Modify Route an
 \includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
 \subsubsection{Modify Route}
 \includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
-\subsubsection{Delete Route}
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/ps_GetRouteTraffic.jpg}
-\subsubsection{Extra Route Information}
-\includegraphics[width=\textwidth]{images/ps_ExRouteInfo.jpg}
 
 \section{Open Issues}
 Possible future work to be done on the system:
 \begin{itemize}
-\item \textbf{Improve Schedule Notification Use Case} - The current version of the system does not have push notifications. By implementing push notifications the application will be more efficient for the user.
 \item \textbf{Camera's from more sources} - The system only has access to SANRAL highway cameras. This limits the scope of the application. If other sources of camera's are found further work could include improving the analysis by having more images.
 \end{itemize}
 \end{document}
