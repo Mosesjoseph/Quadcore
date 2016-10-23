@@ -81,7 +81,7 @@ In our alternative system, we take an image analysis approach to solve the same 
 The purpose of this system is to provide the user with traffic information based on image analysis from images accessed from highway cameras. The system will need to provide the user with services that allow the achievement of this goal.
 
 The scope of the system which is depicted below in Figure ~\ref{fig:SystemScope} includes the tasks the user can access such as add route, modify route, delete route and get route traffic. This document will further describe each of these tasks as system use cases in the functional requirements section.
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/System_Scope.jpg}
 \caption{System Scope}
 \label{fig:SystemScope}
@@ -102,7 +102,7 @@ The use cases for our system are described below. These use cases are the servic
 For each of the above services described above, there are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in the case that a service fails.
 
 \subsubsection{Add Route}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
 \caption{Service Contract for Add Route Service}
 \label{fig:sc_addroute}
@@ -116,7 +116,7 @@ New route is created and stored.\\
 
 The Add Route service contract depicted above in Figure ~\ref{fig:sc_addroute} shows the use case's pre and post conditions. This use case creates a new route and stores it so that it can be used in requests for traffic information. As a pre-condition it first checks that the route to be created is valid and does not already exist. Thereafter it creates and stores the route, meeting the post-condition. In the case that the route exists an exception is raised.
 \subsubsection{Modify Route} 
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scModify_Route.jpg}
 \caption{Service Contract for Modify Route Service}
 \label{fig:sc_modifyroute}
@@ -130,7 +130,7 @@ Route is modified and the modified route is stored.\\
 This use case makes changes to existing routes and stores the changes. The service contract depicted above in Figure ~\ref{fig:sc_modifyroute} shows the use case's pre and post conditions. This use case first checks if the route exists, if so it then makes the necessary changes to the route and then stores the route. If the route does not exist an exception is raised. 
 \subsubsection{Delete Route}
 
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \caption{Service Contract for Delete Route Service}
 \label{fig:sc_deleteroute}
@@ -143,7 +143,7 @@ Route is removed\\
 This use case, whose service contract is depicted above in Figure ~\ref{fig:sc_deleteroute}, removes an existing route. Before it does this it checks if the route exists in storage then removes it. In the case that the route does not exist an exception is raised.
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/scDetermine_Traffic.jpg}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \caption{Service Contract for Get Route Traffic Service}
 \label{fig:sc_getroutetraffic}
@@ -159,7 +159,7 @@ The Get Route Traffic service contract depicted above in Figure ~\ref{fig:sc_get
 
 \subsubsection{Schedule Notification}
 \includegraphics[width=\textwidth]{images/scSchedule_Notification.jpg}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \caption{Service Contract for Schedule Notification Service}
 \label{fig:sc_notification}
@@ -175,7 +175,7 @@ This use case allows the user to schedule notifications of traffic information a
 \subsubsection{Extra Route Information}
 \includegraphics[width=\textwidth]{images/scExtra_Route_Info.jpg}
 
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \caption{Service Contract for Extra Route Information Service}
 \label{fig:sc_extra}
@@ -193,7 +193,7 @@ The Extra Route Information service contract depicted in Figure ~\ref{fig:sc_ext
 The use cases make use of other lower level functions in order to achieve their purpose. In the below diagrams for each high level use case, the lower level use cases that are required are described.
 
 \subsubsection{Add Route}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/Add_Route.jpg}
 \caption{Use Case Diagram for the Add Route Service}
 \label{fig:uc_add}
@@ -207,7 +207,7 @@ The Add Route use case makes use of the following lower level functions depicted
 \end{itemize}
 
 \subsubsection{Modify Route} 
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/Modify_Route.jpg}
 \caption{Use Case Diagram for the Modify Route Service}
 \label{fig:uc_modify}
@@ -222,7 +222,7 @@ The Modify Route use case makes use of the following lower level functions depic
 
 \subsubsection{Delete Route}
 
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/Delete_Route.jpg}
 \caption{Use Case Diagram for the Delete Route Service}
 \label{fig:uc_delete}
@@ -234,7 +234,7 @@ The Delete Route use case makes use of the following lower level functions depic
 \end{itemize}
 
 \subsubsection{Get Route Traffic}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/Get_Route_Traffic.jpg}
 \caption{Use Case Diagram for the Get Route Traffic Service}
 \label{fig:uc_gettraffic}
@@ -251,7 +251,7 @@ The Get Route Traffic use case makes use of the following lower level functions,
 \end{itemize}
 
 \subsubsection{Extra Route Information}
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/Extra_Route_Info.jpg}
 \caption{Use Case Diagram for the Extra Route Information Service}
 \label{fig:uc_extra}
@@ -270,21 +270,21 @@ The Extra Route Information use case makes use of the following lower level func
 This section describes the process for completing the Add Route, Modify Route and Get Route Traffic Sections.
 \subsubsection{Add Route}
 The process for adding a route is shown below in Figure ~\ref{fig:ps_add}.
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/psAdd_Route.jpg}
 \caption{Process Specification Diagram for the Add Route Service}
 \label{fig:ps_add}
 \end{figure}
 \subsubsection{Modify Route}
 The process for modifying a route is shown below in Figure ~\ref{fig:ps_modify}.
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/psModify_Route.jpg} 
 \caption{Process Specification Diagram for the Modify Route Service}
 \label{fig:ps_modify}
 \end{figure}
 \subsubsection{Get Route Traffic}
 The process for getting traffic information is shown below in Figure ~\ref{fig:ps_gettraffic}.
-\begin{figure}[here]
+\begin{figure}[ht]
 \includegraphics[width=\textwidth]{images/ps_GetRouteTraffic.jpg}
 \caption{Process Specification Diagram for the Get Route Traffic Service}
 \label{fig:ps_gettraffic}
