@@ -1,17 +1,50 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
+\usepackage{blindtext}
 \usepackage[utf8]{inputenc}
-
-\title{Testing}
-\author{Themba Mbhele (14007950)\\
-        Moses Mayimela (14019702)\\
-        Hlengekile Jita (14077893)\\
-        Mpho Baloyi (14133670)\\
-        }
-\date{29 July 2016}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{verbatim}
+\usepackage{makecell}
 
 \begin{document}
+\begin{titlepage}
+\center
 
-\maketitle
+\textsc{\LARGE Testing Document}\\[1.5cm]
+\textsc{\Large Project: Traffic Camera Image Analysis}\\[1.5cm]
+\textsc{\large Client: DPSS, CSIR}\\[0.5cm]
+\textsc{\large Team: Quadcore Productions}\\[0.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\textbf{Author(s):}\\
+Mpho \textsc{Baloyi}\\
+Hlengekile \textsc{Jita}\\
+Mayimela \textsc{Moses}\\
+Mbhele \textsc{Themba}\\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\textbf{Student number(s):} \\
+14133670\\ % Student number
+14077893\\
+14019702\\
+14007950\\
+\end{flushright}
+\end{minipage}\\
+
+\includegraphics[width=\textwidth]{2012-quad-core-phones.jpg}
+
+{\large University of Pretoria, Department of Computer Science}\\
+
+{\large 22 October 2016}\\[3cm]
+
+\vfil
+
+\end{titlepage}
 
 \section{Introduction}
 This document contains all the details of the tests that were conducted on the system. In addition to tests that have already been conducted, plans for futures tests will also be stated.
@@ -79,6 +112,35 @@ Outcome: For this test to be successful, the following results are expected
 \subsection{Unit Test Report}
 The following results were obtained from running all the tests
 \subsubsection{Test Case 1}
+Test description: Route construction test with valid data\\
+Result: Success.\\
+Reason: A non-empty JSON object was returned.
+\subsubsection{Test Case 2}
+Test description: Route construction test with invalid data\\
+Result: Success.\\
+Reason: An empty JSON object was returned.
+\subsubsection{Test Case 3}
+Test description: Server response test\\
+Result: Success.\\
+Reason: An XML file was returned by the server.
+\subsubsection{Test Case 4.1}
+Test description: Input validation test with empty user input fields\\
+Result: Success.\\
+Reason: The validation function returned false.
+\subsubsection{Test Case 4.2}
+Test description: Input validation test with a valid start location and an empty end location\\
+Result: Success.\\
+Reason: The validation function returned false.
+\subsubsection{Test Case 4.3}
+Test description: Input validation test with empty start location and a valid end location\\
+Result: Success.\\
+Reason: The validation function returned false.
+\subsubsection{Test Case 4.4}
+Test description: Input validation test with valid data for both start and end location\\
+Result: Success.\\
+Reason: The validation function returned true.
+\subsection{Unit Test Screenshot}
+
 \subsection{Plans for the future}
 Once the application has been completed, we plan to conduct usability tests where we gather a number of people to test the application. The aim of these tests will be to determine whether the user interface of the application is user friendly and the test will also reveal any flaws in the system
 \section{Plan for Testing (Server)}
@@ -109,3 +171,4 @@ The Django project will handle all the requests from the android device regardin
 \end{itemize}
 To Test the server, an Android device or a web browser may be used to send requests to the django application. Then the application should be able to respond with relevant information. Giving it known latitude-longitude combination and verify if the cameras returned are correct.
 \end{document}
+
