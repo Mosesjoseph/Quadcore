@@ -20,5 +20,13 @@ def getImage(imgId):
 
 def analyseImage(img):
     print "Analysis"
+    if img == "GP::GP CCTV N4 101":
+        return 1
+    if img == "GP::GP CCTV N4 102":
+        return 1
+    if img == "GP::GP CCTV N1 201":
+        return 4
+    if img == "GP::GP CCTV N1 203":
+        return 2
     return randint(1,5)
 #getImage("GP::GP CCTV N1 205")

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/action_addroute"
+        android:title="@string/action_addroute"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_add"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_modifyroute"
+        android:title="@string/action_modifyroute"
+        android:enabled="false"
+        android:icon="@drawable/ic_action_edit"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_deleteroute"
+        android:title="@string/action_deleteroute"
+        android:enabled="false"
+        android:icon="@drawable/ic_menu_delete"
+        app:showAsAction="ifRoom"/>
+
+</menu>

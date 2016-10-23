@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="za.co.quadcore.trafficanalysisapp.AddRoute"
+    android:background="#f9fbe7"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Enter name for route:"
+            android:id="@+id/lblRouteName"
+            android:textSize="25dp"
+            android:textStyle="normal|bold"
+            android:textColor="#030303"
+            android:layout_weight="0.06" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtRouteName"
+            android:textSize="20dp"
+            android:hint="e.g. Home" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Enter route details and search:"
+            android:id="@+id/lblRouteInfo"
+            android:textSize="25dp"
+            android:textStyle="normal|bold"
+            android:textColor="#030303"
+            android:layout_weight="0.06" />
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter start location"
+            android:id="@+id/autocompleteStart"
+            android:textSize="20dp"
+            android:layout_below="@+id/tool_bar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter end location"
+            android:id="@+id/autocompleteEnd"
+            android:textSize="20dp"
+            android:layout_below="@+id/autocompleteStart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@android:string/search_go"
+            android:id="@+id/search_button"
+            android:layout_below="@+id/autocompleteEnd"
+            android:onClick="sendRequestParameters"
+            />
+
+    </LinearLayout>
+</FrameLayout>
