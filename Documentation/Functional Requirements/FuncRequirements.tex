@@ -76,11 +76,11 @@ For this project we aim to achieve a system that makes use of images obtained fr
 \section{Background}
 As a commuter, traffic is something that is a part of everyday life, and it is not one of the more pleasurable aspects of life. Already there is software in place that assists us in dealing with this problem, such as Google Maps. This software uses the crowd-sourcing of GPS data in order to provide their up-to-date traffic information.
 
-In our system,we want to take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
+In our alternative system, we take an image analysis approach to solve the same problem. We will make use of the publicly available SANRAL highway cameras to get images. Processing these images we will perform image analysis and determine the traffic conditions in the area of a camera. Using this information we will be able to generate information pertaining to user specified routes in order to provide the information necessary to help them avoid traffic and choose the most suitable routes in order to do so.
 \section{System Scope}
-The purpose of this system is to provide the user with traffic information based on image analysis from images accessed from highway cameras. The user will thus need to be able to access services that allow the achievement of this goal.
+The purpose of this system is to provide the user with traffic information based on image analysis from images accessed from highway cameras. The system will need to provide the user with services that allow the achievement of this goal.
 
-The scope of the system which is depicted below in {figure ref} includes the tasks the user can access such as add route, modify route, delete route and get route traffic.
+The scope of the system which is depicted below in {figure ref} includes the tasks the user can access such as add route, modify route, delete route and get route traffic. This document will further describe each of these tasks as system use cases in the functional requirements section.
 \includegraphics[width=\textwidth]{images/System_Scope.jpg}
 
 \section{Functional Requirements}
@@ -95,7 +95,7 @@ The use cases for our system are described below. These use cases are the servic
 \item Extra Route Information 	(Nice To Have)
 \end{itemize}
 \subsection{Service Contracts}
-For each of the above services described above, there are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in case the service fails.
+For each of the above services described above, there are pre-conditions that must be met for the service to be carried out and post-conditions that are met to indicate the successful completion of a service. In addition the service contracts indicate what exceptions will be thrown in the case that a service fails.
 
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/scAdd_Route.jpg}
@@ -107,7 +107,7 @@ Route does not already exist.\\
 \textbf{Post-Condition: }
 New route is created and stored.\\
 
-This use case creates a new route and stores it so that it can be used in requests for traffic information. It first checks that the route to be created is valid and does not already exist in storage, then it creates and stores the route. In the case that the route exists an exception is raised.
+The Add Route service contract depicted above in {figure ref} shows the use case's pre and post conditions. This use case creates a new route and stores it so that it can be used in requests for traffic information. As a pre-condition it first checks that the route to be created is valid and does not already exist. Thereafter it creates and stores the route, meeting the post-condition. In the case that the route exists an exception is raised.
 \subsubsection{Modify Route} 
 \includegraphics[width=\textwidth]{images/scModify_Route.jpg}
 \textbf{Pre-Condition: }
@@ -115,14 +115,14 @@ Route exists.\\
 \textbf{Post-Condition: }
 Route is modified and the modified route is stored.\\
 
-This use case makes changes to existing routes and stores the changes. In order to do this, this use case first checks if the route exists, if so it then makes the necessary changes to the route and then stores the route. If the route does not exist an exception is raised. 
+This use case makes changes to existing routes and stores the changes. The service contract depicted above in {figure ref} shows the use case's pre and post conditions. This use case first checks if the route exists, if so it then makes the necessary changes to the route and then stores the route. If the route does not exist an exception is raised. 
 \subsubsection{Delete Route}
 \includegraphics[width=\textwidth]{images/scDelete_Route.jpg}
 \textbf{Pre-Condition: }
 Route exists.\\
 \textbf{Post-Condition: }
 Route is removed\\
-This use case removes an existing route. Before it does this it checks if the route exists in storage then removes it. In the case that the route does not exist an exception is raised.
+This use case, whose service contract is depicted above in {figure ref}, removes an existing route. Before it does this it checks if the route exists in storage then removes it. In the case that the route does not exist an exception is raised.
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/scDetermine_Traffic.jpg}
 \textbf{Pre-Condition: }
@@ -131,7 +131,7 @@ Camera locations on route has valid images.\\
 \textbf{Post-Condition: }
 Traffic information for route is generated.\\
 
-This use case generates traffic information based on a route provided with the request. To do this it first checks if the route covers any of the camera locations, if not no traffic information is generated and an exception is raised. Otherwise it continues and retrieves the images for the camera's within the route, thereafter it checks if these images are valid, if all are invalid, no traffic information is generated, it then performs image analysis on the valid images and determine the traffic levels and generates traffic information for the route.
+The Get Route Traffic service contract depicted above in {figure ref} shows the use case's pre and post conditions. This use case generates traffic information based on a route provided with the request. To do this it first checks if the route covers any of the camera locations, if not no traffic information is generated and an exception is raised. Otherwise it continues and retrieves the images for the camera's within the route, thereafter it checks if these images are valid, if all are invalid, no traffic information is generated, it then performs image analysis on the valid images and determine the traffic levels and generates traffic information for the route.
 
 \subsubsection{Schedule Notification}
 \includegraphics[width=\textwidth]{images/scSchedule_Notification.jpg}
@@ -140,14 +140,21 @@ Valid times\\
 \textbf{Post-Condition: }
 Notification is scheduled\\
 
-This use case allows the user to schedule notifications of traffic information at specific times. This is done by allowing the user to specify a time to be notified about a route when adding or modifying it. This time is then used to schedule automated traffic information requests.
+This use case allows the user to schedule notifications of traffic information at specific times. It's service contract is depicted in {figure ref}. This use case is completed by allowing the user to specify a time to be notified about a route when adding or modifying it. This time is then used to schedule automated traffic information requests.
 
 \subsubsection{Extra Route Information}
 \includegraphics[width=\textwidth]{images/scExtra_Route_Info.jpg}
+\textbf{Pre-Condition: }
+Get Route Traffic use case succeeds.\\
+Route has roadworks and incident information.\\
+\textbf{Post-Condition: }
+Extra traffic information for route is generated.\\
 
+The Extra Route Information service contract depicted in {figure ref} shows what pre- and post- conditions must be met to recieve extra route information, specifically information about roadworks and incidents. This service is completed if and only if the Get Route Traffic service is completed as an addittional add on. Before the service can run, the system also has to check if such information for that route is available. If the service is able to run successfuly, the post-condition is met.
 
 \subsection{Required Functionality}
 The use cases make use of other lower level functions in order to achieve their purpose. In the below diagrams for each high level use case, the lower level use cases that are required are described.
+
 \subsubsection{Add Route}
 \includegraphics[width=\textwidth]{images/Add_Route.jpg}
 
@@ -157,6 +164,7 @@ The Add Route use case makes use of the following lower level functions to add a
 \item \textbf{createRoute -} This creates a route, or a set of directions, based on the route boundaries (departure and destination points).
 \item \textbf{persistRoute -} This stores the route so that it is available for later use.
 \end{itemize}
+
 \subsubsection{Modify Route} 
 \includegraphics[width=\textwidth]{images/Modify_Route.jpg}
 The Modify Route use case makes use of the following lower level functions to make changes to an already existing route.
@@ -165,12 +173,14 @@ The Modify Route use case makes use of the following lower level functions to ma
 \item \textbf{createRoute -} This creates a route, or a set of directions, based on the route boundaries (departure and destination points). Only if the changes are in the route boundaries.
 \item \textbf{persistRoute -} This stores the modified route.
 \end{itemize}
+
 \subsubsection{Delete Route}
 \includegraphics[width=\textwidth]{images/Delete_Route.jpg}
 The Delete Route use case makes use of the following lower level functions to assist in removing the route from storage:
 \begin{itemize}
 \item \textbf{getRoute -} This checks if the route exists already .
 \end{itemize}
+
 \subsubsection{Get Route Traffic}
 \includegraphics[width=\textwidth]{images/Get_Route_Traffic.jpg}
 The Get Route Traffic use case makes use of the following lower level functions, both within and outside the Routes module to determine the traffic of a route and send it back to the user:
@@ -182,6 +192,7 @@ The Get Route Traffic use case makes use of the following lower level functions,
 \item \textbf{sendTrafficInformation -} This function creates a traffic information report and sends it to the user who requested it.
 \item \textbf{storeTrafficLevels -} The traffic levels are stored for any other user to be able to access it if necessary instead of performing analysis again.
 \end{itemize}
+
 \subsubsection{Extra Route Information}
 \includegraphics[width=\textwidth]{images/Extra_Route_Info.jpg}
 
