@@ -23,7 +23,8 @@ doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/data_file
 def getEvents(roadName): 
     global doc
     if cache.has_key("xml_data")==False:
-        doc = parse("/home/moses/Quadcore/python files/TrafficAnalyzer/traffic/data_files/events.xml")
+        u = urlopen('https://www.i-traffic.co.za/api/incidents?key=c763adacf26b4b7eb5bc81bca8772975&format=xml')
+        doc = parse(u)
         cache.set("xml_data", "xml_data", timeout=60)
 
     eventsRoot = doc.getroot()

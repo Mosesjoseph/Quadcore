@@ -50,10 +50,10 @@ def createRoadNames(cam):
 
 def setTrafficForCamera(camera):
     if cache.has_key(camera.camera)==False:
-        if imageHandler.getImage(camera.camera)==True:           #Fetch image
-            trafficLevel=imageHandler.analyseImage("image")      #analyse the image
+        if imageHandler.getImage(camera.camera)==True:                  #Fetch image
+            trafficLevel=imageHandler.analyseImage(camera.camera)       #analyse the image
             camera.traffic=trafficLevel
-            camera.timestamp = datetime.now()                    #update model timestamp
+            camera.timestamp = datetime.now()                           #update model timestamp
             camera.save()
             cache.set(camera.camera, trafficLevel, timeout=60)
     #else it is already in the database and does not need to be fetched
