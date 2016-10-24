@@ -170,5 +170,29 @@ The Django project will handle all the requests from the android device regardin
 \item The website also works with information form the itraffic website and thus it should be verified that the itraffic website is active to avoid avoid incorrect results from the server.
 \end{itemize}
 To Test the server, an Android device or a web browser may be used to send requests to the django application. Then the application should be able to respond with relevant information. Giving it known latitude-longitude combination and verify if the cameras returned are correct.
+\subsubsection{Test Case 1}
+Test description: Recieves polyline and returns a an array of lat/long pairs\\
+\includegraphics[scale=0.3]{images/decode_polyline.png}\\
+Result: Success.\\
+Reason: The validation function returned a valid array.
+\subsubsection{Test Case 2}
+Test description: Recieves a lat/long pair and returns two pairs of latlong pairs.\\
+\includegraphics[scale=0.3]{images/bound.png}\\ 
+Result: Success.\\
+Reason: The validation function returned a valid lat/long array.
+\subsubsection{Test Case 3}
+Test description: Recieves all cameras and produces a camera list to be analysed.
+Result: Success.\\
+Reason: The validation function returned a valid cameras array.
+\subsubsection{Test Case 4}
+Test description: Recieves an image id and must fetch this image from SANRAL.\\
+\includegraphics[scale=0.6]{images/im11.jpg}\\
+Result: Success.\\
+Reason: The validation function successfuly retrieved the image.
+\subsubsection{Test Case 5}
+Test description: Recieves an image id and analyses it to return a traffic level.
+\includegraphics[scale=0.3]{images/image_analysis.png}\\
+Result: Success.\\
+Reason: The validation function returned a valid traffic level.
 \end{document}
 

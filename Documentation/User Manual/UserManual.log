@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.29)  23 OCT 2016 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.29)  23 OCT 2016 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,18 +348,18 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 ) (./UserManual.aux)
 \openout1 = `UserManual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -423,195 +423,220 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 29.
+(Font)              <6> on input line 27.
 
 <2012-quad-core-phones.jpg, id=1, 602.25pt x 454.69875pt>
 File: 2012-quad-core-phones.jpg Graphic file (type jpg)
 
 <use 2012-quad-core-phones.jpg>
-Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 41.
+Package pdftex.def Info: 2012-quad-core-phones.jpg used on input line 39.
 (pdftex.def)             Requested size: 390.0pt x 294.4614pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./2012-quad-core-phones.jp
-g>] (./UserManual.toc)
-\tf@toc=\write3
-\openout3 = `UserManual.toc'.
-
- [1]
-<images/coverPage.png, id=13, 521.95pt x 491.8375pt>
+g>]
+<images/coverPage.png, id=10, 521.95pt x 491.8375pt>
 File: images/coverPage.png Graphic file (type png)
 
 <use images/coverPage.png>
-Package pdftex.def Info: images/coverPage.png used on input line 54.
+Package pdftex.def Info: images/coverPage.png used on input line 49.
 (pdftex.def)             Requested size: 390.0pt x 367.50383pt.
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 54--57
-[][]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 49--50
+[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 51.
 
+[1 <./images/coverPage.png>] (./UserManual.toc)
+\tf@toc=\write3
+\openout3 = `UserManual.toc'.
+
+ [2]
+Overfull \hbox (21.17262pt too wide) in paragraph at lines 65--73
+ [][] 
  []
 
-[2 <./images/coverPage.png>] (./UserManual.toc)
-\tf@toc=\write4
-\openout4 = `UserManual.toc'.
-
- [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 81.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 81.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 
-<images/splashScreen.jpg, id=25, 722.7pt x 1284.8pt>
+<images/splashScreen.jpg, id=22, 722.7pt x 1284.8pt>
 File: images/splashScreen.jpg Graphic file (type jpg)
 
 <use images/splashScreen.jpg>
 Package pdftex.def Info: images/splashScreen.jpg used on input line 93.
 (pdftex.def)             Requested size: 390.0pt x 693.33078pt.
- [5]
+
+Overfull \hbox (62.65224pt too wide) in paragraph at lines 91--95
+\OT1/cmr/m/n/12 <<<<<<< HEAD []
+ []
+
+[4]
 Overfull \vbox (101.33078pt too high) has occurred while \output is active []
 
 
-[6 <./images/splashScreen.jpg>]
-<images/AddRoute.png, id=34, 1084.05pt x 1927.2pt>
+[5 <./images/splashScreen.jpg>]
+
+LaTeX Warning: File `images/splashScreen.png' not found on input line 96.
+
+
+! Package pdftex.def Error: File `images/splashScreen.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 ...phics[width=50mm]{images/splashScreen.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<images/AddRoute.png, id=30, 1084.05pt x 1927.2pt>
 File: images/AddRoute.png Graphic file (type png)
  <use images/AddRoute.png>
-Package pdftex.def Info: images/AddRoute.png used on input line 98.
-(pdftex.def)             Requested size: 390.0pt x 693.32098pt.
+Package pdftex.def Info: images/AddRoute.png used on input line 104.
+(pdftex.def)             Requested size: 542.02368pt x 963.59766pt.
 
-<images/MainScreen2.png, id=35, 813.0375pt x 1445.4pt>
+<images/MainScreen2.png, id=31, 813.0375pt x 1445.4pt>
 File: images/MainScreen2.png Graphic file (type png)
 
 <use images/MainScreen2.png>
-Package pdftex.def Info: images/MainScreen2.png used on input line 99.
-(pdftex.def)             Requested size: 390.0pt x 693.32097pt.
+Package pdftex.def Info: images/MainScreen2.png used on input line 107.
+(pdftex.def)             Requested size: 406.51776pt x 722.69824pt.
 
-<images/AddRoute2.png, id=36, 1084.05pt x 1927.2pt>
+<images/AddRoute2.png, id=32, 1084.05pt x 1927.2pt>
 File: images/AddRoute2.png Graphic file (type png)
  <use images/AddRoute2.png>
-Package pdftex.def Info: images/AddRoute2.png used on input line 100.
-(pdftex.def)             Requested size: 390.0pt x 693.32098pt.
+Package pdftex.def Info: images/AddRoute2.png used on input line 108.
+(pdftex.def)             Requested size: 542.02368pt x 963.59766pt.
 
-Overfull \hbox (215.74081pt too wide) in paragraph at lines 97--102
-\OT1/cmr/m/n/12 The pro-cess of adding a route is as fol-lows: []
- []
-
-
-Overfull \vbox (847.44193pt too high) has occurred while \output is active []
-
-
-[7 <./images/AddRoute.png> <./images/MainScreen2.png>]
-Overfull \vbox (101.32098pt too high) has occurred while \output is active []
-
-
-[8 <./images/AddRoute2.png>]
-<images/MainScreen3.png, id=44, 813.0375pt x 1445.4pt>
+[6 <./images/AddRoute.png>]
+<images/MainScreen3.png, id=38, 813.0375pt x 1445.4pt>
 File: images/MainScreen3.png Graphic file (type png)
 
 <use images/MainScreen3.png>
-Package pdftex.def Info: images/MainScreen3.png used on input line 107.
-(pdftex.def)             Requested size: 390.0pt x 693.32097pt.
+Package pdftex.def Info: images/MainScreen3.png used on input line 116.
+(pdftex.def)             Requested size: 406.51776pt x 722.69824pt.
 
-<images/StoredRoutes2.png, id=45, 1084.05pt x 1927.2pt>
+<images/StoredRoutes2.png, id=39, 1084.05pt x 1927.2pt>
 File: images/StoredRoutes2.png Graphic file (type png)
 
 <use images/StoredRoutes2.png>
-Package pdftex.def Info: images/StoredRoutes2.png used on input line 108.
-(pdftex.def)             Requested size: 390.0pt x 693.32098pt.
+Package pdftex.def Info: images/StoredRoutes2.png used on input line 117.
+(pdftex.def)             Requested size: 542.02368pt x 963.59766pt.
 
-<images/Options.png, id=46, 1084.05pt x 1927.2pt>
+<images/Options.png, id=40, 1084.05pt x 1927.2pt>
 File: images/Options.png Graphic file (type png)
  <use images/Options.png>
-Package pdftex.def Info: images/Options.png used on input line 109.
-(pdftex.def)             Requested size: 390.0pt x 693.32098pt.
+Package pdftex.def Info: images/Options.png used on input line 118.
+(pdftex.def)             Requested size: 542.02368pt x 963.59766pt.
 
-<images/EditOption.png, id=47, 813.0375pt x 1445.4pt>
+Overfull \hbox (42.00708pt too wide) in paragraph at lines 116--119
+[] [] [] 
+ []
+
+[7 <./images/MainScreen2.png> <./images/AddRoute2.png>]
+<images/EditOption.png, id=45, 813.0375pt x 1445.4pt>
 File: images/EditOption.png Graphic file (type png)
 
 <use images/EditOption.png>
-Package pdftex.def Info: images/EditOption.png used on input line 110.
-(pdftex.def)             Requested size: 390.0pt x 693.32097pt.
- [9]
-Overfull \vbox (818.72527pt too high) has occurred while \output is active []
-
-
-[10 <./images/MainScreen3.png> <./images/StoredRoutes2.png>]
-Overfull \vbox (101.32098pt too high) has occurred while \output is active []
-
-
-[11 <./images/Options.png>]
-Overfull \vbox (101.32097pt too high) has occurred while \output is active []
-
-
-[12 <./images/EditOption.png>]
-<images/DeleteOption.png, id=63, 813.0375pt x 1445.4pt>
+Package pdftex.def Info: images/EditOption.png used on input line 120.
+(pdftex.def)             Requested size: 406.51776pt x 722.69824pt.
+ [8 <./images/MainScreen3.png> <./images/StoredRoutes2.png> <./images/Options.p
+ng> <./images/EditOption.png>]
+<images/DeleteOption.png, id=51, 813.0375pt x 1445.4pt>
 File: images/DeleteOption.png Graphic file (type png)
 
 <use images/DeleteOption.png>
-Package pdftex.def Info: images/DeleteOption.png used on input line 121.
-(pdftex.def)             Requested size: 390.0pt x 693.32097pt.
+Package pdftex.def Info: images/DeleteOption.png used on input line 133.
+(pdftex.def)             Requested size: 406.51776pt x 722.69824pt.
 
-Overfull \hbox (221.61575pt too wide) in paragraph at lines 120--124
-\OT1/cmr/m/n/12 The pro-cess of delet-ing a route is as fol-lows: [] 
- []
-
-[13]
-Overfull \vbox (122.07097pt too high) has occurred while \output is active []
-
-
-[14 <./images/DeleteOption.png>]
-<images/TrafficReportOption.png, id=71, 813.0375pt x 1445.4pt>
+<images/TrafficReportOption.png, id=52, 813.0375pt x 1445.4pt>
 File: images/TrafficReportOption.png Graphic file (type png)
 
 <use images/TrafficReportOption.png>
-Package pdftex.def Info: images/TrafficReportOption.png used on input line 130.
+Package pdftex.def Info: images/TrafficReportOption.png used on input line 144.
 
 (pdftex.def)             Requested size: 390.0pt x 693.32097pt.
 
-<images/TrafficReport4.png, id=72, 1084.05pt x 1927.2pt>
+<images/TrafficReport4.png, id=53, 1084.05pt x 1927.2pt>
 File: images/TrafficReport4.png Graphic file (type png)
 
 <use images/TrafficReport4.png>
-Package pdftex.def Info: images/TrafficReport4.png used on input line 131.
+Package pdftex.def Info: images/TrafficReport4.png used on input line 145.
 (pdftex.def)             Requested size: 390.0pt x 693.32098pt.
-
-Overfull \hbox (293.09418pt too wide) in paragraph at lines 129--134
-\OT1/cmr/m/n/12 The pro-cess of get-ting the traf-fic in-for-ma-tion is as fol-
-lows: []
- []
-
-[15]
-Overfull \vbox (818.72527pt too high) has occurred while \output is active []
+ [9 <./images/DeleteOption.png>]
+Overfull \vbox (138.90428pt too high) has occurred while \output is active []
 
 
-[16 <./images/TrafficReportOption.png> <./images/TrafficReport4.png>] [17]
-(./UserManual.aux) ) 
+[10 <./images/TrafficReportOption.png>]
+Overfull \vbox (101.32098pt too high) has occurred while \output is active []
+
+
+[11 <./images/TrafficReport4.png>]
+File: images/TrafficReportOption.png Graphic file (type png)
+ <use images/TrafficReportOption.png>
+Package pdftex.def Info: images/TrafficReportOption.png used on input line 148.
+
+(pdftex.def)             Requested size: 406.51776pt x 722.69824pt.
+
+
+LaTeX Warning: File `images/TrafficReport.png' not found on input line 151.
+
+
+! Package pdftex.def Error: File `images/TrafficReport.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...0mm, scale=0.5]{images/TrafficReport.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: images/TrafficReport4.png Graphic file (type png)
+<use images/TrafficReport4.png>
+Package pdftex.def Info: images/TrafficReport4.png used on input line 152.
+(pdftex.def)             Requested size: 542.02368pt x 963.59766pt.
+ [12] [13] (./UserManual.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2521 strings out of 494977
- 36079 string characters out of 6180183
- 91792 words of memory out of 5000000
- 5691 multiletter control sequences out of 15000+600000
- 9098 words of font info for 32 fonts, out of 8000000 for 9000
+ 2525 strings out of 494977
+ 36131 string characters out of 6180183
+ 92792 words of memory out of 5000000
+ 5695 multiletter control sequences out of 15000+600000
+ 9574 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,14n,23p,310b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmc
-sc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (18 pages, 2342253 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on UserManual.pdf (14 pages, 2347877 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

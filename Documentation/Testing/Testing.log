@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.29)  23 OCT 2016 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.29)  23 OCT 2016 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,8 +345,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \rotheadsize=\dimen121
 \c@nlinenum=\count111
 \TeXr@lab=\toks21
-)
-No file Testing.aux.
+) (./Testing.aux)
 \openout1 = `Testing.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -361,6 +360,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
@@ -447,24 +447,55 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
  [1] [2] [3] [4]
-[5] [6] (./Testing.aux) ) 
+[5] <images/decode_polyline.png, id=26, 1263.72125pt x 703.62875pt>
+File: images/decode_polyline.png Graphic file (type png)
+
+<use images/decode_polyline.png>
+Package pdftex.def Info: images/decode_polyline.png used on input line 175.
+(pdftex.def)             Requested size: 379.11931pt x 211.09026pt.
+
+<images/bound.png, id=27, 1013.7875pt x 641.39626pt>
+File: images/bound.png Graphic file (type png)
+ <use images/bound.png>
+Package pdftex.def Info: images/bound.png used on input line 180.
+(pdftex.def)             Requested size: 304.1386pt x 192.42035pt.
+
+[6 <./images/decode_polyline.png>]
+<images/im11.jpg, id=32, 529.98pt x 468.24937pt>
+File: images/im11.jpg Graphic file (type jpg)
+ <use images/im11.jpg>
+Package pdftex.def Info: images/im11.jpg used on input line 189.
+(pdftex.def)             Requested size: 317.99043pt x 280.95178pt.
+ [7 <./images/bound.png>] <images/image_analysis.png, id=36, 1485.55pt x 779.91
+376pt>
+File: images/image_analysis.png Graphic file (type png)
+
+<use images/image_analysis.png>
+Package pdftex.def Info: images/image_analysis.png used on input line 194.
+(pdftex.def)             Requested size: 445.66844pt x 233.97594pt.
+
+Overfull \hbox (55.66844pt too wide) in paragraph at lines 193--197
+[] 
+ []
+
+[8 <./images/im11.jpg>] [9 <./images/image_analysis.png>] (./Testing.aux) ) 
 Here is how much of TeX's memory you used:
- 2447 strings out of 494977
- 34407 string characters out of 6180183
+ 2471 strings out of 494977
+ 34900 string characters out of 6180183
  93784 words of memory out of 5000000
- 5638 multiletter control sequences out of 15000+600000
+ 5654 multiletter control sequences out of 15000+600000
  9098 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,4n,23p,559b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
->
-Output written on Testing.pdf (7 pages, 140865 bytes).
+ 38i,5n,23p,559b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Testing.pdf (10 pages, 1772899 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
